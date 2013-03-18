@@ -112,19 +112,19 @@ var _hmt = _hmt || [];
           <ul>
             <li class="name"><%= f.label :name, '姓名' %></li>
             <li class="enter">
-            	<%= f.text_field :name, :class => "text" %>
+            	<%= f.text_field :name, :class => "text validate", :data => { :validate=> "姓名" } %>
             </li>
           </ul>
           <ul>
             <li class="name"><%= f.label :name, '電話' %></li>
             <li class="enter">
-            	<%= f.text_field :phone, :class => "text" %>
+            	<%= f.text_field :phone, :class => "text validate valid_tel", :data => { :validate=> "電話" }  %>
             </li>
           </ul>
           <ul>
             <li class="name"><%= f.label :name, 'email' %></li>
             <li class="enter">
-            	<%= f.text_field :email, :class => "text" %>
+            	<%= f.text_field :email, :class => "text validate valid_email", :data => { :validate=> "email" }  %>
             </li>
           </ul>
         </ol>
@@ -164,34 +164,120 @@ var _hmt = _hmt || [];
     </div>
     <!--flt-->
     <div class="flt" id="send"> 
-    	<%= f.submit '確定送出' %>
-    	<a id="alert">確定送出</a> 
+    	<a id="alert">確認送出</a>
+    	<!--input id="alert" class="sendTicket" type="image" src="../../images/contact-send.jpg" value="submit" /-->
     </div>
     <!--flt--> 
   <% end %>
   </div>
   <!--vert--> 
+    <script>
+  var
+  	d = Alertify.dialog,
+  	l = Alertify.log,
+  	$ = Alertify.get,
+  	reset = function () {
+  		$("toggleCSS").href = "/css/alertify.default.css";
+        d.labels.ok     = "OK";
+        d.labels.cancel = "Cancel";
+        d.buttonReverse = false;
+        d.buttonFocus   = "ok";
+        l.delay         = 5000;
+    };
+    
+    
+	  var finished = window.location.hash.substr(1) == "finished";
+	  if (finished) {
+		  var
+		  	d = Alertify.dialog,
+		  	l = Alertify.log,
+		  	$ = Alertify.get,
+		  	reset = function () {
+		  		$("toggleCSS").href = "../css/alertify.default.css";
+		        d.labels.ok     = "OK";
+		        d.labels.cancel = "Cancel";
+		        d.buttonReverse = false;
+		        d.buttonFocus   = "ok";
+		        l.delay         = 5000;
+		    };
+	    	reset();
+	        Alertify.dialog.alert("感謝您撥空填寫，您的需求我們收到了，專業顧問將儘速為您服務！");
+	
+	  }
+
+    
+	$("alert").onclick = function () {
+    	reset();
+    	jQuery("form").submit();
+        //Alertify.dialog.alert("感謝您撥空填寫，您的需求我們收到了，專業顧問將儘速為您服務！");
+        return false;
+	}
+  </script>
   <script>
   
-  var finished = window.location.hash.substr(1) == "finished";
-  if (finished) {
-	  var
-	  	d = Alertify.dialog,
-	  	l = Alertify.log,
-	  	$ = Alertify.get,
-	  	reset = function () {
-	  		$("toggleCSS").href = "../css/alertify.default.css";
-	        d.labels.ok     = "OK";
-	        d.labels.cancel = "Cancel";
-	        d.buttonReverse = false;
-	        d.buttonFocus   = "ok";
-	        l.delay         = 5000;
-	    };
-    	reset();
-        Alertify.dialog.alert("感謝您撥空填寫，您的需求我們收到了，專業顧問將儘速為您服務！");
-
+  jQuery("body").css("display", "none");
+  jQuery("body").fadeIn(500);
+  jQuery("aside a").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        jQuery("body").fadeOut(500, redirectPage);
+  });   
+  function redirectPage() {
+        window.location = linkLocation;
   }
-  </script> 
+  
+  jQuery("form").submit(function(){
+    return validateForm();
+  });
+
+  function validateForm(){
+    var alertMsg = "";
+    var submit = true;
+
+    if(jQuery("#other-left input:checkbox")[0].checked){
+      jQuery("#other-right input:text").addClass("validate");
+    }
+    else{
+      jQuery("#other-right input:text").removeClass("validate");
+    }
+
+    //驗證不為空
+    jQuery(".validate").each(function(){
+      if(!jQuery(this).val()){
+        alertMsg += "請填寫您的"+jQuery(this).data("validate")+"<br />";
+        submit = false;
+      }
+    });
+
+    //validate email value
+    var emailrule = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(jQuery(".valid_email").val() && !jQuery(".valid_email").val().match(emailrule)){
+      submit = false;
+      alertMsg += "請輸入正確的email<br />";
+    }
+
+    //validate tel value
+    var telrule = /^\d{6,10}$/;
+    if(jQuery(".valid_tel").val() && !jQuery(".valid_tel").val().match(telrule)){
+      submit = false;
+      alertMsg += "請輸入正確的聯絡電話<br />";
+    }
+    
+    if(jQuery("input:checkbox:checked").length == 0){
+      submit = false;
+      alertMsg += "請勾選服務需求<br />";
+    }
+
+	if (alertMsg) {		
+    	Alertify.dialog.alert(alertMsg);
+	}
+	
+
+    return submit;
+  }
+</script>
+  
+  
 </article>
 <footer _height="none">
   <div class="parallax-layer" id="cloud-bg-b"> </div>

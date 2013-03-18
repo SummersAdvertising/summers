@@ -9,7 +9,7 @@ Summers::Application.routes.draw do
 
   namespace :admin do
     get "sign_up", "log_in", "log_out", "edit"
-    get '/' => 'news#index'
+    get '/' => 'tickets#index'
     
     resources :tickets
     

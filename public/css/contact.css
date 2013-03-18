@@ -38,6 +38,9 @@ article{display:table;width:95%;margin:0 auto;color:#fff;}
 #send a:hover{background:url(../images/contact-send2.jpg) 0 0 no-repeat;background-size:contain}
 #send a:active{background:url(../images/contact-send2.jpg) 0 0 no-repeat;position:relative;top:2px;background-size:contain}
 
+.sendTicket:hover{ background:url(../images/contact-send2.jpg) 0 0 no-repeat;background-size:contain }
+
+
 /*-----------------------------------------------------------------------頁腳---*/
 
 footer{width:100%;height:300px;position:relative;overflow:hidden;}
