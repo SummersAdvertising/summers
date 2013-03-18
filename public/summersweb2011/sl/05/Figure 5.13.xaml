@@ -1,0 +1,12 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007">
+
+  <MediaElement Name="video" Source="05/Lake.wmv" Opacity="0" IsMuted="true"/>
+
+  <TextBlock FontWeight="Bold" FontSize="100" FontFamily="Arial"
+  Text="Silverlight">
+    <TextBlock.Foreground>
+      <VideoBrush SourceName="video"/>
+    </TextBlock.Foreground>
+  </TextBlock>
+
+</Canvas>

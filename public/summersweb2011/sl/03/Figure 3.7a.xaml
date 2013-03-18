@@ -1,0 +1,2 @@
+﻿<Line xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  X1="20" Y1="20" X2="100" Y2="100" Stroke="Black" StrokeThickness="10"/>

@@ -1,0 +1,33 @@
+
+/*-----------------------------------------------------------------------全域---*/
+
+.limit{max-width:1024px}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header{background:url(../images/header.png) center 0 no-repeat;}
+#banner{padding:5% 0 10% 0}
+header h1{font-size:60pt;width:770px;height:207px;background-position:0 0;padding:25px 0 0 28%;margin:0 auto;line-height:1em}
+header h2{font-size:42pt;width:62%;text-shadow:0 0 3px #E3EDFF}
+header h3{font-size:20pt}
+
+#title,#title a{font-size:15pt}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{font-size:14pt}
+article h4{font-size:20pt}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{width:50%;text-align:right}
+#arr{width:50%;height:182px;background-position:10% bottom;
+-webkit-animation:arr2 1s ease-in-out infinite alternate;
+-moz-animation:arr2 1s ease-in-out infinite alternate}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+#contact{width:733px;height:80px;padding:0 0 0 39%}
+#contact a{font-size:20pt;padding:20px 0 0 0;width:237px;height:79px}
+#logo{width:291px;height:80px}
+#gplus{width:291px;text-align:center}

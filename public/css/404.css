@@ -1,0 +1,96 @@
+
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+.limit{margin:0 auto}
+.flt{overflow:hidden}
+ 
+/*-----------------------------------------------------------------------頁首---*/
+
+header{background:#00C1AF;height:350px;position:relative;overflow:hidden;z-index:1}
+
+#parallax {width:100%;min-width:2000px;height:350px;position:absolute;bottom:0;overflow:hidden;z-index:1}
+.parallax-layer {position: absolute}
+#cloud-bg-b{background:url(../images/cloud-bg-b3.png) 0 bottom repeat-x;height: 350px;width:105%}
+#cloud-bg-f{background:url(../images/cloud-bg-f.png) center 190px repeat-x;height: 370px;width:110%}
+#p-cloud{background:url(../images/cloud3.png) center 50px no-repeat;height: 370px;width:105%}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+#man{width:424px;height:781px;background:url(../images/404-man.png) 0 0 no-repeat;
+position:absolute;top:-350px;z-index:5;
+-webkit-transform-origin:378px top;
+-moz-transform-origin:378px top;
+-webkit-animation:swing 1s ease-in-out infinite alternate;
+-moz-animation:swing 1s ease-in-out infinite alternate}
+#shadow{width:217px;height:55px;background:url(../images/404-shadow.png) 0 0 no-repeat;position:absolute;bottom:0;left:220px;
+-webkit-animation:move 1s ease-in-out infinite alternate;
+-moz-animation:move 1s ease-in-out infinite alternate}
+
+article .limit{position:relative}
+#text{color:#5d6148}
+#text h1{font-weight:700;font-family:"century gothic",verdana;line-height:135px}
+#text h2{font-weight:300;font-family:"century gothic",verdana}
+#text p{font-weight:300;font-family:微軟正黑體,Arial;line-height:1.7em;margin:5% 0}
+
+#text a{display:block;width:521px;height:54px;background:url(../images/404-button.png) 0 0 no-repeat;text-align:center;color:#3E4131;text-shadow:0 1px 0 #fff;font-weight:300;font-family:微軟正黑體,Arial;padding:10px 0 0 0;margin:0 auto;background-size:contain}
+#text a:hover{background:url(../images/404-button2.png) 0 0 no-repeat;color:#72794F;background-size:contain}
+#text a:active{position:relative;top:1px}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer{margin:0 0 20px 0}
+footer .limit{height:125px;background:url(../images/404-footer.gif) right 0 no-repeat}
+
+/*-----------------------------------------------------------------------動畫---*/
+
+@-webkit-keyframes swing {
+	0% { -webkit-transform:rotate(10deg)}	
+	100% { -webkit-transform:rotate(-10deg)}
+}
+@-moz-keyframes swing {
+	0% { -moz-transform:rotate(10deg)}	
+	100% { -moz-transform:rotate(-10deg)}
+}
+@-webkit-keyframes move {
+	0% { left:100px }	
+	100% { left:340px }
+}
+@-moz-keyframes move {
+	0% { left:100px }	
+	100% { left:340px }
+}
+
+/*-----------------------------------------------------------------------適應---*/
+
+@media screen and (max-width: 581px){
+.limit{width:95%}
+#man,#shadow{display:none}
+#text{width:100%;margin:0 0 5% 0;text-align:center;}
+#text h1{font-size:145px;padding:0 25% 0 0}
+#text h2{font-size:35px;padding:0 0 0 25%}
+#text p{font-size:17px}
+#text a{width:100%;font-size:19px}
+}
+
+@media screen and (min-width: 582px) and (max-width: 1023px){
+.limit{width:95%}
+#man,#shadow{display:none}
+#text{width:100%;margin:0 0 5% 0;text-align:center;}
+#text h1{font-size:160px;padding:0 25% 0 0}
+#text h2{font-size:45px;padding:0 0 0 25%}
+#text p{font-size:22px}
+#text a{width:521px;font-size:27px}
+} 
+
+@media screen and (min-width: 1024px){
+.limit{max-width:1024px}
+
+#text{width:600px;margin:0 0 5% 424px}
+#text h1{font-size:175px;padding:0 0 0 15%}
+#text h2{font-size:55px;text-align:right}
+#text p{text-align:center;font-size:27px}
+#text a{width:521px;font-size:27px}
+}

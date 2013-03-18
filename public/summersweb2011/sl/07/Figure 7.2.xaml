@@ -1,0 +1,12 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Ellipse Name="one" Width="100" Height="5000" Fill="Blue"/>
+  <TextBlock Name="two" Canvas.Left="150" Canvas.Top="50" Width="200" Height="500" TextWrapping="Wrap">
+The functionality described so far can be used to put together a sophisticated control such as a scroll bar. Although Silverlight 1.0 doesn't support creating your own custom UI elements (or even anything that can be used from XAML), this section shows how you can encapsulate control-like functionality in a JavaScript class and make it reusable.
+The functionality described so far can be used to put together a sophisticated control such as a scroll bar. Although Silverlight 1.0 doesn't support creating your own custom UI elements (or even anything that can be used from XAML), this section shows how you can encapsulate control-like functionality in a JavaScript class and make it reusable.
+The functionality described so far can be used to put together a sophisticated control such as a scroll bar. Although Silverlight 1.0 doesn't support creating your own custom UI elements (or even anything that can be used from XAML), this section shows how you can encapsulate control-like functionality in a JavaScript class and make it reusable.
+  </TextBlock>
+  <Canvas Name="three" Canvas.Left="400" Canvas.Top="100" Background="Tan" Width="200" Height="400">
+    <Rectangle Canvas.Left="10" Canvas.Top="10" Width="100" Height="100" Fill="Yellow"/>
+    <Line Stroke="Green" StrokeThickness="5" X1="20" Y1="20" X2="200" Y2="200"/>
+  </Canvas>
+</Canvas>

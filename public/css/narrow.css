@@ -1,0 +1,120 @@
+﻿
+/*-----------------------------------------------------------------------導航---*/
+
+aside a,aside span{font-size:13pt}
+
+/*-----------------------------------------------------------------------捷徑---*/
+
+.move{display:none}
+.move a{height:40px;padding:5px 0 0 0;font-size:13pt;background-position:55px 3px}
+.move a:hover{background-position:65px 3px}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header{text-align:center}
+header h1{height:90px}
+header h2{height:65px;font-size:13pt;padding:4pt 0 0 0;}
+header h2 strong{font-size:16pt}
+
+/*-----------------------------------------------------------------------視差---*/
+
+#parallax,#earth{display:none}
+#cloud{position:absolute;width:100%;height:70px;background:url(../images/cloud.png) center 0 no-repeat;z-index:1;bottom:28%}
+#wrestler{width:100%;bottom:3%}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{width:100%;overflow:hidden;position:absolute;bottom:5%;z-index:3}
+#link div{width:45%}
+#link a{font-size:13pt;background:#8FC82B;display:block;padding:2%;border-radius:5px;border:3px double #6FA114}
+#link a:hover{text-shadow:none;border:3px double #4C6A11}
+#link strong{color:#000;font-size:10pt}
+#link-l{background:url(../images/arr-l.png) 79% 0 no-repeat;float:left;padding:35px 2.5% 0 2.5%}
+#link-r{background:url(../images/arr-r.png) 13% 0 no-repeat;float:right;padding:35px 2.5% 0 2.5%}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{font-size:11pt}
+article h1{font-size:40pt;text-align:center;width:100%}
+article h2{font-size:50pt;text-align:center;width:100%}
+article h3{font-size:20pt}
+article h4{font-size:33pt}
+article .dcr{margin:5% 0}
+
+/*-----------------------------------------------------------------------設計---*/
+
+#design{text-align:center}
+.box .dot{height:10px;margin:5% 0;background-position:center 0}
+
+/*-----------------------------------------------------------------------設計的錯與對---*/
+
+#dcr-1{width:100%;height:112px;background-position:center center}
+#box1 #text{width:100%}
+#box1 ul{width:85%;margin:0 auto}
+#box1 #wrong{display:none}
+
+/*-----------------------------------------------------------------------我們的看法---*/
+
+#box2 h4{width:100%}
+#intro{width:100%}
+#dcr-2{height:20px}
+
+#circle{width:320px;height:320px;margin:15% auto}
+#client{width:91px;height:104px}
+#arr-d{width:46px;height:91px}
+#chart{width:164px;height:148px}
+#arr-u{width:68px;height:83px}
+
+#step {font-size:10pt}
+#step li{width:100%}
+#step div{padding:2px 5px}
+#step .row-2 ,#step .row-4{margin:14px 0 0 10%}
+
+/*-----------------------------------------------------------------------案例探討---*/
+
+#box3 li,#box4 li{font-size:11pt}
+#box3 li a,#box4 li a{color:#028ebd;text-decoration:underline;font-size:13pt}
+#dcr-3{height:112px;background:url(../images/dcr-3.jpg) center 0 no-repeat;background-size:contain}
+#box3 h4{width:100%}
+#box3 .dot{width:100%}
+
+#box3 .row-5,#box3 .row-6,#box3 .row-7{font-size:9pt!important}
+#box3 .row-6,#box3 .row-7{padding:0 19% 0 0}
+#box3 .row-5 a,#box3 .row-6 a,#box3 .row-7 a{font-size:15pt!important}
+
+/*-----------------------------------------------------------------------提供真正的創意服務---*/
+
+#box4{background-image:url(../images/box4-bg.jpg)}
+#dcr-5{background:url(../images/weightlifting.png) center 0 no-repeat;height:147px;margin:5% 0 0 0}
+#box4 #wlf{display:none}
+#box4 h5{font-size:12pt;margin:2% 0}
+
+/*-----------------------------------------------------------------------使用技術---*/
+
+#mobile{height:96px;background:url(../images/mobile.png) center 0 no-repeat;margin:0 0 5% 0}
+#box5 h4{width:100%}
+#box5 .dot{width:100%}
+#box5 ul{width:100%;font-size:14pt}
+#box5 .item{display:none}
+
+/*-----------------------------------------------------------------------文字---*/
+
+#dcr-4{background:url(../images/dcr-4.png) center 0 no-repeat;margin:3% 0}
+
+/*-----------------------------------------------------------------------段落---*/
+
+.paragraph{width:85%}
+.paragraph a{font-size:13pt;text-decoration:underline;color:#028ebd;}
+/*刪除線*/
+#del{top:30px;left:45px}
+/*按鈕*/
+.bt{top:133px}
+#bt-1{left:65px}
+#bt-2{left:170px}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+#contact{width:100%}
+#contact a{font-size:16pt;width:187px;height:62px;padding:15px 0 0 0;margin:0 auto}
+#logo{width:100%;height:50px;background-position:center 0;margin:5% 0 0 0}
+#gplus{width:100%;text-align:center}

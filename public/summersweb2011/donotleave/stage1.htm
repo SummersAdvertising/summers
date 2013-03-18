@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="Robots" content="index,follow"/>
+<meta name="keywords" content="中小企業,Visual Studio 2010,MSDN,開發人員,visual studio, VSTS, Visual Studio Team System ,專案管理,系統開發,軟體專案,軟體工程,開發工具,除錯,測試,分工,程式碼,debug,壓力測試,贈品" />
+<meta name="description" content="快利用Visual Studio 2010 + MSDN的高效能開發十大招，留住所有人才再抽好禮。" />
+<meta name="abstract" content=" Visual Studio 2010 + MSDN要用高效能開發十大招，為您解決開發難題，留住所有人才。"/>
+<meta name="DC.Rights" content="台灣微軟"/>
+<meta name="DC.Date" content="2010/11/1"/>
+<meta name="DC.Language" scheme="W3CDTF" content="zh-TW"/>
+<meta name="DC.Subject" content="慰留大作戰！Visual Studio 2010 + MSDN為您留住所有開發人才"/>
+<meta name="DC.Type" content="產品介紹、遊戲情境、開發難題解決及贈品訊息"/>
+<title>慰留大作戰！Visual Studio 2010 + MSDN為您留住所有開發人才</title>
+<link href="framestyle.css" rel="stylesheet" type="text/css" />
+<link href="jquery.simpledialog.0.1.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+/* disabled 也不變色 */
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity:1; }
+/* 對話框 */
+.sd_container { background-color:transparent; border:0px solid #CCCCCC; font-family:arial,helvetica,sans-serif; margin:0; padding:10px; position:absolute; text-align:center; }
+#icon-wrong  { display: none; top: 0px; left: 0px; z-index:4; position: absolute; }
+#dialog-wrong { display: none; cursor:pointer; position: absolute; top: 0px; left:0px; width:421px; height:295px; }
+#dialog-right { display: none; cursor:pointer; position: absolute; top: 0px; left:0px; width:421px; height:295px; }
+.cursor-move { cursor: move; } 
+</style>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript"src="jquery-ui-1.8.5.custom.min.js"></script>
+<script type="text/javascript"src="jquery.simpledialog.0.1.min.js"></script>
+<!-- script type="text/javascript" src="jquery.flashSound-1.2.min.js"></script -->
+<script type="text/javascript">
+var reId = /^\D+(\d+)$/; //ID尾數字
+var iDrag, iDrop;
+var pos = [];
+$(document).ready(function() {
+
+  //對錯對話框
+  $('#simpledialog-wrong,#simpledialog-right').simpleDialog({showCloseLabel: false,showCaption: false, close:unDrag });
+
+  //設定可移元素  
+  $("#choose1,#choose2,#choose3,#choose4").addClass('cursor-move').draggable( {containment:'#bigbody',revert: true} );
+  $('#bigbody').disableSelection();
+  
+  //記憶位置
+  for(var i=0;i<4;i++) pos[i] = $("#choose"+(i+1)+":first").position();
+
+  //設定可放區
+  $("#listbox1,#listbox2,#listbox3,#listbox4").droppable({
+    drop: function(e,ui) {
+      iDrag = reId.test(ui.draggable.attr('id'))?RegExp.$1:0; //取拖ID名尾數字
+      iDrop = reId.test($(this).attr('id'))?RegExp.$1:0;  //取放ID名尾數字
+      
+      if(iDrag==0||iDrop==0) { alert('Error!'); return; }
+
+      var p = $("#listbox"+iDrop).position(); // 放區正確位置
+      
+      $(ui.draggable).draggable("option","revert",false).animate({left:p.left+4,top:p.top+4},"fast","swing", function() { //把抓進來的移到正確放上的位置
+        $("#listbox"+iDrop+" > img").attr('src','images/list.png'); // 放區背景正常
+
+        if( (iDrag==1 && iDrop==2) || (iDrag==2 && iDrop==1) || (iDrag==3 && iDrop==4) || (iDrag==4 && iDrop==3) ) { //正確
+          //$.flashSound.play('bingo'); //聲音
+          $("#listbox"+iDrop).droppable("disable"); // 也不能再抓進來
+          $(ui.draggable).removeClass('cursor-move').draggable("disable"); // 不能再抓走 換鼠標
+          $('#bigbody').append($('<div style="position:absolute;z-index:4;left:'+pos[iDrag-1].left+'px;top:'+pos[iDrag-1].top+'px"><img src="images/btn_right.png" width="60" height="49"></div>')); //打勾
+          calScore();
+        }
+        else { //錯誤
+          // $.flashSound.play('wrong'); //聲音
+          $("#icon-wrong").css({left:pos[iDrag-1].left,top:pos[iDrag-1].top}).show('slow'); //打叉
+          $('#simpledialog-wrong').click();
+        }
+        
+      });
+    },
+    over: function(event, ui) { iDrop = reId.test($(this).attr('id'))?RegExp.$1:0; $("#listbox"+iDrop+" > img").attr('src','images/list2.png'); }, // 放區背景亮
+    out: function(event, ui) { iDrop = reId.test($(this).attr('id'))?RegExp.$1:0; $("#listbox"+iDrop+" > img").attr('src','images/list.png'); }, // 放區背景正常
+  });
+
+  //聲音載入
+  //$.flashSound('sound-bingo.mp3', {id: 'bingo'});
+  //$.flashSound('sound-wrong.mp3', {id: 'wrong'});
+  
+});
+
+function closeWrong() {
+  unDrag();
+  $.simpleDialog.close();
+}
+function unDrag() {
+  $("#icon-wrong").hide(); //取消打叉
+  $('#choose'+iDrag).animate({left:pos[iDrag-1].left,top:pos[iDrag-1].top}, "slow").draggable("option","revert",true); //歸位
+}
+
+var iScore = 0;
+function calScore() {
+  if(++iScore==4) {
+    $('#simpledialog-right').click();
+  }
+}
+
+function nextStage(){
+  //location.href='stage2.htm';
+  alert($('#next-stage'));
+  $('#next-stage').trigger('click');
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="bigbody">
+<div id="ribbon" style="position:absolute;z-index:9999;top:0;left:180px"><img src="images/ribbon.png" width="241" height="47"></div>
+<div id="bg"><img src="images/gamebg_1.jpg" width="960" height="800"></div>
+<div id="mslogo"><img src="images/mslogo.png" width="142" height="23"></div>
+<div id="goindex"><a href="default.htm"><img src="images/backindex.png" width="39" height="34" border="0"></a></div>
+<div id="gamelogo"><img src="images/gamelogo.png" width="387" height="221"></div>
+<div id="question1"><img src="images/gametable1.png" width="444" height="341" border="0" usemap="#Map"> 
+<map name="Map">
+  <area shape="rect" coords="137,34,433,98" href="problembye2.htm" target="_blank">
+<area shape="rect" coords="151,119,410,159" href="problembye1.htm" target="_blank">
+<area shape="rect" coords="107,258,424,304" href="problembye3.htm" target="_blank">
+<area shape="rect" coords="106,178,417,243" href="problembye7.htm" target="_blank">
+</map>
+
+</div>
+
+<div id="choose1"><img src="images/choosebtn1.png" width="60" height="49"></div>
+<div id="choose2"><img src="images/choosebtn2.png" width="60" height="49"></div>
+<div id="choose3"><img src="images/choosebtn3.png" width="60" height="49"></div>
+<div id="choose4"><img src="images/choosebtn4.png" width="60" height="49"></div>
+
+
+<div id="employee1"><img src="images/employee1.png" width="511" height="388"></div>
+
+<div id="letterbox4"><img src="images/letter4.png" width="202" height="236"></div>
+<div id="listbox4"><img src="images/list.png" width="64" height="56"></div>
+
+<div id="letterbox3"><img src="images/letter3.png" width="210" height="248"></div>
+<div id="listbox3"><img src="images/list.png" width="64" height="56"></div>
+
+<div id="letterbox2"><img src="images/letter2.png" width="189" height="234"></div>
+<div id="listbox2"><img src="images/list.png" width="64" height="56"></div>
+
+<div id="letterbox1"><img src="images/letter1.png" width="208" height="236"></div>
+<div id="listbox1"><img src="images/list.png" width="64" height="56"></div>
+
+<div id="copy_right">
+  <table width="700" height="29" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="700"><div align="center"><span class="gray_11px">© 2011 Microsoft Corporation. 著作權所有，並保留一切權利。台灣微軟對本活動保有異動權。　<a href="http://www.microsoft.com/taiwan/misc/cpyright.htm" target="_blank">使用規定</a> | <a href="http://support.microsoft.com/contactus/?ln=zh-tw&ws=taiwan" target="_blank">與我們聯絡</a> | <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/zh-tw.mspx" target="_blank">商標</a> | <a href="http://go.microsoft.com/fwlink/?LinkId=81184&clcid=0x404" target="_blank">隱私權聲明</a></span></div></td>
+    </tr>
+  </table>
+</div>
+
+<div id="people1"><img src="images/peoplenumber1.png" width="211" height="71"></div>
+<div id="icon-wrong"><img src="images/btn_wrong.png" width="60" height="49"></div>
+
+</div>
+
+<a href="#" rel="dialog-wrong" id="simpledialog-wrong" style="display:none"></a>
+<a href="#" rel="dialog-right" id="simpledialog-right" style="display:none"></a>
+<div id="dialog-wrong"><img style="cursor:pointer" src="images/wrongimage.png" onclick="closeWrong()" /></div>
+<div id="dialog-right"><a href="stage2.htm"><img style="cursor:pointer" src="images/rightimage.png" border="0" /></a></div>
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+
+/*-----------------------------------------------------------------------導航---*/
+
+aside a,aside span{font-size:16pt}
+
+/*-----------------------------------------------------------------------捷徑---*/
+
+.move a{height:57px;padding:10px 0 0 0;font-size:17pt;background-position:20px 11px}
+.move a:hover{background-position:30px 11px}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header #banner{height:360pt;position:relative;width:100%;max-width:1024px;margin:0 auto}
+header hgroup{width:569px;}
+header h1{height:132px;}
+header h2{height:85px;font-size:17pt;padding:7pt 0 0 0;line-height:1.4em}
+header h2 strong{font-size:20pt}
+
+/*-----------------------------------------------------------------------視差---*/
+
+.parallax-layer {position: absolute}
+#cloud{display:none}
+#wrestler{width:400px;bottom:30%;right:10%}
+#earth{width:400px;height:167px}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link div{position:absolute;width:240px;z-index:3}
+#link a{font-size:17pt}
+#link strong{color:#fff;font-size:13pt}
+#link-l{background:url(../images/arr-r.png) right center no-repeat;right:34%;bottom:40%}
+#link-r{background:url(../images/arr-l.png) left center no-repeat;right:3%;bottom:37%;padding:0 0 0 80px}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{font-size:14pt}
+article h1{font-size:55pt}
+article h2{font-size:55pt}
+article h3{font-size:28pt}
+article h4{font-size:48pt}
+article .dcr{margin:2% 0}
+article .limit{width:100%;max-width:1024px}
+.more a{font-size:20pt}
+
+/*-----------------------------------------------------------------------設計---*/
+
+.box .dot{height:15px;background-position:left 0}
+
+/*-----------------------------------------------------------------------設計的錯與對---*/
+
+#box1 hgroup{background:url(../images/spr-1.jpg) 150px 39px no-repeat;border-bottom:1px solid #aaa;
+height:185px;width:300px;float:left;margin:0 0 0 17%}
+#dcr-1{float:left;width:19%;height:166px;background-position:center bottom}
+#box1 h3{float:left;width:350px;padding:86pt 0 0 0;border-bottom:1px solid #aaa;height:186px;*height:70px}
+
+#box1 #text{float:left;width:65%}
+#box1 #wrong{width:35%}
+#box1 #x{left:55%;top:1%}
+
+/*-----------------------------------------------------------------------我們的看法---*/
+
+#box2 h4{width:49%;text-align:right;padding:30px 0 0 0}
+#box2 #intro{width:49%;background:url(../images/dcr-5.jpg) 0 center no-repeat;padding:30px 0 30px 50px}
+#dcr-2{display:none}
+#box2 p{font-size:18pt;margin:3% 0 0 0}
+
+#circle{width:432px;height:432px;margin:10% auto 5% auto}
+#client{width:123px;height:141px}
+#arr-d{width:62px;height:123px}
+#chart{width:222px;height:200px}
+#arr-u{width:92px;height:112px}
+
+#step {font-size:12pt}
+#step li{width:90%}
+#step div{padding:8px 5px}
+#step .row-2 ,#step .row-4 {margin:14px 0 0 25%}
+
+/*-----------------------------------------------------------------------案例探討---*/
+
+#box3 li,#box4 li{font-size:14pt}
+#box3 li a,#box4 li a{font-size:19pt;background:#E7F695;color:#6a6a6a}
+#dcr-3{display:none}
+#box3 h4{width:49%;text-align:right}
+#box3 .dot{width:49%;margin:32px 0 0 0}
+
+#box3 ul{background-image:url(../images/dcr-3.jpg);background-repeat:no-repeat;background-position:7% 50%;background-size: contain;margin:5% 0 0 0}
+#box3 .row-1{padding:0 0 0 40%}
+#box3 .row-2,#box3 .row-6{padding:0 0 0 43%}
+#box3 .row-3{padding:0 0 0 46%}
+#box3 .row-4{padding:0 0 0 49%}
+#box3 .row-5{padding:0 0 0 46%;font-size:12pt!important}
+#box3 .row-7{padding:0 5% 0 40%;font-size:12pt!important}
+
+/*-----------------------------------------------------------------------提供真正的創意服務---*/
+
+#box4{background-image:url(../images/box4-bg-2.jpg)}
+#box4 .limit{padding:0 0 0 10%}
+#dcr-5,#box4 .dot{display:none}
+
+#box4 h4{background:url(../images/dot.png) 270px 117px no-repeat}
+#box4 h5{font-size:16pt}
+
+#box4 ul{float:right;width:60%}
+#box4 #wlf{float:left}
+
+#box4 .row-1{padding:0 0 0 5%}
+#box4 .row-2,#box4 .row-5{padding:0 0 0 15%}
+#box4 .row-3{padding:0 0 0 10%}
+#box4 .row-4{padding:0 0 0 20%}
+#box4 .row-6{padding:0 0 0 5%}
+
+@media \0screen {
+#box4 h4{background:url(../images/dot.png) 350px 117px no-repeat}
+}
+
+/*-----------------------------------------------------------------------使用技術---*/
+
+#box5 .limit{position:relative}
+#box5 h4{width:49%;text-align:right}
+#box5 .dot{width:49%;margin:32px 0 0 0}
+
+#box5 ul{width:70%;font-size:18pt}
+
+#box5 #item-left-1{width:600px;height:408px;top:0%;left:-39%}
+#box5 #item-left-2{width:530px;height:361px;top:20%;left:-37%}
+#box5 #item-left-3{width:500px;height:286px;top:10%;left:-30%}
+#box5 #item-right-1{width:381px;height:310px;top:15%;right:-25%}
+#box5 #item-right-2{width:552px;height:401px;top:0%;right:-30%}
+#box5 #item-right-3{width:495px;height:362px;top:-3%;right:-25%}
+
+/*-----------------------------------------------------------------------文字---*/
+
+#writer hgroup{background:url(../images/spr-2.jpg) 150px 39px no-repeat;border-bottom:1px solid #aaa;height:185px;width:300px;float:left;margin:0 0 0 17%}
+#writer h3{float:left;width:350px;padding:86pt 0 0 0;border-bottom:1px solid #aaa;height:186px;*height:70px}
+#dcr-4{float:left;width:19%;height:166px;background-position:center bottom;margin:2% 0 0 0}
+
+/*-----------------------------------------------------------------------段落---*/
+
+.paragraph{width:66%}
+.paragraph a{background:#d98506;color:#fff;font-size:15pt}
+.paragraph a:hover{color:#d98506;background:#fff}
+#pg1{clear:both}
+#del{top:38px;left:75px}
+.bt{top:77%}
+#bt-1{left:90px}
+#bt-2{left:222px}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer .limit{width:100%;max-width:1024px;}
+#contact{width:733px;height:80px;padding:0 0 0 39%}
+#contact a{font-size:20pt;padding:20px 0 0 0;width:237px;height:79px}
+#logo{width:291px;height:80px}
+#gplus{width:291px;text-align:center}

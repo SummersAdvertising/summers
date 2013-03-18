@@ -1,0 +1,10 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<Canvas.RenderTransform>
+  <ScaleTransform ScaleX="3" ScaleY="3"/>
+</Canvas.RenderTransform>
+
+  <TextBlock Name="textBlock" Text="Custom Font"/>
+
+  <TextBlock Canvas.Top="22" FontSize="4" Foreground="Red">This example only works when run from a Web server.</TextBlock>
+
+</Canvas>

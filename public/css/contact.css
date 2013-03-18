@@ -1,0 +1,72 @@
+
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none;background:#007BC1}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+aside{max-width:1024px;width:95%;margin:0 auto;padding:50px 0;background:url(../images/back.png) 5px 49px no-repeat;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside a{color:#fff;font:300 20pt 微軟正黑體,Arial;display:block;width:190px;padding:0 0 0 50px;text-shadow:0 0 1px #005585;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside:hover{background:url(../images/back.png) 0 49px no-repeat}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{display:table;width:95%;margin:0 auto;}
+#vert{display:table-cell; vertical-align:middle}
+.flt{overflow:hidden;margin:0 auto;clear:both;width:95%;max-width:1024px;margin:0 auto}
+#bubble{float:left;background:url(../images/contact.jpg) no-repeat;background-size:contain;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+#info{float:right;color:#fff;font-weight:300;font-family:微軟正黑體,Arial;line-height:1.7em;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+#info b{font:700 46pt 微軟正黑體,Arial}
+#info a{color:#fff;font-weight:300;font-family:微軟正黑體,Arial}
+#info a:hover{text-decoration:underline}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer{width:100%;height:300px;position:relative;overflow:hidden}
+
+#parallax {width:100%;min-width:2000px;height:300px;position:absolute;bottom:0;overflow:hidden;z-index:1}
+.parallax-layer {position: absolute}
+#cloud-bg-b{background:url(../images/cloud-bg-b2.png) 0 bottom repeat-x;height: 300px;width:105%}
+#cloud-bg-f{background:url(../images/cloud-bg-f.png) center 120px repeat-x;height: 300px;width:110%}
+#p-cloud{background:url(../images/cloud2.png) center 0 no-repeat;height: 300px;width:105%}
+#earthman{background:url(../images/earthman.png) no-repeat;height:300px;position:relative;z-index:2;background-size:contain;margin:0 auto;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+
+	#bubble{width:48%;height:395px;background-position:right 0}
+	#info{width:48%;font-size:21pt}
+	#earthman{width:584px;background-position:0 90%}
+
+/*-----------------------------------------------------------------------適應---*/
+
+@media screen and (max-width: 581px){
+	#bubble{width:100%;height:150px;background-position:0 0}
+	#info{width:100%;text-align:center;font-size:17pt}
+	#info a{font-size:17pt}
+	#earthman{display:none}
+	#p-cloud{background-position:35% 0 }
+}
+
+@media screen and (min-width: 582px) and (max-width: 1023px){
+	#bubble{width:48%;height:395px;background-position:right 0}
+	#info{width:48%;font-size:19pt}
+	#info a{font-size:19pt}
+	#earthman{width:484px;background-position:0 80%}
+} 
+
+@media screen and (min-width: 1024px){
+	#bubble{width:48%;height:395px;background-position:right 0}
+	#info{width:48%;font-size:21pt}
+	#info a{font-size:21pt}
+	#earthman{width:584px;background-position:0 90%}
+}

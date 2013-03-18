@@ -1,0 +1,9 @@
+﻿<Rectangle xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  Width="300" Height="300">
+  <Rectangle.Fill>
+    <RadialGradientBrush RadiusX="0.7" RadiusY="0.7">
+      <GradientStop Offset="0" Color="#FF0000FF"/>
+      <GradientStop Offset="1" Color="#220000FF"/>
+    </RadialGradientBrush>
+  </Rectangle.Fill>
+</Rectangle>

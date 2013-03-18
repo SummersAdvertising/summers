@@ -1,0 +1,34 @@
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header .limit{max-width:1024px;padding:0 0 2% 0}
+#wlf{float:left;width:50%;background-position:right 0}
+header hgroup{float:right;width:50%}
+header h3{font-size:27pt;text-align:left;padding:70px 0 10px 0}
+
+/*-----------------------------------------------------------------------控制---*/
+
+nav {float:left;width:50%;text-align:left}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article {width:100%;background:url(../images/spr.jpg) center 0 no-repeat}
+article .limit{max-width:1024px;height:575px}
+article h2{font-size:22pt!important}
+article h1{font-size:36pt!important;line-height:1.4em}
+article ul{float:left;width:49%;font-size:15pt}
+article li{background-position:0 9px}
+#imgbox{float:right;width:50%;margin:5% 0 0 0}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{float:left}
+#link a{padding:0 0 10px 0}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer .limit{max-width:1024px}
+#contact{width:733px;height:80px;padding:0 0 0 39%}
+#contact a{font-size:20pt;padding:20px 0 0 0;width:237px;height:79px}
+#logo{width:291px;height:80px}
+#gplus{width:291px;text-align:center}

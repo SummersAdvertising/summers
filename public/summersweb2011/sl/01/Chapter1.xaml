@@ -1,0 +1,28 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007">
+  <MediaElement Name="video" Source="01/Lake.wmv" Opacity="0" IsMuted="true"/>
+  <!-- A circle containing a live video: -->
+  <Ellipse Width="100" Height="100">
+    <Ellipse.Fill>
+      <VideoBrush SourceName="video"/>
+    </Ellipse.Fill>
+  </Ellipse>
+  <!-- Two pieces of text: -->
+  <TextBlock FontFamily="Georgia" Foreground="Blue" FontStyle="Italic"
+    FontSize="40" Canvas.Left="125" Canvas.Top="20" Text="Great Estates"/>
+  <TextBlock Foreground="Blue" Canvas.Left="110" Canvas.Top="70"
+    Text="Luxurious Living at an Affordable Price"/>
+  <!-- Curves and a line: -->
+  <Path Stroke="Red" StrokeThickness="4">
+    <Path.Data>
+      <PathGeometry>
+        <PathFigure StartPoint="0,65">
+          <ArcSegment SweepDirection="Clockwise" Size="2,2" Point="25,65"/>
+          <ArcSegment SweepDirection="Clockwise" Size="2,2" Point="50,65"/>
+          <ArcSegment SweepDirection="Clockwise" Size="2,2" Point="75,65"/>
+          <ArcSegment SweepDirection="Clockwise" Size="2,2" Point="100,65"/>
+          <LineSegment Point="390,65"/>
+        </PathFigure>
+      </PathGeometry>
+    </Path.Data>
+  </Path>
+</Canvas>

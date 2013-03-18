@@ -1,0 +1,137 @@
+﻿<html>
+<head>
+<title>夏天廣告</title>
+ <style type="text/css">
+    html, body {
+	    height: 100%;
+	    overflow: auto;
+	    background:black;
+	    text-align:center;
+    }
+    body {
+	    padding: 0;
+	    margin: 0;
+    }
+    #content {
+	    margin-left:auto;
+	    margin-right:auto;
+    }
+    </style>
+    
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22983915-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script type="text/javascript" src="jquery-1.3.2-vsdoc2.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+// 滑鼠滑過變化-------------------------------------------							   
+  $("#mu1").hover(
+  function () {
+	  if( $(this).attr('src') != 'leftmenu_2_1.jpg')
+	  {$(this).attr('src','leftmenu_1_1.jpg');}
+  },
+  function () {
+	   if( $(this).attr('src') != 'leftmenu_2_1.jpg')
+	  {$(this).attr('src','leftmenu_3_1.jpg');}
+  }); 
+  
+    $("#mu2").hover(
+  function () {
+	  if( $(this).attr('src') != 'leftmenu_2_2.jpg')
+	  {$(this).attr('src','leftmenu_1_2.jpg');}
+  },
+  function () {
+	   if( $(this).attr('src') != 'leftmenu_2_2.jpg')
+	  {$(this).attr('src','leftmenu_3_2.jpg');}
+  });
+	
+	 $("#mu3").hover(
+  function () {
+	  if( $(this).attr('src') != 'leftmenu_2_3.jpg')
+	  {$(this).attr('src','leftmenu_1_3.jpg');}
+  },
+  function () {
+	   if( $(this).attr('src') != 'leftmenu_2_3.jpg')
+	  {$(this).attr('src','leftmenu_3_3.jpg');}
+  });
+// 滑鼠滑過變化_END-------------------------------------------    
+//目錄狀態----------------------------------------------------
+  $("#mu1").click(function (){
+		var SilverlightControl = document.getElementById("ShowRoot");
+        SilverlightControl.content.bridge.Msg();
+	 $(this).attr('src','leftmenu_2_1.jpg');
+	 $("#mu2").attr('src','leftmenu_3_2.jpg');
+	 $("#mu3").attr('src','leftmenu_3_3.jpg');
+	 });
+  $("#mu2").click(function (){
+		var SilverlightControl = document.getElementById("ShowRoot");
+        SilverlightControl.content.bridge.Msg2();
+	 $(this).attr('src','leftmenu_2_2.jpg');
+	 $("#mu1").attr('src','leftmenu_3_1.jpg');
+	 $("#mu3").attr('src','leftmenu_3_3.jpg');
+	 });
+   
+  $("#mu3").click(function (){
+		var SilverlightControl = document.getElementById("ShowRoot");
+        SilverlightControl.content.bridge.Msg3();
+	 $(this).attr('src','leftmenu_2_3.jpg');
+	 $("#mu1").attr('src','leftmenu_3_1.jpg');
+	 $("#mu2").attr('src','leftmenu_3_2.jpg');
+	 });
+//目錄狀態_END------------------------------------------------
+	}); //ready_END
+ 
+</script>
+	</head>
+	<body>
+    <div id ="content" style="background:#000;width:1000px;">
+	<div  style="width:1000px; height:155px;" align="center"> 
+	<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"  width="1000" height="155" >
+	  <param name="background" value="#000" />
+			<param name="source" value="portfolio.xap" />
+			<param name="initParams" value="ConfigurationProvider=DarkTheme,DataProvider=XmlDataProvider;Path=../Memorabilia/Data.xml" />
+			<a href="http://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" vspace="0" align="top"  style="border-style: none" /></a>
+	   </object>
+    </div>
+      <div style="width:1000px; height:400px; top:0px" align="center">
+        <table width="1000px" border="0" bgcolor="Black" >
+          <tr>
+            <td width="25%"><table width="100%" border="0" align="left" cellpadding="5">
+              <tr>
+                <td><table width="100%" height="402" border="0" align="left" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td >
+                    <img id="mu1" src="leftmenu_2_1.jpg" style="cursor:pointer;" /><br/>                      
+                    <img id="mu2" src="leftmenu_3_2.jpg" style="cursor:pointer;" /><br/>                      
+                    <img id="mu3" src="leftmenu_3_3.jpg" style="cursor:pointer;" />
+                    </td>
+                  </tr>
+                </table>
+                </td>
+              </tr>
+            </table></td>
+        <td width="75%" align="center" >
+       <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"  width="680" height="396" align="top"   id="ShowRoot">
+	  <param name="background" value="#000" />
+			<param name="source" value="Vertigo.SlideShow.xap" />
+			<param name="initParams" value="ConfigurationProvider=DarkTheme,DataProvider=XmlDataProvider;Path=../Memorabilia/Data.xml" />
+			<a href="http://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;"><img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" vspace="0" align="top"  style="border-style: none" /></a>
+	   </object>
+        </td>
+          </tr>
+        </table>
+		 </div>   
+  <div style="width:1000px; height:60px;" align="center">
+  <img src="copy.jpg" />
+  </div>
+    </div> 
+	</body>
+</html>

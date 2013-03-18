@@ -1,0 +1,16 @@
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <MediaElement Source="05/Lake.wmv" Opacity="0.5"
+    Canvas.Left="300" Canvas.Top="300">
+    <MediaElement.Clip>
+      <EllipseGeometry Center="120,120" RadiusX="120" RadiusY="120"/>
+    </MediaElement.Clip>
+    <MediaElement.RenderTransform>
+      <RotateTransform Angle="180"/>
+    </MediaElement.RenderTransform>
+  </MediaElement>
+  <MediaElement Source="05/Lake.wmv" Opacity="0.5">
+    <MediaElement.Clip>
+      <EllipseGeometry Center="120,120" RadiusX="120" RadiusY="120"/>
+    </MediaElement.Clip>
+  </MediaElement>
+</Canvas>

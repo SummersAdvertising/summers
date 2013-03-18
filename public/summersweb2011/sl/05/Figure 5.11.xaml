@@ -1,0 +1,3 @@
+﻿<TextBlock xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  FontWeight="Bold" FontSize="100" FontFamily="Arial" Text="Silverlight">
+</TextBlock>

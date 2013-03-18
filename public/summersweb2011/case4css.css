@@ -1,0 +1,165 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	/*background-image: url(images/background2.jpg);*/
+	background-repeat:no-repeat;
+	background-color:#FFFFFF;
+	font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    
+	
+}
+
+a:link {
+	text-decoration: none;
+	color: #008AF0;
+}
+a:visited {
+	text-decoration: none;
+	color: #008AF0;
+}
+a:hover {
+	text-decoration: none;
+	color: #008AF0;
+}
+a:active {
+	text-decoration: none;
+	color: #008AF0;
+}
+
+a.link2:link {
+	text-decoration: none;
+	color: #CC0000;
+}
+a.link2:visited {
+	text-decoration: none;
+	color: #CC0000;
+}
+a.link2:hover {
+	text-decoration: none;
+	color: #CC6600;
+}
+a.link2:active {
+	text-decoration: none;
+	color: #CC0000;
+}
+
+
+/*最外框*/
+#bigbody {
+	width: 955px;
+	height: 1700px;
+	position:relative;
+	margin: 0 auto;
+	background-image:url(images/background2.jpg);
+	background-repeat: no-repeat;
+	background-color:#FFFFFF;
+	z-index: 1;
+	overflow: hidden; 
+	
+}
+
+
+/*側選單*/
+
+.slide-out-div {
+	   width: 325px;
+	   height: 296px;
+	   background-image:url(images/sidemenu_01.png);
+	   z-index:10;
+	   
+	   
+}
+
+/*側選單的影子*/
+#sideshadow{
+	width: 21px;
+	height: 296px;
+	top: 186px;
+	left: 0px;
+	position: relative;
+	z-index: 1;
+}
+
+/*首頁底*/
+#indexleg{
+	width: 887px;
+	height: 53px;
+	top: 567px;
+	left: 36px;
+	position: relative;
+	z-index: 3;
+}
+
+
+
+
+/*其他頁面右上角按鈕*/
+
+#rightbtn{
+	width: 220px;
+	height: 72px;
+	top: 44px;
+	left: 676px;
+	position: absolute;
+	z-index: 1;
+}
+
+
+/*選單*/
+#menu{
+	width: 696px;
+	height: 17px;
+	top: 123px;
+	left: 194px;
+	position: absolute;
+	z-index: 2;
+
+
+}
+
+
+/*左方插圖*/
+#menupic{
+	width: 129px;
+	height: 210px;
+	top: 99px;
+	left: 68px;
+	position: absolute;
+	z-index: 1;
+
+}
+
+/*標題*/
+#title{
+	width: 733px;
+	height: 126px;
+	top: 184px;
+	left: 193px;
+	position: absolute;
+	z-index: 1;
+
+}
+
+/*優勢頁內容*/
+#casebody{
+	width: 887px;
+	height: 350px;
+	top: 344px;
+	left: 36px;
+	position: absolute;
+	z-index: 3;
+}
+
+
+
+/*底部logo*/
+#leglogo{
+	width: 166px;
+	height: 55px;
+	top: 546px;
+	left: 389px;
+	position: absolute;
+	z-index: 4;
+}

@@ -1,0 +1,4 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <TextBlock Canvas.Left="2" Canvas.Top="2" Foreground="Black" FontSize="50" FontWeight="Bold" Text="Drop Shadow!"/>
+  <TextBlock Foreground="Orange" FontSize="50" FontWeight="Bold" Text="Drop Shadow!"/>
+</Canvas>

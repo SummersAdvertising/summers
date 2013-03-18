@@ -1,0 +1,16 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Rectangle Width="200" Height="100">
+    <Rectangle.Fill>
+      <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.RelativeTransform>
+          <RotateTransform Angle="45"/>
+ 
+
+       </LinearGradientBrush.RelativeTransform>
+        <GradientStop Offset="0" Color="Red"/>
+        <GradientStop Offset="1" Color="Blue"/>
+      </LinearGradientBrush>
+    </Rectangle.Fill>
+  </Rectangle>
+
+</Canvas>

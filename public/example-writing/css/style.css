@@ -1,0 +1,88 @@
+﻿
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none;background:url(../images/bg.jpg) 0 0 repeat}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+.flt{overflow:hidden;margin:0 auto;clear:both}
+.limit{width:95%;margin:0 auto}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header{
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+header h1 {font-weight:900;font-family:微軟正黑體,Arial;background:url(../images/pen.png) no-repeat;background-size:contain;text-shadow:0 1px 0 #FFEA8C}
+header h1 span{color:#0076C3}
+
+hgroup{color:#687EA4;padding:5% 0 10% 0;}
+header h2,header h3{font-weight:300;font-family:微軟正黑體,Arial;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+
+aside{padding:50px 0 5px 0;background:url(../../images/back.png) 5px 45px no-repeat;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside a{color:#4D5350;font:300 17pt 微軟正黑體,Arial;display:block;width:150px;padding:0 0 0 50px;text-shadow:0 1px 0 #FFEA8C;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside:hover{background:url(../../images/back.png) 0 45px no-repeat}
+aside:hover a{}
+
+#title{color:#7D7D7D;border-bottom:1px solid #7F7F7F;padding:0 0 20px 0;font:300 微軟正黑體,Arial;line-height:1.7em}
+#title a{background:#92CFDE;color:#7D7D7D;padding:5px;line-height:1.7em;font:300 微軟正黑體,Arial;text-shadow:0 1px 0 #AADFEC}
+#title a:hover{background:#FFD931;text-shadow:0 1px 0 #FFEA8C;color:#222;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{line-height:1.7em;padding:35px 0;color:#1a3a42}
+article h4{color:#0096bb;font-weight:300;font-family:微軟正黑體,Arial}
+article p{padding:2% 0}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{float:left;padding:30px 0 0 0;line-height:2.7em}
+#link a{font-size:20pt;color:#222;background:url(../../example-design/images/line.png) 0 bottom repeat-x;padding:0 0 5px 0;text-shadow:0 1px 0 #fff;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#link a:hover{background:#FFD931}
+#arr{float:right;background-image:url(../../example-design/images/arr.png);background-repeat:no-repeat}
+#arr a{display:block;width:100%;height:100%}
+@-webkit-keyframes arr1 {
+	0% { background-position:47% bottom }	
+	100% { background-position:53% bottom }
+}
+@-moz-keyframes arr1 {
+	0% { background-position:47% bottom }	
+	100% { background-position:53% bottom }
+}
+@-webkit-keyframes arr2 {
+	0% { background-position:6% bottom }	
+	100% { background-position:12% bottom }
+}
+@-moz-keyframes arr2 {
+	0% { background-position:6% bottom }	
+	100% { background-position:12% bottom }
+}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+#forest{width:100%;height:134px;background:url(../../images/forest.png) 70% bottom no-repeat}
+footer{background:#000;padding:2% 0}
+#contact{float:left;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#contact a{color:#bcdde3;text-shadow:0 -1px 0 #000;display:block;background:url(../../images/contact-1.png) 0 0 no-repeat;text-align:center;background-size:contain}
+#contact a:hover{color:#23fde6}
+#contact a:active{background:url(../../images/contact-2.png) 0 0 no-repeat;background-size:contain;color:#23fde6;position:relative;top:1px}
+#contact a span{font-weight:700}
+#logo{float:right;background-image:url(../../images/logo.jpg);background-repeat:no-repeat;background-size:contain;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#logo a{display:block;width:100%;height:100%}
+#gplus{float:right;color:#fff;font:300 9pt 微軟正黑體,Arial;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#gplus a{color:#fff;font:300 9pt 微軟正黑體,Arial}

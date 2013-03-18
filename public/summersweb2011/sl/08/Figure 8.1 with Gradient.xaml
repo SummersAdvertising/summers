@@ -1,0 +1,15 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007">
+  <!-- Only one Rectangle: -->
+  <Rectangle Width="100" Height="22">
+    <Rectangle.Fill>
+      <LinearGradientBrush EndPoint="1,0">
+        <GradientStop Color="Aqua" Offset="0"/>
+        <GradientStop Name="middleStop1" Color="Aqua" Offset="0"/>
+        <GradientStop Name="middleStop2" Color="LightGray" Offset="0"/>
+        <GradientStop Color="LightGray" Offset="1"/>
+      </LinearGradientBrush>
+    </Rectangle.Fill>
+  </Rectangle>
+  <!-- Some text: -->
+  <TextBlock Name="progressBarText">0%</TextBlock>
+</Canvas>

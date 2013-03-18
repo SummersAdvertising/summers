@@ -1,0 +1,33 @@
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header .limit{width:90%;padding:0 0 5% 0}
+#wlf{background-position: center 0}
+header h3{width:100%;font-size:27pt;text-align:center;padding:10px 0}
+
+/*-----------------------------------------------------------------------控制---*/
+
+nav {width:100%;text-align:center}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article {width:100%;background:url(../images/spr.jpg) center 0 no-repeat}
+article .limit{max-width:90%;height:740px}
+article h2{font-size:20pt}
+article h1{font-size:34pt;line-height:1.2em}
+article ul{font-size:13pt}
+article li{background-position:0 6px}
+#imgbox{width:100%}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{padding:3% 0}
+#link a{padding:0 0 10px 0}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer .limit{width:90%}
+#contact{width:50%}
+#contact a{font-size:18pt;width:187px;height:62px;padding:15px 0 0 0}
+#logo{width:50%;height:50px;background-position:90% center}
+#gplus{width:50%;text-align:right;padding:0 5% 0 0}

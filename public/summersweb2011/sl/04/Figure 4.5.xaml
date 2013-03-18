@@ -1,0 +1,4 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Rectangle Name="rectangle" Fill="Tan" Stroke="Black" RadiusX="15" RadiusY="15"/>
+  <TextBlock Name="text" Foreground="White" FontSize="40" Text="Some simple text."/>
+</Canvas>

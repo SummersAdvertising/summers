@@ -1,0 +1,104 @@
+
+.text_gray_12 {
+	font-family: "微軟正黑體",Arial, Helvetica, "新細明體",sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #333333;
+}
+
+.text_red_11 {
+	font-family: "微軟正黑體",Arial, Helvetica, "新細明體",sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	color: #CC0000; 
+}
+
+.text_gray_11 {
+	font-family: "微軟正黑體",Arial, Helvetica, "新細明體",sans-serif;
+	font-size: 11px;
+	line-height: 20px;
+	color: #333333; 
+}
+
+.text_green_18 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+	color: #009999;
+	font-weight: bold;
+}
+
+.text_gray_15 {
+	font-family: "微軟正黑體",Arial, Helvetica, "新細明體",sans-serif;
+	font-size: 15px;
+	line-height: 25px;
+	color: #333333;
+}
+
+.text_black_50 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 50px;
+	line-height: 60px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.text_black_30 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 30px;
+	line-height: 35px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.text_black_18 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	color: #000000;
+	
+}
+
+.text_blue_18 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	color: #008AF0;
+	
+}
+
+.text_red_33 {
+	font-family: "微軟正黑體",Arial, Helvetica, "新細明體",sans-serif;
+	font-size: 32px;
+	line-height: 38px;
+	color: #CC0000; 
+}
+
+.text_black_24 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 23px;
+	line-height: 29px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.text_black_28 {
+	font-family: "微軟正黑體", Arial, Helvetica, "新細明體", sans-serif;
+	font-size: 28px;
+	line-height: 35px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.facebook_like {
+	margin-right: 0px; 
+	float: right;
+	margin-top: 4px;
+}
+
+a.FansLink {
+	text-decoration: none;
+}
+a.FansLink:hover {	
+	text-decoration: underline;
+}

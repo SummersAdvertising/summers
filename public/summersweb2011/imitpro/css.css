@@ -1,0 +1,382 @@
+﻿
+body {
+text-align:center;
+position: relative;
+} 
+
+#ribbon{position:absolute;top:-10px;left:43px;z-index:999}
+
+
+/*最外面的框*/
+#body {
+	margin: auto;
+	position: relative;
+	width: 1024px;
+	height: 850px;
+	z-index: 1;
+}
+
+/*遊戲頁面背景*/
+#bg {
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	position: relative;
+	width: 1024px;
+	height: 850px;
+	z-index: 1;
+}
+
+
+/*版權宣告*/
+#copyright {
+	position: absolute;
+	top: 790px;
+	left: 150px;
+	z-index: 2;
+}
+
+#home {
+	position: absolute;
+	top: 35px;
+	left: 899px;
+	z-index: 5;
+}
+
+
+
+/*大標題*/
+#title {
+	position: absolute;
+	top: 80px;
+	left: 80px;
+	width: 279px;
+	height: 222px;
+	z-index: 2;
+}
+
+/*案件編號的字*/
+#filename {
+	position: absolute;
+	top: 330px;
+	left:120px;
+	width: 780px;
+	height: 160px;
+	z-index: 2;
+}
+
+/*中間的小圖*/
+#playlist1 {
+	position: absolute;
+	border-width: 0px;
+	top: 460px;
+	left:180px;
+	width: 79px;
+	height: 89px;
+	z-index: 3;
+	
+}
+#playlist2 {
+	position: absolute;
+	border-width: 0px;
+	top: 477px;
+	left:320px;
+	width: 65px;
+	height: 96px;
+	z-index: 3;
+	
+}
+
+#playlist3 {
+	position: absolute;
+	border-width: 0px;
+	top: 489px;
+	left:452px;
+	width: 71px;
+	height: 94px;
+	z-index: 3;
+	
+}
+
+#playlist4 {
+	position: absolute;
+	border-width: 0px;
+	top: 468px;
+	left:582px;
+	width: 90px;
+	height: 104px;
+	z-index: 3;
+	
+}
+
+#playlist5 {
+	position: absolute;
+	border-width: 0px;
+	top: 493px;
+	left:732px;
+	width: 55px;
+	height: 53px;
+	z-index: 3;
+	
+}
+
+/*中間的小圖已破案*/
+#playoverlist1 {
+	position: absolute;
+	border-width: 0px;
+	top: 460px;
+	left:180px;
+	width: 79px;
+	height: 89px;
+	z-index: 3;
+	
+}
+#playoverlist2 {
+	position: absolute;
+	border-width: 0px;
+	top: 478px;
+	left:310px;
+	width: 65px;
+	height: 96px;
+	z-index: 3;
+	
+}
+
+#playoverlist3 {
+	position: absolute;
+	border-width: 0px;
+	top: 489px;
+	left:452px;
+	width: 71px;
+	height: 94px;
+	z-index: 3;
+	
+}
+
+#playoverlist4 {
+	position: absolute;
+	border-width: 0px;
+	top: 468px;
+	left:582px;
+	width: 90px;
+	height: 104px;
+	z-index: 3;
+	
+}
+
+#playoverlist5 {
+	position: absolute;
+	border-width: 0px;
+	top: 493px;
+	left:712px;
+	width: 55px;
+	height: 53px;
+	z-index: 3;
+	
+}
+
+
+/*左下角的偵探*/
+#leftman {
+	position: absolute;
+	border-width: 0px;
+	top: 600px;
+	left:50px;
+	z-index: 3;
+	
+}
+
+/*下方的說明文*/
+#keytext {
+	position: absolute;
+	border-width: 0px;
+	top: 650px;
+	left:330px;
+	z-index: 3;
+	
+}
+
+/*關鍵證物*/
+#playkey1 {
+	position: absolute;
+	border-width: 0px;
+	top: 676px;
+	left:346px;
+	z-index: 4;
+	
+}
+
+#playkey2 {
+	position: absolute;
+	border-width: 0px;
+	top: 685px;
+	left:457px;
+	z-index: 4;
+	
+}
+
+
+#playkey3 {
+	position: absolute;
+	border-width: 0px;
+	top: 684px;
+	left:561px;
+	z-index: 4;
+	
+}
+
+
+#playkey4 {
+	position: absolute;
+	border-width: 0px;
+	top: 690px;
+	left:673px;
+	z-index: 4;
+	
+}
+
+
+#playkey5 {
+	position: absolute;
+	border-width: 0px;
+	top: 688px;
+	left:784px;
+	z-index: 4;
+	
+}
+
+/*問題的背景*/
+#m1_paper {
+	position: absolute;
+	top: 10px;
+	left: 360px;
+	z-index: 3;
+}
+
+#m2_paper {
+	position: absolute;
+	top: 10px;
+	left: 360px;
+	z-index: 3;
+}
+
+#m3_paper {
+	position: absolute;
+	top: 10px;
+	left: 360px;
+	z-index: 3;
+}
+
+#m4_paper {
+	position: absolute;
+	top: 10px;
+	left: 360px;
+	z-index: 3;
+}
+
+#m5_paper {
+	position: absolute;
+	top: 10px;
+	left: 360px;
+	z-index: 3;
+}
+
+/*破案*/
+#gameover {
+	position: absolute;
+	top: 3px;
+	left: 540px;
+	z-index: 6;
+}
+
+
+/*問題感應區域*/
+#m1_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+#m2_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+#m3_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+#m4_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+#m5_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+
+/*問題感應區域答對*/
+#m1right_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+#m2right_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+#m3right_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+
+	z-index: 4;
+}
+
+#m4right_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+
+	z-index: 4;
+}
+
+#m5right_icon {
+	position: absolute;
+	top: 180px;
+	left: 470px;
+	z-index: 4;
+}
+
+
+/*答對大遮罩*/
+#right1 {
+	position: absolute;
+	width:100%;
+	height:120%;
+	background-color:black;
+	z-index: 10;
+	top: 0px;
+	filter:alpha(opacity=80);/*IE看的*/
+	opacity:0.8;                             /*FF看的*/
+}
+
+/*答對和答錯的圖*/
+

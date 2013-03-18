@@ -1,0 +1,42 @@
+
+/*-----------------------------------------------------------------------選單---*/
+
+nav{width:100%}
+nav h4{font-size:15pt}
+nav ul{max-width:100%;overflow:hidden;padding:10px 0 0 0;margin:0 auto}
+nav a{width:54px;height:54px;font-size:12px;padding:11px 0 0 0}
+nav a:hover{padding:6px 0 0 0}
+nav li:nth-child(1) a,nav li:nth-child(3) a{padding:20px 0 0 0}
+nav li:nth-child(1) a:hover,nav li:nth-child(3) a:hover{padding:15px 0 0 0}
+
+/*-----------------------------------------------------------------------標題---*/
+
+hgroup{width:100%;margin:10% 0}
+hgroup h2{font-size:17pt}
+hgroup h1{font-size:33pt}
+
+/*-----------------------------------------------------------------------示範案例---*/
+
+#title{padding:0 0 10px 0}
+#title a{max-width:62%}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{font-size:11pt}
+article .limit{padding:2% 0 0 0}
+article h3{font-size:15pt}
+article p{padding:2% 0}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{width:100%;text-align:center}
+#arr{width:100%;margin:5% 0 0 0;background-position:50% bottom;
+-webkit-animation:arr1 1s ease-in-out infinite alternate;
+-moz-animation:arr1 1s ease-in-out infinite alternate}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+#contact{width:100%}
+#contact a{font-size:16pt;width:187px;height:62px;padding:15px 0 0 0;margin:0 auto}
+#logo{width:100%;height:50px;background-position:center 0;margin:5% 0 0 0}
+#gplus{width:100%;text-align:center}

@@ -1,0 +1,43 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+<Path Canvas.Left="20" Canvas.Top="20" Stroke="Black" StrokeThickness="20" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat">
+  <Path.Data>
+    <PathGeometry>
+      <PathFigure StartPoint="0,0">
+        <LineSegment Point="100,0"/>
+      </PathFigure>
+    </PathGeometry>
+  </Path.Data>
+</Path>
+
+<Path Canvas.Left="20" Canvas.Top="50" Stroke="Black" StrokeThickness="20" StrokeStartLineCap="Square" StrokeEndLineCap="Square">
+  <Path.Data>
+    <PathGeometry>
+      <PathFigure StartPoint="0,0">
+        <LineSegment Point="100,0"/>
+      </PathFigure>
+    </PathGeometry>
+  </Path.Data>
+</Path>
+
+<Path Canvas.Left="20" Canvas.Top="80" Stroke="Black" StrokeThickness="20" StrokeStartLineCap="Round" StrokeEndLineCap="Round">
+  <Path.Data>
+    <PathGeometry>
+      <PathFigure StartPoint="0,0">
+        <LineSegment Point="100,0"/>
+      </PathFigure>
+    </PathGeometry>
+  </Path.Data>
+</Path>
+
+<Path Canvas.Left="20" Canvas.Top="110" Stroke="Black" StrokeThickness="20" StrokeStartLineCap="Triangle" StrokeEndLineCap="Triangle">
+  <Path.Data>
+    <PathGeometry>
+      <PathFigure StartPoint="0,0">
+        <LineSegment Point="100,0"/>
+      </PathFigure>
+    </PathGeometry>
+  </Path.Data>
+</Path>
+
+</Canvas>

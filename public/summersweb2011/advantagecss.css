@@ -1,0 +1,129 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	/*background-image: url(images/background2.jpg);*/
+	background-repeat:no-repeat;
+	background-color:#FFFFFF;
+	font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    
+	
+}
+
+a:link {
+	text-decoration: none;
+	color: #008AF0;
+}
+a:visited {
+	text-decoration: none;
+	color: #008AF0;
+}
+a:hover {
+	text-decoration: none;
+	color: #008AF0;
+}
+a:active {
+	text-decoration: none;
+	color: #008AF0;
+}
+
+a.link2:link {
+	text-decoration: none;
+	color: #CC0000;
+}
+a.link2:visited {
+	text-decoration: none;
+	color: #CC0000;
+}
+a.link2:hover {
+	text-decoration: none;
+	color: #CC6600;
+}
+a.link2:active {
+	text-decoration: none;
+	color: #CC0000;
+}
+
+
+/*最外框*/
+#bigbody {
+	width: 955px;
+	height: 1230px;
+	position:relative;
+	margin: 0 auto;
+	background-image:url(images/background2.jpg);
+	background-repeat: no-repeat;
+	background-color:#FFFFFF;
+	z-index: 1;
+	overflow: hidden; 
+	
+}
+
+
+/*側選單*/
+
+.slide-out-div {
+	   width: 325px;
+	   height: 296px;
+	   background-image:url(images/sidemenu_01.png);
+	   z-index:10;
+	   
+	   
+}
+
+/*側選單的影子*/
+#sideshadow{
+	width: 21px;
+	height: 296px;
+	top: 186px;
+	left: 0px;
+	position: relative;
+	z-index: 1;
+}
+
+/*首頁底*/
+#indexleg{
+	width: 887px;
+	height: 53px;
+	top: 567px;
+	left: 36px;
+	position: relative;
+	z-index: 3;
+}
+
+
+
+
+/*其他頁面右上角按鈕*/
+
+#rightbtn{
+	width: 220px;
+	height: 72px;
+	top: 30px;
+	left: 676px;
+	position: absolute;
+	z-index: 1;
+}
+
+/*優勢頁內容*/
+#advantagebody{
+	width: 887px;
+	height: 350px;
+	top: 156px;
+	left: 36px;
+	position: absolute;
+	z-index: 3;
+}
+
+
+
+/*底部logo*/
+#leglogo{
+	width: 166px;
+	height: 55px;
+	top: 546px;
+	left: 389px;
+	position: absolute;
+	z-index: 4;
+}

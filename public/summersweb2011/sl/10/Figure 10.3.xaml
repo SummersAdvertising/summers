@@ -1,0 +1,24 @@
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <MediaElement Source="05/Lake.wmv" MediaOpened="onMediaOpened" MediaEnded="onMediaEnded"/>
+
+  <!-- The Play Button -->
+  <Canvas MouseLeftButtonDown="play">
+    <Rectangle Height="25" Width="50" Stroke="White" Fill="#66FFFFFF"/>
+    <TextBlock Canvas.Left="7" Canvas.Top="2" Foreground="White">PLAY</TextBlock> 
+  </Canvas>
+
+  <!-- The Stop Button -->
+  <Canvas MouseLeftButtonDown="stop" Canvas.Left="55">
+    <Rectangle Height="25" Width="50" Stroke="White" Fill="#66FFFFFF"/>
+    <TextBlock Canvas.Left="6" Canvas.Top="2" Foreground="White">STOP</TextBlock> 
+  </Canvas>
+
+  <!-- The Pause Button -->
+  <Canvas MouseLeftButtonDown="pause" Canvas.Left="110">
+    <Rectangle Height="25" Width="50" Stroke="White" Fill="#66FFFFFF"/>
+    <TextBlock Canvas.Left="2" Canvas.Top="2" Foreground="White">PAUSE</TextBlock> 
+  </Canvas>
+
+  <!-- The Current Position -->
+  <TextBlock Name="positionText" Canvas.Left="2" Canvas.Top="26" Foreground="White"/>
+</Canvas>

@@ -1,0 +1,33 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  Background="Black" Width="600" Height="100">
+  <Canvas.Triggers>
+    <EventTrigger RoutedEvent="Canvas.Loaded">
+      <BeginStoryboard>
+        <Storyboard Storyboard.TargetProperty="Opacity" RepeatBehavior="Forever">
+          <DoubleAnimation Storyboard.TargetName="title1" BeginTime="0:0:2"
+            From="0" To="1" Duration="0:0:2" AutoReverse="True"/>
+          <DoubleAnimation Storyboard.TargetName="title2" BeginTime="0:0:6"
+            From="0" To="1" Duration="0:0:2" AutoReverse="True"/>
+          <DoubleAnimation Storyboard.TargetName="title3" BeginTime="0:0:10"
+            From="0" To="1" Duration="0:0:2" AutoReverse="True"/>
+          <DoubleAnimation Storyboard.TargetName="title4" BeginTime="0:0:14"
+            From="0" To="1" Duration="0:0:2" AutoReverse="True"/>
+          <DoubleAnimation Storyboard.TargetName="title5" BeginTime="0:0:18"
+            From="0" To="1" Duration="0:0:2" AutoReverse="True"/>
+        </Storyboard>
+      </BeginStoryboard>
+    </EventTrigger>
+  </Canvas.Triggers>
+  <Canvas Canvas.Left="20" Canvas.Top="30">
+    <TextBlock Opacity="0" Name="title1" Foreground="White" FontSize="30">
+      In a world</TextBlock>
+    <TextBlock Opacity="0" Name="title2" Foreground="White" FontSize="30">
+      where rich content must be created</TextBlock>
+    <TextBlock Opacity="0" Name="title3" Foreground="White" FontSize="30">
+      one book</TextBlock>
+    <TextBlock Opacity="0" Name="title4" Foreground="White" FontSize="30">
+      will explain it all...</TextBlock>
+    <TextBlock Opacity="0" Name="title5" Foreground="White" FontSize="30">
+      Silverlight 1.0 Unleashed</TextBlock>
+  </Canvas>
+</Canvas>

@@ -1,0 +1,2 @@
+﻿<TextBlock xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Text="This does not wrap."
+  Foreground="Red" Width="10" TextWrapping="NoWrap"/>

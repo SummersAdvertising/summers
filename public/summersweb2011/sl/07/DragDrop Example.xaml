@@ -1,0 +1,5 @@
+﻿<Canvas Background="transparent" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="2000" Height="2000">
+  <Ellipse Name="one" Width="200" Height="200" Fill="Red"/>
+  <Ellipse Name="two" Width="200" Height="200" Canvas.Left="100" Canvas.Top="100" Fill="Red"/>
+  <TextBlock Name="eventInfo" Canvas.Top="250" Text="Text"/>
+</Canvas>

@@ -1,0 +1,24 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+  <Canvas>
+    <Rectangle Fill="#FFAAAAAA" RadiusX="20" RadiusY="20" Width="120" Height="330"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="10" Fill="Red"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="115" Fill="Yellow"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="220" Fill="Green"/>
+  </Canvas>
+
+  <Canvas Canvas.Left="150" Canvas.Top="50">
+    <Rectangle Fill="#FFAAAAAA" RadiusX="20" RadiusY="20" Width="120" Height="330"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="10" Fill="Red"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="115" Fill="Yellow"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="220" Fill="Green"/>
+  </Canvas>
+
+  <Canvas Canvas.Left="300" Canvas.Top="100">
+    <Rectangle Fill="#FFAAAAAA" RadiusX="20" RadiusY="20" Width="120" Height="330"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="10" Fill="Red"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="115" Fill="Yellow"/>
+    <Ellipse Width="100" Height="100" Canvas.Left="10" Canvas.Top="220" Fill="Green"/>
+  </Canvas>
+
+</Canvas>

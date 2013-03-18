@@ -1,0 +1,3 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Rectangle Name="rectangle" Width="50" Height="50" Fill="Red" Stroke="Black" StrokeThickness="5"/>
+</Canvas>

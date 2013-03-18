@@ -1,0 +1,14 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <Image Source="06/TeamPhoto.jpg"/>
+  <Image Canvas.Top="507" Source="06/TeamPhoto.jpg">
+    <Image.RenderTransform>
+      <ScaleTransform ScaleY="-0.75"/>
+    </Image.RenderTransform>
+    <Image.OpacityMask>
+      <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Offset="0" Color="transparent"/>
+        <GradientStop Offset="1" Color="#44FFFFFF"/>
+      </LinearGradientBrush>
+    </Image.OpacityMask>
+  </Image>
+</Canvas>

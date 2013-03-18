@@ -1,0 +1,45 @@
+
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header{background:#007BC1;height:350px;position:relative;overflow:hidden;z-index:1}
+
+#parallax {width:100%;min-width:2000px;height:350px;position:absolute;bottom:0;overflow:hidden;z-index:1}
+.parallax-layer {position: absolute}
+#cloud-bg-b{background:url(../images/cloud-bg-b2.png) 0 bottom repeat-x;height: 350px;width:105%}
+#cloud-bg-f{background:url(../images/cloud-bg-f.png) center 190px repeat-x;height: 370px;width:110%}
+#p-cloud{background:url(../images/cloud2.png) center 50px no-repeat;height: 370px;width:105%}
+
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article{display:table;width:100%;height:320px}
+#vert{display:table-cell; vertical-align:middle}
+.flt{overflow:hidden;width:805px;margin:0 auto}
+article p{color:#032f54;font:300 25pt 微軟正黑體,Arial;float:right;text-shadow:1px 1px 0 #eee;padding:5% 0 0 0;line-height:1.7em}
+article a{color:#3575AC;font:300 25pt 微軟正黑體,Arial}
+article a:hover{text-decoration:underline}
+#man{width:344px;height:662px;background:url(../images/oops-man.png) 0 0 no-repeat;
+float:left;position:absolute;top:-2%;z-index:5}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer{height:280px;background:#E3E3E3}
+footer .limit{max-width:1024px;margin:0 auto}
+footer #dcr{width:83px;height:75px;background:url(../images/oops-1.png) 0 0 no-repeat;
+margin:0 auto;position:relative;top:-25px}
+footer li{float:left;height:170px;filter:alpha(opacity=100)}
+footer li:hover{filter:alpha(opacity=70)}
+footer li a{display:block;width:100%;height:100%;padding:150px 0 0 0;text-shadow:1px 1px 0 #fff;font:700 12pt 微軟正黑體,Arial;color:#222}
+footer ul{overflow:hidden;width:842px;margin:0 auto}
+footer .spr{width:90px;background:url(../images/oops-spr.jpg) center center no-repeat}
+footer .browser{width:143px;text-align:center}
+#ie{background:url(../images/oops-ie.jpg) center 0 no-repeat}
+#chr{background:url(../images/oops-chr.jpg) center 10px no-repeat}
+#ff{background:url(../images/oops-ff.jpg) center 5px no-repeat}
+#opr{background:url(../images/oops-opr.jpg) center 5px no-repeat}

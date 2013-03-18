@@ -1,0 +1,10 @@
+﻿<TextBlock xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  FontSize="20" Canvas.Left="70" Text="Help!">
+  <TextBlock.RenderTransform>
+    <TransformGroup>
+      <RotateTransform Angle="45"/>
+      <ScaleTransform ScaleX="5" ScaleY="1"/>
+      <SkewTransform AngleX="30"/>
+    </TransformGroup>
+  </TextBlock.RenderTransform>
+</TextBlock>

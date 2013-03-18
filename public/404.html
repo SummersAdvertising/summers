@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="Robots" content="noindex,nofollow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+<meta property="og:site_name" content="夏天廣告官方網站"/>
+<meta property="og:type" content="company"/>
+<meta property="og:image" content="images/thumbnail.jpg"/>
+<meta name="msvalidate.01" content="BD7CCAECD53F3EDDF89A9F154C15F65E" />
+<link rel="image_src" href="images/thumbnail.jpg"/>
+<title>夏天廣告×當代網頁設計觀點</title>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/404.css">
+<script src="js/jquery-1.8.1.min.js"></script>
+<script src="js/auto-full-height.min.js"></script>
+<script src="js/jquery.event.frame.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script>
+  jQuery(document).ready(function(){
+    jQuery('#parallax .parallax-layer')
+    .parallax({
+      mouseport: jQuery('#parallax')
+    });
+	
+	$("body").css("display", "none");
+    $("body").fadeIn(500);
+	$("#text a").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(500, redirectPage);
+    }); 	
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+  });
+</script>
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase();
+$.browser.version = (userAgent.match( /.(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0, '0'])[1];
+var version = $.browser.version;
+if ($.browser.msie) {
+	if (parseFloat(version) < 8.0) { 
+		document.location.href="oops.html" + window.location.hash;
+	}
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22983915-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38776205-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?488af24fc55cb9a4eeac7da38383e935";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+<header _height="none">
+  <div id="parallax">
+    <div class="parallax-layer" id="cloud-bg-b"> </div>
+    <div class="parallax-layer" id="cloud-bg-f"> </div>
+    <div class="parallax-layer" id="p-cloud"> </div>
+  </div>
+</header>
+<article _height="auto">
+  <section class="limit" >
+    
+      <div class="flt">
+        <div id="man"></div>
+        <div id="shadow"></div>
+        <div id="text">
+        <h1>404</h1>
+        <h2>not  found</h2>
+        <p>查詢的網頁，可能已重新命名或移除<br>
+         暫時無法使用！<br>
+         請回到夏天網站欣賞更多精彩作品</p>        
+          <a href="http://www.summers.com.tw" title="夏天廣告 | 網頁設計觀點">夏天廣告 Resurrection !</a>
+         </div>
+      </div>
+      <!--flt--> 
+    
+  </section>
+</article>
+<footer _height="none">
+  <section class="limit"> </section>
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007" Canvas.Left="20" Canvas.Top="20">
+  <!-- Only one Rectangle: -->
+  <Ellipse Width="300" Height="300" Stroke="LightGray">
+    <Ellipse.Fill>
+      <RadialGradientBrush>
+        <GradientStop Color="Brown" Offset="0"/>
+        <GradientStop Name="endPoint" Color="White" Offset="0"/>
+      </RadialGradientBrush>
+    </Ellipse.Fill>
+  </Ellipse>
+  <!-- Some text: -->
+  <TextBlock Name="progressBarText" FontSize="20" Foreground="White"
+    Canvas.Left="128" Canvas.Top="135">0%</TextBlock>
+</Canvas>

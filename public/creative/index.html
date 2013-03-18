@@ -1,0 +1,315 @@
+<!doctype html>
+<html><head>
+<!--[if lt IE 9]>
+<script src="../js/html5.js"></script>
+<link rel="stylesheet" href="css/wide.css">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+<meta name="keywords" content="網頁設計, 設計網頁, 網站設計, 設計網站"/>
+<meta name="description" content="夏天廣告創意，加上夏天專業網頁設計，結合網站技術、視覺設計、專業文案、創意規劃，持續服務品牌大廠，成為長期網站設計、網路行銷規劃協力夥伴。"/>
+<meta property="og:title" content="創意+網頁設計| 夏天廣告×當代網頁設計觀點 "/>
+<meta property="og:description" content="夏天廣告創意，加上夏天專業網頁設計，結合網站技術、視覺設計、專業文案、創意規劃，持續服務品牌大廠，成為長期網站設計、網路行銷規劃協力夥伴。"/>
+<meta property="og:site_name" content="夏天廣告官方網站"/>
+<meta property="og:type" content="company"/>
+<meta property="og:image" content="../images/thumbnail.jpg"/>
+<meta name="msvalidate.01" content="BD7CCAECD53F3EDDF89A9F154C15F65E" />
+<link rel="image_src" href="../images/thumbnail.jpg"/>
+<title>創意+網頁設計| 夏天廣告×當代網頁設計觀點 </title>
+<link rel="shortcut icon" href="../images/favicon.ico" >
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" media="screen and (max-width: 581px)" href="css/narrow.css" />
+<link rel="stylesheet" media="screen and (min-width: 582px) and (max-width: 1023px)" href="css/medium.css" />
+<link rel="stylesheet" media="screen and (min-width: 1024px)" href="css/wide.css" />
+<script src="../js/jquery-1.8.1.min.js"></script>
+<script src="../js/jquery.iosslider.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("body").css("display", "none");
+    $("body").fadeIn(250);
+	$("aside a,#contact a,#logo a").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(250, redirectPage);
+    }); 	
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+		
+	$('article .limit').iosSlider({
+		scrollbar: true,
+		snapToChildren: true,
+		desktopClickDrag: true,
+		scrollbarLocation: 'top',		
+		scrollbarBorderRadius: '0',
+		responsiveSlideWidth: true,
+		navSlideSelector: $('nav .button'),
+		infiniteSlider: true,
+		startAtSlide: window.location.hash.split("=")[1]||window.location.hash.substring(1)||'1',
+		onSlideChange: slideContentChange,
+		onSlideComplete: slideContentComplete,
+		onSliderLoaded: slideContentLoaded
+	});
+				
+	function slideContentChange(args) {
+		/* indicator */
+		$('nav .button').removeClass('selected');
+		$('nav .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+	}
+				
+	function slideContentComplete(args) {
+		if(!args.slideChanged) return false;
+		/* animation */		
+	}
+	function slideContentLoaded(args) {
+		/* indicator */
+		$('nav .button').removeClass('selected');
+		$('nav .button:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+	}
+});
+</script>
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase();
+$.browser.version = (userAgent.match( /.(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0, '0'])[1];
+var version = $.browser.version;
+if ($.browser.msie) {
+	if (parseFloat(version) < 8.0) { 
+		document.location.href="../oops.html" + window.location.hash;
+	}
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22983915-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38776205-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?488af24fc55cb9a4eeac7da38383e935";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+<header>
+  <section class="limit">
+  <aside> <a href="http://www.summers.com.tw#box4">夏天廣告</a> </aside>
+    <div class="flt">
+      <div id="wlf"></div>
+      <hgroup>
+        <h3>創意 + 網頁設計</h3>
+        <nav>
+          <div id="btbox">
+            <div id="bt1" class="button"></div>
+            <div id="bt2" class="button"></div>
+            <div id="bt3" class="button"></div>
+            <div id="bt4" class="button"></div>
+            <div id="bt5" class="button"></div>
+            <div id="bt6" class="button"></div>
+            <div id="bt7" class="button"></div>
+            <div id="bt8" class="button"></div>
+          </div>
+        </nav>
+      </hgroup>
+    </div>
+    <!--flt--> 
+  </section>
+  <!--limit--> 
+</header>
+<article>
+  <section class="limit" >
+    <div class="slider">
+      <div class ="page" id="page1">
+        <hgroup>
+          <h2>青春徵文活動</h2>
+          <h1>Windows 8 青春888公里</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計、程式撰寫</li>
+            <li>以年輕人的浪漫與活力為切入點</li>
+            <li>利用延伸閱讀，帶出感動</li>
+          </ul>
+          <div id="imgbox"><a href="http://win888.events.pixnet.net/" target="_blank"><img src="images/win8.jpg"></a></div>
+          <div id="link"><a href="http://win888.events.pixnet.net/" target="_blank">青春888公里</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page1-->
+      <div class ="page" id="page2">
+        <hgroup>
+          <h2>文化行銷顧問</h2>
+          <h1>大果文化</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>視覺規劃，網站設計</li>
+            <li>展現文化顧問公司的人文與深度</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.corecultural.com/" target="_blank"><img src="images/core.jpg"></a></div>
+          <div id="link"><a href="http://www.corecultural.com/" target="_blank">大果文化</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page2-->
+      <div class ="page" id="page3">
+        <hgroup>
+          <h2>FB活動</h2>
+          <h1>IE9關燈狂歡節</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計美術、程式撰寫</li>
+            <li>高難度無贈品吸引，近4000人參加 → <span>成功原因：內容與活動參與者有深度互動</span></li>
+            <li>以協助台灣動物能繼續狂歡為主題傳遞減碳知識</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.microsoft.com/taiwan/promo/IE9earthday/" target="_blank"><img src="images/ie9ed.jpg"></a></div>
+          <div id="link"><a href="http://www.microsoft.com/taiwan/promo/IE9earthday/" target="_blank">IE9關燈狂歡節</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page3-->
+      <div class ="page" id="page4">
+        <hgroup>
+          <h2>介紹IE釘選功能</h2>
+          <h1>消息靈通的大大</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計、程式撰寫</li>
+            <li>以網站上全知全能的大大，做為創意的出發點</li>
+            <li>豐富生動的功能介紹，及大量的配合網站介紹</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.microsoft.com/taiwan/promo/ie9-pinned-sites/" target="_blank"><img src="images/pins.jpg"></a></div>
+          <div id="link"><a href="http://www.microsoft.com/taiwan/promo/ie9-pinned-sites/" target="_blank">消息靈通的大大</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page4-->
+      <div class ="page" id="page5">
+        <hgroup>
+          <h2>與科技宅男熱血共鳴</h2>
+          <h1>虛擬化戰士首部曲</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計、程式撰寫</li>
+            <li>以鋼鐵擂台機器人登場畫面，象徵學習虛擬化技術的IT 人員</li>
+            <li>同時繪製虛擬化戰士團圖騰，延伸製作證書與T恤等等</li>
+            <li>參加者成效卓著</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.microsoft.com/taiwan/promo/virtualhero/hypermeeting/" target="_blank"><img src="images/vh.jpg"></a></div>
+          <div id="link"><a href="http://www.microsoft.com/taiwan/promo/virtualhero/hypermeeting/" target="_blank">虛擬化戰士首部曲</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page5-->
+      <div class ="page" id="page6">
+        <hgroup>
+          <h2>鼓勵與感謝</h2>
+          <h1>中小企業紅利旺</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計、程式撰寫</li>
+            <li>感謝中小企業的辛苦，感謝中小企業的每分努力</li>
+            <li>不只是採購積點專案，更是經營品牌與客戶的關係</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.microsoft.com/taiwan/promo/eq/membermileage/" target="_blank"><img src="images/mbml.jpg"></a></div>
+          <div id="link"><a href="http://www.microsoft.com/taiwan/promo/eq/membermileage/" target="_blank">中小企業紅利旺</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page6-->
+      <div class ="page" id="page7">
+        <hgroup>
+          <h2>租車不如，租個安全靠山</h2>
+          <h1>趨勢中小企業資安特勤署</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計、程式撰寫</li>
+            <li>以袋鼠育兒、行動敏捷的特色，塑造出趨勢一系列中小企業租用型資安服務的吉祥物</li>
+            <li>危機四伏的街頭，在強悍的特勤署防護下，中小企業得以昂首大步的前進</li>
+            <li>文字也借用目前打得火熱的租車風潮，讓企業更快認同租用服務的價值</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.trendmicro.com.tw/micro/smbhosted/index.html" target="_blank"><img src="images/smbh.jpg"></a></div>
+          <div id="link"><a href="http://www.trendmicro.com.tw/micro/smbhosted/index.html" target="_blank">趨勢中小企業資安特勤署</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page7-->
+      <div class ="page" id="page8">
+        <hgroup>
+          <h2>鼓勵中小企業升級</h2>
+          <h1>換檔上坡賺錢</h1>
+        </hgroup>
+        <div class="flt">
+          <ul>
+            <li>全站創意發想，文案、網頁設計、程式撰寫</li>
+            <li>講提升競爭力很老套，用更興奮的語調與中小企業溝通才有效</li>
+          </ul>
+          <div id="imgbox"><a href="http://www.microsoft.com/taiwan/promo/eq/goupmoney/" target="_blank"><img src="images/gpm.jpg"></a></div>
+          <div id="link"><a href="http://www.microsoft.com/taiwan/promo/eq/goupmoney/" target="_blank">換檔上坡賺錢</a> </div>
+          <!--link--> 
+        </div>
+        <!--flt--> 
+      </div>
+      <!--page8--> 
+    </div>
+    <!--slider--> 
+    
+  </section>
+  <!--limit--> 
+</article>
+<div id="forest"></div>
+<footer>
+  <section class="limit">
+    <div class="flt">
+      <div id="contact"><a href="../contact.html">業務聯絡 <span>></span></a></div>
+      <div id="logo"><a href="http://www.summers.com.tw" title="夏天廣告 | 網頁設計觀點"></a></div>
+      <div id="gplus">Copyright © <a href="https://plus.google.com/109325166536931705977?rel=author" target="_blank">Summers</a></div>
+    </div>
+    <!--flt--> 
+  </section>
+  <!--limit--> 
+</footer>
+</body>
+</html>

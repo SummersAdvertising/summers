@@ -1,0 +1,96 @@
+﻿
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%;background:url(../images/bg.gif)}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none;background:url(../images/bg.png) center 0 repeat-x;padding:50px 0 0 0}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+.flt{overflow:hidden;margin:0 auto;clear:both}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+header{background:url(../images/header.jpg) center center no-repeat}
+header .limit{margin:0 auto}
+#wlf{background-image:url(../../images/weightlifting.png);background-repeat:no-repeat;height:160px}
+hgroup{padding:2% 0 0 0;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+h1,h2,h3{color:#687EA4;font-weight:300;font-family:微軟正黑體,Arial;text-shadow:0 1px 0 #E4ECFA}
+
+aside{padding:4px 0 50px 0;background:url(../../images/back.png) 5px 0px no-repeat;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside a{color:#4D5350;font:300 17pt 微軟正黑體,Arial;display:block;width:150px;padding:0 0 0 50px;text-shadow:0 1px 0 #fff;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside:hover{background:url(../../images/back.png) 0 0 no-repeat}
+aside:hover a{}
+
+/*-----------------------------------------------------------------------控制---*/
+
+nav #btbox{width:240px;height:15px;overflow:hidden;margin:0 auto}
+nav .button {float:left;width:15px;height:15px;margin:0 15px 0 0;border-radius:50%}
+nav .selected {background:#000!important}
+#bt1{background:#56BEF9}
+#bt2{background:#7AEA27}
+#bt3{background:#3489E9}
+#bt4{background:#EF9331}
+#bt5{background:#F9566D}
+#bt6{background:#12B7B1}
+#bt7{background:#F4C022}
+#bt8{background:#BE7EFF}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article .limit{width:90%;margin:0 auto;}
+.slider{width:100%;height:100%}
+.page {position:relative;width:100%;height:100%;overflow:hidden}
+
+/*-----------------------------------------------------------------------文字---*/
+
+article ul{color:#8d8d8d;line-height:1.7em;padding:5% 0}
+article li{padding:0 0 0 20px;background-image:url(../images/li.gif);background-repeat:no-repeat}
+article li span{color:#d72323}
+
+/*-----------------------------------------------------------------------圖片---*/
+
+#imgbox{text-align:center}
+#imgbox a{background:url(../../example-design/images/arr.png) center center no-repeat;display:block;max-width:100%;height:100%;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+#imgbox a:hover{background:url(../../example-design/images/arr.png) center center no-repeat}
+#imgbox a:hover img{opacity:.25;filter:alpha(opacity=25)}
+#imgbox img{max-width:100%;height:auto;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+
+/*-----------------------------------------------------------------------連結---*/
+
+#link{text-align:center}
+#link a{font-size:20pt;color:#222;background:url(../../example-design/images/line.png) 0 bottom repeat-x;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+#link a:hover{background:#2EBC00;color:#fff}
+
+/*-----------------------------------------------------------------------森林---*/
+
+#forest{width:100%;height:134px;background:url(../../images/forest.png) 70% bottom no-repeat}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer{background:#000;padding:2% 0}
+footer .limit{margin:0 auto}
+#contact{float:left;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#contact a{color:#bcdde3;text-shadow:0 -1px 0 #000;display:block;background:url(../../images/contact-1.png) 0 0 no-repeat;text-align:center;background-size:contain}
+#contact a:hover{color:#23fde6}
+#contact a:active{background:url(../../images/contact-2.png) 0 0 no-repeat;background-size:contain;color:#23fde6;position:relative;top:1px}
+#contact a span{font-weight:700}
+#logo{float:right;background-image:url(../../images/logo.jpg);background-repeat:no-repeat;background-size:contain;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#logo a{display:block;width:100%;height:100%}
+#gplus{float:right;color:#fff;font:300 9pt 微軟正黑體,Arial;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#gplus a{color:#fff;font:300 9pt 微軟正黑體,Arial}

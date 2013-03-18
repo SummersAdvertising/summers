@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+<head>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="css/wide.css">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+<meta name="keywords" content="網頁設計, 網站設計, 設計網頁, 設計網站"/>
+<meta name="description" content="什麼是完整的網頁設計？夏天廣告掌握網站設計兩大關鍵：超越設計、網頁文字。超越設計，指的是加強組織企劃的網站設計觀念；網頁文字則為企業發掘出深度溝通的力量。誠懇分享我們多年的行銷／設計經驗，夏天廣告為您整理當代網站設計觀點。"/>
+<meta property="og:title" content="夏天廣告 Summers Adevertising ×當代網頁設計觀點 "/>
+<meta property="og:description" content="什麼是完整的網頁設計？夏天廣告掌握網站設計兩大關鍵：超越設計、網頁文字。超越設計，指的是加強組織企劃的網站設計觀念；網頁文字則為企業發掘出深度溝通的力量。誠懇分享我們多年的行銷／設計經驗，夏天廣告為您整理當代網站設計觀點。"/>
+<meta property="og:site_name" content="夏天廣告官方網站"/>
+<meta property="og:type" content="company"/>
+<meta property="og:image" content="http://www.summers.com.tw/images/thumbnail.jpg"/>
+<meta name="msvalidate.01" content="BD7CCAECD53F3EDDF89A9F154C15F65E" />
+<title>夏天廣告 Summers Advertising ×當代網頁設計觀點</title>
+<link rel="image_src" href="images/thumbnail.jpg"/>
+<link rel="shortcut icon" href="images/favicon.ico" >
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" media="screen and (max-width: 581px)" href="css/narrow.css" />
+<link rel="stylesheet" media="screen and (min-width: 582px) and (max-width: 1023px)" href="css/medium.css" />
+<link rel="stylesheet" media="screen and (min-width: 1024px)" href="css/wide.css" />
+<script src="js/jquery-1.8.1.min.js"></script>
+<script src="js/anchor-art.js"></script>
+<script src="js/jquery.superscrollorama.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/jquery.event.frame.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/konami.js"></script>
+<script type="text/javascript">
+	konami = new Konami()
+	konami.iphone.code = function() {
+		$('#wrestler').fadeOut(0).delay(2750).fadeIn(0)
+		$('#big-wrestler').fadeIn(0).delay(250).animate({bottom:'0'},500).delay(1500).animate({bottom:'-200%'},500).fadeOut(0)
+	}
+	konami.code = function() {
+		$('#wrestler').fadeOut(0).delay(2750).fadeIn(0)
+		$('#big-wrestler').fadeIn(0).delay(250).animate({bottom:'0'},500).delay(1500).animate({bottom:'-200%'},500).fadeOut(0)		
+	}
+	konami.load()
+</script>
+		
+<script>
+jQuery(document).ready(function(){	
+	var controller = $.superscrollorama();
+	controller.addTween('#box1', TweenMax.from( $('#wrong'),  .75 ,  {css:{opacity:0,'position':'relative','top':'-15px'}} ));
+	controller.addTween('#box1', TweenMax.from( $('#dcr-1'),  .75 ,  {css:{opacity: 0}} ));	
+	controller.addTween('#box2', TweenMax.to( $('#move-w'),  .75 ,  {css:{top:0}} ));		
+	controller.addTween('#box2', TweenMax.from( $('#box2 .item'),  .75 ,  {css:{opacity: 0}} ));	
+	controller.addTween('#box4', TweenMax.from( $('#wlf'),  .75 ,  {css:{opacity:0,'position':'relative','top':'-15px'}} ));
+	controller.addTween('#box5', TweenMax.from( $('#item-left-1'), 1.5 ,  {css:{opacity: 0, left:'-49%'}} ));
+	controller.addTween('#box5', TweenMax.from( $('#item-left-2'),  2 ,  {css:{opacity: 0, left:'-47%'}} ));
+	controller.addTween('#box5', TweenMax.from( $('#item-left-3'),  2.5 ,  {css:{opacity: 0, left:'-40%'}} ));
+	controller.addTween('#box5', TweenMax.from( $('#item-right-1'),  1.5 ,  {css:{opacity: 0,right:'-30%'}} ));
+	controller.addTween('#box5', TweenMax.from( $('#item-right-2'),  2 ,  {css:{opacity: 0,right:'-45%'}} ));
+	controller.addTween('#box5', TweenMax.from( $('#item-right-3'),  2.5 ,  {css:{opacity: 0,right:'-40%'}} ));
+	controller.addTween('#writer', TweenMax.from( $('#dcr-4'),  .75 ,  {css:{opacity: 0}} ));
+	controller.addTween('#writer', TweenMax.to( $('#move-d'),  .75 ,  {css:{top:0}} ));
+	controller.addTween('#pg4', TweenMax.from( $('#forest'),  2 ,  {css:{opacity:0,'position':'relative','top':'25px'}} ));
+});
+</script>
+<script>
+  jQuery(document).ready(function(){
+    jQuery('#parallax .parallax-layer')
+    .parallax({
+      mouseport: jQuery('#parallax')
+    });
+	
+	$("body").css("display", "none");
+    $("body").fadeIn(500);
+	$("#box3 a,#box4 a,aside a,#pg5 a,#forest a,#contact a,#logo a").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(500, redirectPage);
+    }); 	
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+  });
+</script>
+<script>
+$(function(){
+	$("#link-l a").mouseover(function() {
+		$("#wrestler").removeClass().addClass('lift-l');
+	});
+	$("#link-r a").mouseover(function() {
+		$("#wrestler").removeClass().addClass('lift-r');
+	});
+	$("#link a").mouseout(function(){
+		$("#wrestler").removeClass()
+	});
+});
+</script>
+<script type="text/javascript">
+		<!--//--><![CDATA[//><!--
+			var images = new Array()
+			function preload() {
+				for (i = 0; i < preload.arguments.length; i++) {
+					images[i] = new Image()
+					images[i].src = preload.arguments[i]
+				}
+			}
+			preload(
+				"images/wrestler-l.png",
+				"images/wrestler-r.png",
+				"images/weightlifting-up.png"
+			)
+		//--><!]]>
+</script>
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase();
+$.browser.version = (userAgent.match( /.(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0, '0'])[1];
+var version = $.browser.version;
+if ($.browser.msie) {
+	if (parseFloat(version) < 8.0) { 
+		document.location.href="oops.html" + window.location.hash;
+	}
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22983915-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38776205-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?488af24fc55cb9a4eeac7da38383e935";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+<div id="big-wrestler"></div>
+<aside itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> <a href="contact.html" itemprop="url"  title="業務聯絡"><span itemprop="title">業務聯絡</span></a> <span>★</span> <a href="works/enterprise.html" itemprop="url"><span itemprop="title" title="作品">作品</span></a> <span>★</span> <a href="service.html" itemprop="url" title="服務項目"><span itemprop="title">服務項目</span></a> </aside>
+<nav id="move-w" class="move"><a href="#writer">請看我的左腳─網頁文字</a></nav>
+<nav id="move-d" class="move"><a href="#design">請看我的右腳─網頁設計</a></nav>
+<header>
+  <div id="banner">
+    <hgroup>
+      <h1>夏天廣告×當代網頁設計觀點</h1>
+      <h2>網頁文字，與網頁設計同等重要<br>
+        <strong>有銷售力的網站，要有兩隻腳</strong></h2>
+    </hgroup>
+    <section>
+      <div id="earth"></div>
+      <div id="cloud"></div>
+      <div id="wrestler"></div>
+    </section>
+    <div id="link">
+      <div id="link-l"><a href="#design">右腳─網頁設計<br>
+        <strong>結合企劃的當代觀點</strong></a></div>
+      <div id="link-r"><a href="#writer">左腳─網頁文字<br>
+        <strong>被忽視的力量</strong></a></div>
+    </div>
+    <!--link--> 
+  </div>
+  <!--banner-->
+  
+  <div id="parallax">
+    <div class="parallax-layer" id="cloud-bg-b"> </div>
+    <div class="parallax-layer" id="cloud-bg-f"> </div>
+    <div class="parallax-layer" id="p-cloud"> </div>
+  </div>
+  <!--parallax--> 
+  
+</header>
+<article id="design">
+  <div id="box1" class="box">
+    <section class="limit">
+      <hgroup>
+        <h1>右腳</h1>
+        <h2>網頁設計</h2>
+      </hgroup>
+      <h3>結合企劃的當代觀點</h3>
+      <div id="dcr-1" class="dcr"></div>
+      <div class="flt">
+        <div id="wrong">
+          <div id="x"></div>
+        </div>
+        <div id="text">
+          <h4>設計的錯與對</h4>
+          <ul>
+            <li><b>1. 版型10年來都一樣：</b><em>網頁設計</em>是100%實用主義，一直在進化，如果版型是你5年前就看過 ，八成有問題。</li>
+            <li><b>2. 整體好看就是好：</b>很多網站設計不堪用的基本因素，網站要滿足的是「商業訊息突顯」、「易於閱讀」、與「良好的使用者經驗」</li>
+            <li><b>3. 沒有企劃的網頁設計：</b>網站於是變成企業的組織與營運報告，沒有商業，行銷與業務目標</li>
+          </ul>
+        </div>
+        <!--text--> 
+      </div>
+      <!--flt--> 
+    </section>
+    <!--limit--> 
+  </div>
+  <!--box1-->
+  
+  <div id="box2" class="box">
+    <section class="limit">
+      <div class="flt">
+        <h4>我們的看法</h4>
+        <ul id="intro">
+          <li>1. <em>網頁設計</em>要跟著「商業目的」走</li>
+          <li>2. 網頁設計要跟著「網友閱讀的目的」走</li>
+          <li>3. 網頁設計要跟著「裝置的發展」走</li>
+        </ul>
+      </div>
+      <!--flt--> 
+      <!--intro-->
+      <div id="dcr-2" class="dcr"></div>
+      <p>以下是我們與企業洽談過程的大綱</p>
+      <div id="circle">
+        <ul id="step">
+          <li class="row-1">
+            <div>詢問：製作網站的商業目的</div>
+          </li>
+          <li class="row-2">
+            <div>提出：網站目的企劃、網站建置企劃</div>
+          </li>
+          <li class="row-3">
+            <div>討論與確認</div>
+          </li>
+          <li class="row-4">
+            <div>提出：網頁設計提案、文案提案<br>
+              100%客製功能確認</div>
+          </li>
+        </ul>
+        <!--step-->
+        <div id="client" class="item"></div>
+        <div id="arr-d" class="item"></div>
+        <div id="chart" class="item"></div>
+        <div id="arr-u" class="item"></div>
+      </div>
+      <!--circle--> 
+    </section>
+    <!--limit--> 
+  </div>
+  <!--box2-->
+  
+  <div id="box3" class="box">
+    <section class="limit">
+      <div id="dcr-3" class="dcr"></div>
+      <div class="flt">
+        <h4>案例探討</h4>
+        <div class="dot"></div>
+      </div>
+      <!--flt-->
+      <ul>
+        <li class="row-1">精簡選單設計，使訊息突顯：<br>
+          <a href="example-design/desktopupgrade.html" title="微軟左右手網站--網頁精簡選單設計">微軟左右手網站</a>、<a href="example-design/kishuan.html" title="紀州庵--網頁精簡選單設計">紀州庵</a></li>
+        <li class="row-2">網站首頁帶入企業優勢介紹：<a href="example-design/ykhome.html" title="誼光家事--網站首頁帶入企業優勢">誼光家事</a></li>
+        <li class="row-3">搜尋最重要：<a href="example-design/miilab.html" title="Miilab--網頁選單設計">Miilab</a>，請注意上方選單設計</li>
+        <li class="row-4">非Flash遊戲的網頁設計：<a href="example-design/imitpro.html" title="IT 懸案大調查--非 Flash 遊戲的網頁設計">IT懸案大調查</a></li>
+        <li class="row-5">動態網頁設計：<a href="example-design/win888.html" title="青春 888 公里--動態網頁設計">青春888公里</a></li>
+        <li class="row-6">全部側翻網頁設計：<a href="example-design/aplusclub.html" title="中小企業 A+ 會員--全部側翻網頁設計">中小企業A+會員</a></li>
+        <li class="row-7">零翻頁網站設計：<a href="example-design/magic77.html" title="奇蹟 77--零翻頁網站設計">奇蹟77</a></li>
+      </ul>
+      <div class="more"><a href="works/enterprise.html" title="更多作品">更多作品 <span>></span></a></div>
+    </section>
+    <!--limit--> 
+  </div>
+  <!--box3-->
+  
+  <div id="box4" class="box">
+    <section class="limit">
+      <div id="dcr-5" class="dcr"></div>
+      <h4>提供真正的<br>
+        創意服務</h4>
+      <h5>針對行銷需求，發想引人注目的視覺：<br>
+        創意 + 網頁設計 = 夏天廣告</h5>
+      <div class="dot"></div>
+      <div class="flt">
+        <ul>
+          <li class="row-1">人文：<a href="creative/index.html#1" title="青春 888 公里--人文的網頁設計">青春888公里</a>、<a href="creative/index.html#2" title="大果文化--人文的網頁設計">大果文化</a></li>
+          <li class="row-2">溫馨感人：<a href="creative/index.html#3" title="關燈狂歡節--溫馨感人的網頁設計">關燈狂歡節</a></li>
+          <li class="row-3">年輕朝氣：<a href="creative/index.html#4" title="消息靈通的大大--年輕朝氣的網頁設計">消息靈通的大大</a></li>
+          <li class="row-4">科技：<a href="creative/index.html#5" title="虛擬化戰士首部曲--科技的網頁設計">虛擬化戰士首部曲</a></li>
+          <li class="row-5">關懷：<a href="creative/index.html#6" title="中小企業紅利旺--關懷的網頁設計">中小企業紅利旺</a></li>
+          <li class="row-6">企業應用：<a href="creative/index.html#7" title="中小企業資安特勤署--企業應用的網頁設計">中小企業資安特勤署</a>、<br>
+            <a href="creative/index.html#8" title="換檔上坡賺錢--企業應用的網頁設計">換檔上坡賺錢</a></li>
+        </ul>
+        <div id="wlf">
+          <div id="sweat-l" class="sweat"></div>
+          <div id="sweat-r" class="sweat"></div>
+        </div>
+      </div>
+    </section>
+    <!--limit--> 
+  </div>
+  <!--box4-->
+  
+  <div id="box5" class="box">
+    <section class="limit">
+      <div id="mobile"></div>
+      <div id="item-left-1" class="item"></div>
+      <div id="item-left-2" class="item"></div>
+      <div id="item-left-3" class="item"></div>
+      <div id="item-right-1" class="item"></div>
+      <div id="item-right-2" class="item"></div>
+      <div id="item-right-3" class="item"></div>
+      <div class="flt">
+        <h4>使用技術</h4>
+        <div class="dot"></div>
+      </div>
+      <!--flt-->
+      <ul>
+        <li class="row-1">no flash的<em>網頁設計</em></li>
+        <li class="row-2">以html 5 + javascript為核</li>
+        <li class="row-3">因為要平板、手機兼容</li>
+        <li class="row-4">適應性設計</li>
+        <li class="row-5">也投入APP開發</li>
+        <li class="row-6">（目前Windows 8 APP有成品）</li>
+        <li class="row-7">特別推薦RoR ──</li>
+        <li class="row-8">敏捷開發技術，<strong>才能100%客製</strong></li>
+        <li class="row-9">全部自行掌握 </li>
+      </ul>
+    </section>
+    <!--limit--> 
+  </div>
+  <!--box5--> 
+  
+</article>
+<article id="writer">
+  <section class="limit">
+    <div class="flt">
+      <hgroup>
+        <h1>左腳</h1>
+        <h2>網頁文字</h2>
+      </hgroup>
+      <h3>被忽視的力量</h3>
+      <div id="dcr-4" class="dcr"></div>
+    </div>
+    <section class="paragraph" id="pg1">
+      <h4>一字換千金</h4>
+      <p>文字能說細節，文字擅長說故事，在融合了事實與情感的文字魔術中，消費者被深深打動了，他極想採取一些行動…..原來文字是網站裡的推銷員啊！</p>
+    </section>
+    <section class="paragraph" id="pg2">
+      <h4>你愛文字，天天發生</h4>
+      <p> 文字影響你很大，這件事天天在發生，如：<br>
+        1. 部落客文章讓你也想試試這個商品<br>
+        2. 傳統直效行銷DM穿插著證言，讓你覺得這東西真不錯<br>
+        3. 新聞公關報導影響了你<br>
+        4. 網路好文吸引你看完之後再傳給別人 </p>
+    </section>
+    <section class="paragraph" id="pg3">
+      <div id="del"></div>
+      <a id="bt-1" class="bt"></a><a id="bt-2" class="bt"></a>
+      <h4>短裙文也迷人</h4>
+      <p> 寫文案並非只在長篇大論時有用，<br>
+        3-5個字的講究，一樣很有效：　<br>
+        比如，你的網頁想推銷一個免費會員，<br>
+        在按鈕上　　　　　　比　　　　　　來得更吸睛，<br>
+        當然實際應用的學問比這個更多更大。 </p>
+    </section>
+    <section class="paragraph" id="pg4">
+      <h4>誠實面對需求</h4>
+      <p> 夏天是廣告公司，總是在替客戶分析訊息，發想溝通的文字該如何講才會深入人心，所以我們願意與客戶誠實的面對文案的必要性。 <br>
+        <br>
+        而一般的設計公司、網站公司多半不願意談這塊。 </p>
+    </section>
+    <section class="paragraph" id="pg5">
+      <h4>案例探討</h4>
+      <p> <a href="example-writing/ykhome.html" title="誼光家事--網頁文字設計"> 誼光家事</a>：首頁就寫出承諾與服務，客戶認為這樣極為清楚<br>
+        <a href="example-writing/eyeplus.html" title="聚英視光銷售頁--網頁文字設計"> 聚英視光銷售頁 </a>：從眼睛的痛苦出發，交錯病痛的原因及治療的想法，突顯出專業與對患者的關心。這樣的頁面也對搜尋行銷很有幫助，裡面有太多關鍵字了。 </p>
+    </section>
+  </section>
+  <!--limit-->
+  <div id="forest">
+    <div class="more"><a href="works/enterprise.html" title="更多作品">更多作品 <span>></span></a></div>
+  </div>
+</article>
+<footer>
+  <section class="limit">
+    <div class="flt">
+      <div id="contact"><a href="contact.html" title="業務聯絡">業務聯絡 <span>></span></a></div>
+      <div id="logo"><a href="http://www.summers.com.tw" title="夏天廣告 | 網頁設計觀點"></a></div>
+      <div id="gplus">Copyright © <a href="https://plus.google.com/109325166536931705977?rel=author" target="_blank">Summers</a></div>
+    </div>
+    <!--flt--> 
+  </section>
+  <!--limit--> 
+</footer>
+</body>
+</html>

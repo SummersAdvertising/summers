@@ -1,0 +1,8 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007">
+  <!-- The background: -->
+  <Rectangle Fill="LightGray" Width="100" Height="22"/>
+  <!-- The growing bar: -->
+  <Rectangle Name="progressBar" Fill="Lime" Width="0" Height="22"/>
+  <!-- Some text: -->
+  <TextBlock Name="progressBarText">0%</TextBlock>
+</Canvas>

@@ -1,0 +1,12 @@
+﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007">
+  <Rectangle Name="rectangle" Width="50" Height="50" Fill="Red" Stroke="Black"
+    StrokeThickness="5">
+    <Rectangle.Resources>
+      <Storyboard Name="storyboard" 
+        Storyboard.TargetProperty="Width"
+        Storyboard.TargetName="rectangle">
+        <DoubleAnimation Name="animation" Duration="0:0:1"/>
+      </Storyboard>
+    </Rectangle.Resources>
+  </Rectangle>
+</Canvas>

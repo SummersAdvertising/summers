@@ -1,0 +1,116 @@
+
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%;background:url(../images/bg.gif)}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none;background:#B5926B}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+.limit{width:95%;margin:0 auto}
+.flt{overflow:hidden;margin:0 auto;clear:both}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+aside{padding:50px 0;background:url(../../images/back.png) 5px 49px no-repeat;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside a{color:#19293E;font:300 20pt 微軟正黑體,Arial;display:block;width:160px;padding:0 0 0 50px;text-shadow:0 -1px #A38360;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside:hover{background:url(../../images/back.png) 0 49px no-repeat}
+aside:hover a{}
+
+header hgroup{color:#fff;background:url(../images/icon.png) no-repeat;margin:0 auto}
+header h1{font-weight:300;font-family:微軟正黑體,Arial;text-shadow:0 -1px #A38360;padding:5% 0}
+header h2{font-weight:300;font-family:微軟正黑體,Arial;text-shadow:0 -1px #A38360;line-height:1.7em}
+
+/*-----------------------------------------------------------------------分類---*/
+
+header ul{overflow:hidden}
+header li{text-align:center;float:left;width:16.6%;position:relative}
+header li a{font-weight:300;font-family:微軟正黑體,Arial;display:block;width:100%;padding:40px 0 0 0;color:#fff;text-shadow:0 -1px #A38360}
+header li div{height:15px;width:100%;position:absolute;top:0;left:0;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#bar1{background:#353535}
+#bar2{background:#57A961}
+#bar3{background:#33b5e0}
+#bar4{background:#5236AB}
+#bar5{background:#AEB336}
+#bar6{background:#AD583C}
+header .active div,
+header li:hover div{height:30px;box-shadow:0 0 10px #555;z-index:2}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article .limit{overflow:hidden}
+
+/*-----------------------------------------------------------------------切換---*/
+
+.arr{float:left;text-align:center}
+.arr a{display:block;margin:0 auto}
+#next{background:url(../images/next.png) no-repeat}
+#prev{background:url(../images/prev.png) no-repeat}
+.arr img{-webkit-transform:scale(0);-moz-transform:scale(0);opacity:0;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+.arr:hover img{-webkit-transform:scale(1);-moz-transform:scale(1);opacity:1}
+
+@media \0screen {
+#next,#prev{background-position-x:center;background-position-y:bottom}
+}
+
+/*-----------------------------------------------------------------------舞台---*/
+
+#tv {max-width:686px;float:left;overflow:hidden;cursor: col-resize;}
+#tv-row {width:2500px;margin-left:-686px}
+
+.hrz{max-width:686px;width:100%;float:left;position:relative}
+.hrz #box{width:100%;text-align:center}
+.hrz img{max-width:686px;width:100%;height:auto}
+.vtc{float:left;position:relative}
+.vtc #box{width:100%;text-align:center}
+.vtc img{max-width:407px;width:100%;height:auto}
+
+@media \0screen {
+.vtc img{width:407px;height:auto}
+}
+
+
+/*-----------------------------------------------------------------------說明---*/
+
+.hrz #explain{color:#fff;background:#000;background:rgba(0,0,0,.9);width:100%;margin:0 auto;position:absolute;
+bottom:0;left:0;padding:2%}
+.hrz h3{font-weight:300;font-family:微軟正黑體,Arial}
+.vtc #explain{color:#fff;position:absolute;top:0;left:0;width:100%}
+.vtc h3{font-weight:300;font-family:微軟正黑體,Arial;background:#000;background:rgba(0,0,0,.9);max-width:407px;margin:0 auto;padding:1%;text-align:right}
+#link{text-align:right}
+#link a{color:#d2d928}
+#link a:hover{text-decoration:underline}
+
+@media \0screen {
+.hrz h3{font-size:18pt}
+.vtc h3{font-size:18pt;width:407px;}
+}
+
+/*-----------------------------------------------------------------------森林---*/
+
+#forest{width:100%;height:134px;background:url(../../images/forest.png) 70% bottom no-repeat}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer{background:#000;padding:2% 0}
+footer .limit{margin:0 auto}
+#contact{float:left;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#contact a{color:#bcdde3;text-shadow:0 -1px 0 #000;display:block;background:url(../../images/contact-1.png) 0 0 no-repeat;text-align:center;background-size:contain}
+#contact a:hover{color:#23fde6}
+#contact a:active{background:url(../../images/contact-2.png) 0 0 no-repeat;background-size:contain;color:#23fde6;position:relative;top:1px}
+#contact a span{font-weight:700}
+#logo{float:right;background-image:url(../../images/logo.jpg);background-repeat:no-repeat;background-size:contain;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#logo a{display:block;width:100%;height:100%}
+#gplus{float:right;color:#fff;font:300 9pt 微軟正黑體,Arial;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#gplus a{color:#fff;font:300 9pt 微軟正黑體,Arial}

@@ -1,0 +1,20 @@
+<html>
+<head>
+<style type="text/css">body { margin: 0px }</style>
+<script>
+var t = null;
+function keyup()
+{
+  if (t)
+  {
+    clearTimeout(t);
+    t = null;
+  }
+  t = setTimeout(parent.parent.frames['chapters'].textUpdated, 500);
+}
+</script>
+</head>
+<body>
+<textarea id="textarea" onkeyup="keyup();" spellcheck="false" wrap="off" style="width:100%;height:100%"></textarea>
+</body>
+</html>
