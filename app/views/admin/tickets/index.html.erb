@@ -1,31 +1,29 @@
-<h1>Listing tickets</h1>
+<div id="main" class="right">
+  <div class="main-list">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr class="main-list-title">
+        <th width="17%" align="center" scope="col">日期</th>
+        <th width="63%" align="left" scope="col">標題</th>
+        <th width="18%" align="center" scope="col">刪除</th>
+      </tr>
+      <% @tickets.each do |ticket| %>
+      <tr>
+        <td align="center"><%= ticket.created_at.strftime("%Y/%m/%d") %></td>
+        <td align="left"><%= link_to ticket.name, admin_ticket_path(ticket) %>
+        </td>
+        <td align="center"><%= link_to image_tag("/images/delete.png"), admin_ticket_path(ticket), method: :delete, data: { confirm: '確定刪除消息?' } %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  <%= paginate @tickets, :theme => 'admin' %>
+</div>
+<!--main--> 
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Issue</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @tickets.each do |ticket| %>
-  <tr>
-    <td><%= ticket.name %></td>
-    <td><%= ticket.phone %></td>
-    <td><%= ticket.email %></td>
-    <td><%= ticket.issue %></td>
-    <td><%= ticket.content %></td>
-    <td><%= link_to 'Show', admin_ticket_path(ticket) %></td>
-    <td><%= link_to 'Edit', edit_admin_ticket_path(ticket) %></td>
-    <td><%= link_to 'Destroy', admin_ticket_path(ticket), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#tickets").addClass("active");
+});
+</script>
 
 <br />
-
-<%= link_to 'New Ticket', new_admin_ticket_path %>

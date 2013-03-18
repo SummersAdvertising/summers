@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>榮騰後台管理系統</title>
+<title>夏天後台管理系統</title>
 <%= stylesheet_link_tag "admin", :media => "all" %>
 <%= javascript_include_tag "application" %>
 <%= csrf_meta_tags %>
@@ -11,7 +11,7 @@
 <body>
 <div id="top-out">
   <div id="top">
-    <h1 class="left"><a href="/admin">榮騰農產 - 後台管理系統</a></h1>
+    <h1 class="left"><a href="/admin">夏天廣告 - 後台管理系統</a></h1>
     <div class="right">
       <%if session[:admin]%>
       你好，<%= session[:admin]%>！<a href="/admin/edit">修改個人資料</a><a href="/admin/log_out">登出</a>
@@ -28,7 +28,7 @@
   <%if session[:admin]%>
   <div id="side" class="left">
     <ul>
-      <li><a href="/admin/news" id="update">最新消息</a></li>
+      <li><a href="/admin/tickets" id="tickets">客服系統</a></li>
     </ul>
   </div>
   <% end %>
