@@ -1,3 +1,13 @@
+def compile_asset?(path)
+  if File.basename(path) =~ /^[^_].*\.\w+$/
+    puts "Compiling: #{path}"
+    true
+  else
+    puts "Ignoring: #{path}"
+    false
+  end
+end
+
 Summers::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -15,7 +25,7 @@ Summers::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -72,6 +82,8 @@ Summers::Application.configure do
     :enable_starttls_auto => true
   }
 
+  config.assets.precompile = [ method(:compile_asset?).to_proc ]
+  
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
