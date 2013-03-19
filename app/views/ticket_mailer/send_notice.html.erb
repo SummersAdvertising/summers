@@ -1,30 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
 </head>
+
 <body>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td valign="top" class="title" height="22" width="103"><%= @ticket.created_at.to_date %></td>
-          <td width="543" valign="middle" class="text"><%= @ticket.name %></td>
-        </tr>
-  </table>
-  <table width="100%" border="0" cellspacing="5" cellpadding="0">
-          <tr>
-            <th width="8%" align="left" valign="top">電話：</th>
-            <td width="32%" align="left"><%= @ticket.phone %></td>
-            <th width="17%" align="left" valign="top">姓名：</th>
-            <td width="43%" align="left"><%= @ticket.name %></td>
-          </tr>
-          <tr>
-            <th width="8%" align="left" valign="top">郵件：</th>
-            <td width="32%" align="left"><%= @ticket.email %></td>
-          </tr>
-          <tr>
-            <th width="8%" align="left" valign="top">需求內容：</th>
-            <td width="32%" align="left"><%= @ticket.issue %></td>
-          </tr>
-          </table>
-  </body>
+
+<table width="100%" border="1" bordercolor="eeeeee" cellspacing="5" cellpadding="0">
+  <tr>
+    <th width="9%" height="30" >客戶姓名</th>
+    <td width="24%" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.name %></td>
+    <th width="9%">連絡電話</th>
+    <td width="24%" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.phone %></td>
+    <th width="9%">電子郵件</th>
+    <td width="25%" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.email %></td>
+  </tr>
+  <tr>
+    <th height="30">服務需求</th>
+    <td colspan="5" bgcolor="#f3f3f3" style="padding:0 0 0 10px"><%= @ticket.issue %><%= "、其他〈" + @ticket.content +"〉" %></td>
+  </tr>
+</table>
+
+
+</body>
 </html>
