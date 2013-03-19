@@ -8,7 +8,7 @@ Summers::Application.routes.draw do
   match "/admin/update" => "admin#update", :via => :put
 
 
-  match "/contact.html" => 'tickets#index'
+  match "/contact.html" => 'tickets#new'
 
   namespace :admin do
     get "sign_up", "log_in", "log_out", "edit"

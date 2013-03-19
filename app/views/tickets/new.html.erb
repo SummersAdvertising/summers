@@ -28,12 +28,12 @@
 <script src="../js/alertify.min.js"></script>
 <script>
   jQuery(document).ready(function(){
-	$("body").css("display", "none");
-    $("body").fadeIn(500);
-	$("aside a").click(function(event){
+	jQuery("body").css("display", "none");
+    jQuery("body").fadeIn(500);
+	jQuery("aside a").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-        $("body").fadeOut(500, redirectPage);
+        jQuery("body").fadeOut(500, redirectPage);
     }); 	
     function redirectPage() {
         window.location = linkLocation;
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
           <label for="cb4"><span></span>其他</label>
         </div>
         <div id="other-right">
-          <input type="text" name="ticket[content]" class="text"/>
+          <input type="text" name="ticket[content]" data-validate="其他需求內容" class="text"/>
         </div>
       </div>
       <!--form--> 
@@ -172,47 +172,38 @@ var _hmt = _hmt || [];
   </div>
   <!--vert--> 
     <script>
-  var
-  	d = Alertify.dialog,
-  	l = Alertify.log,
-  	$ = Alertify.get,
-  	reset = function () {
-  		$("toggleCSS").href = "/css/alertify.default.css";
-        d.labels.ok     = "OK";
-        d.labels.cancel = "Cancel";
-        d.buttonReverse = false;
-        d.buttonFocus   = "ok";
-        l.delay         = 5000;
-    };
     
-    
-	  var finished = window.location.hash.substr(1) == "finished";
-	  if (finished) {
-		  var
-		  	d = Alertify.dialog,
-		  	l = Alertify.log,
-		  	$ = Alertify.get,
-		  	reset = function () {
-		  		$("toggleCSS").href = "../css/alertify.default.css";
-		        d.labels.ok     = "OK";
-		        d.labels.cancel = "Cancel";
-		        d.buttonReverse = false;
-		        d.buttonFocus   = "ok";
-		        l.delay         = 5000;
-		    };
-		    
-	        Alertify.dialog.alert("感謝您撥空填寫，您的需求我們收到了，專業顧問將儘速為您服務！");
-	
-	  }
-
-    
-	$("alert").onclick = function () {
-	
-    	//jQuery("form").submit();
-    	reset();
-        Alertify.dialog.alert("感謝您撥空填寫，您的需求我們收到了，專業顧問將儘速為您服務！");
-        return false;
-	}
+    var alertFun = function() {    
+			  var d = Alertify.dialog,
+			  	l = Alertify.log,
+			  	$ = Alertify.get,
+			  	reset = function () {
+			  		$("toggleCSS").href = "/css/alertify.default.css";
+			        d.labels.ok     = "OK";
+			        d.labels.cancel = "Cancel";
+			        d.buttonReverse = false;
+			        d.buttonFocus   = "ok";
+			        l.delay         = 5000;
+				     
+				     jQuery('.is-alertify-dialog-hidden, .is-alertify-cover-hidden').show();
+			    };
+			    
+			    
+				  var finished = window.location.hash.substr(1) == "finished";
+				  if (finished) {		    
+				        d.alert("感謝您撥空填寫，您的需求我們收到了，專業顧問將儘速為您服務！");	
+				  }
+			
+			    
+				$("alert").onclick = function () {				
+			    	jQuery("form").submit();
+			    	reset();
+			    	return false;
+				}
+		}
+		
+		alertFun();
+		
   </script>
   <script>
   
@@ -270,7 +261,7 @@ var _hmt = _hmt || [];
     }
 
 	if (alertMsg) {		
-    	Alertify.dialog.alert(alertMsg);
+    	Alertify.dialog.alert(alertMsg);	
 	}
 	
 

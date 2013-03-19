@@ -122,9 +122,4 @@
   right: 0; }
 
 .is-alertify-log-hidden {
-  right: -300px;
-}
-
-.is-alertify-dialog-hidden {
-	display: none;
-}
+  right: -300px; }
