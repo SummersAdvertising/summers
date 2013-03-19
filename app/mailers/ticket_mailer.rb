@@ -4,8 +4,8 @@ class TicketMailer < ActionMailer::Base
   
   def send_notice(ticket)
   	@ticket = ticket
-
-  	mail(:to => ["yuzhe@summers.com.tw", "andy@summers.com.tw", "awhere@summers.com.tw"],
+  	
+  	mail(:to => ["andy@summers.com.tw", "yuzhe@summers.com.tw", "awhere@summers.com.tw"],
   	     :subject => "[夏天廣告官網] 收到使用者詢問囉！")
   	
   end
