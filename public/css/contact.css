@@ -1,4 +1,4 @@
-
+﻿
 /*-----------------------------------------------------------------------全域---*/
 
 html{font:300 12pt 微軟正黑體,Arial;width:100%}
@@ -71,7 +71,7 @@ article{font:300 21px "微軟正黑體";line-height:1.7em}
 .form{width:100%;border:none}
 
 #form-1 ol{padding:0}
-#form-1 ul{width:100%;overflow:hidden;margin:0 auto}
+#form-1 ul{width:100%;margin:0 auto}
 #form-1 .name{float:left;width:20%}
 #form-1 .enter{float:left;width:80%}
 
@@ -98,7 +98,7 @@ article{font:300 24px "微軟正黑體";line-height:1.7em}
 .form{width:100%;border:none}
 
 #form-1 ol{padding:0}
-#form-1 ul{width:85%;overflow:hidden;margin:0 auto}
+#form-1 ul{width:85%;margin:0 auto}
 #form-1 .name{float:left;width:20%}
 #form-1 .enter{float:left;width:80%}
 
