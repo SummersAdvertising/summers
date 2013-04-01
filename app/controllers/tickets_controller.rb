@@ -24,7 +24,8 @@ class TicketsController < ApplicationController
       
         TicketMailer.send_notice(@ticket).deliver
       
-        format.html { redirect_to :action => :new, :anchor => "finished" }
+        #format.html { redirect_to :action => :new, :anchor => "finished" }
+        format.html { redirect_to "/contact.html#finished" }
         format.json { render json: @ticket, status: :created, location: @ticket }
       else
         format.html { render action: "new" }
