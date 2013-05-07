@@ -1,17 +1,14 @@
 Summers::Application.routes.draw do
-
-
   resources :tickets
 
   match "/admin/createAdmin" => "admin#createAdmin", :via => :post
   match "/admin/loginCheck" => "admin#loginCheck", :via => :post
   match "/admin/update" => "admin#update", :via => :put
 
-
   match "/contact.html" => 'tickets#new'
 
   namespace :admin do
-    get "sign_up", "log_in", "log_out", "edit"
+    get "log_in", "log_out", "edit"
     get '/' => 'tickets#index'
     
     resources :tickets

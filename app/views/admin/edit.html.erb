@@ -1,39 +1,70 @@
-<div id="main" class="right">
+<article>
   <%= form_for(@admin, :url => "/admin/update", :action => "put") do |f| %>
-  <h2><img src="/images/signin.png"/> 修改個人資料</h2>
-  <div class="main-form">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="48%" align="left">帳號<br />
-          <%= f.text_field :username, :autocomplete => "off" %>
-        </td>
-        <td width="3%" align="left">&nbsp;</td>
-        <td width="49%" align="left">新密碼<br />
-          <%= f.password_field :password, :autocomplete => "off" %>
-        </td>
-      </tr>
-      <tr>
-        <td align="left">姓名<br />
-          <%= f.text_field :name, :autocomplete => "off" %></td>
-        <td align="left">&nbsp;</td>
-        <td align="left">確認新密碼<br />
-          <input id="pswCheck" type="password" name="textfield" /></td>
-      </tr>
-    </table>
-  </div>
-  <!--main-form-->
-<% end %>
 
-<div id="error">
+  <section class="hgroup">
+    <h2><img src="/images/man.png" width="16" height="16"> 個人資料</h2>
+  </section>
+  <!--hgroup-->
+
+  <section class="text text-edit">
+    <div class="half">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">帳號：</th>
+          <td><%= f.text_field :username, :autocomplete => "off" %></td>
+        </tr>
+      </table>
+    </div>
+    <div class="half">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">名稱：</th>
+          <td><%= f.text_field :name, :autocomplete => "off" %></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <!--text-->
+
+  <section class="hgroup">
+    <h2><img src="/images/psw.png" width="16" height="16"> 修改密碼</h2>
+    <p>(如不修改密碼可不填此欄)</p>
+  </section>
+  <!--hgroup-->
+
+  <section class="text text-edit">
+    <div class="half">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">新密碼：</th>
+          <td><%= f.password_field :password, :autocomplete => "off" %></td>
+        </tr>
+      </table>
+    </div>
+    <div class="half">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">確認密碼：</th>
+          <td><input id="pswCheck" type="password" name="textfield" /></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <!--text-->
+  <% end %>
+
+  <div id="error">
   <% if flash[:notice] %>
   <p>管理者資料已更新</p>
   <% end %>
-</div>
+  </div>
 
-<div class="button" id="btnSubmit"><a href="#"><img src="/images/save.png">儲存</a></div>
-<div class="button"><a href="#"><img src="/images/cancel.png">取消</a></div>
-</div>
-<!--main-->
+  <section class="button">
+    <a href="#" id="btnSubmit"><img src="/images/save.png">儲存</a>
+    <a href="#"><img src="/images/cancel.png">取消</a>
+  </section>
+  <!--button-->
+</article>
 
 <script type="text/javascript">
 $("#btnSubmit").click(function(){

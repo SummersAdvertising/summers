@@ -1,29 +1,29 @@
-<div id="main" class="right">
-  <div class="main-list">
+<article>
+  <section class="list">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr class="main-list-title">
-        <th width="17%" align="center" scope="col">日期</th>
-        <th width="63%" align="left" scope="col">標題</th>
-        <th width="18%" align="center" scope="col">刪除</th>
+      <tr>
+        <th align="left" class="x0 x2">詢問日期</th>
+        <th align="left">客戶姓名</th>
+        <th align="left" class="x1">刪除</th>
       </tr>
       <% @tickets.each do |ticket| %>
       <tr>
-        <td align="center"><%= ticket.created_at.strftime("%Y/%m/%d") %></td>
-        <td align="left"><%= link_to ticket.name, admin_ticket_path(ticket) %>
+        <td class="x0"><%= ticket.created_at.strftime("%Y-%m-%d") %></td>
+        <td><a href="msg-show.html"><%= link_to ticket.name, admin_ticket_path(ticket) %></a></td>
+        <td class="delete">
+          <%= link_to image_tag("/images/delete.png"), admin_ticket_path(ticket), method: :delete, data: { confirm: '確定刪除消息?' } %>
         </td>
-        <td align="center"><%= link_to image_tag("/images/delete.png"), admin_ticket_path(ticket), method: :delete, data: { confirm: '確定刪除消息?' } %></td>
       </tr>
       <% end %>
     </table>
-  </div>
+  </section>
+  <!--list-->
   <%= paginate @tickets, :theme => 'admin' %>
-</div>
-<!--main--> 
+  <!--page-->
+</article>
 
 <script type="text/javascript">
 $(document).ready(function(){
-  $("#tickets").addClass("active");
+  $("#nav-1").parents("li").addClass("active");
 });
 </script>
-
-<br />

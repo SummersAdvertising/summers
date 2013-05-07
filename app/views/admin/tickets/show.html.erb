@@ -1,44 +1,57 @@
-<style type="text/css">
-img{
-  max-width:480px;
-}
-</style>
-
-  <div id="main" class="right">
-    <div class="main-title">
+<article>
+  <section class="title">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th><%= @ticket.created_at.strftime("%Y-%m-%d") %></th>
+        <td><%= @ticket.name %></td>
+      </tr>
+    </table>
+  </section>
+  <!--title-->
+  <section class="text text-show">
+    <div class="one">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td valign="top" class="title" height="22" width="103"><%= @ticket.created_at.strftime("%Y/%m/%d") %></td>
-          <td width="543" valign="middle" class="text"><%= @ticket.name %></td>
+          <th valign="top">電話：</th>
+          <td><%= @ticket.phone %></td>
         </tr>
       </table>
     </div>
-    <div class="main-text">
-      <table width="100%" border="0" cellspacing="5" cellpadding="0">        
-          <tr>
-            <th width="14%" align="left" valign="top">電話：</th>
-            <td width="86%" align="left"><%= @ticket.phone %></td>
-          </tr>
-          <tr>
-            <th width="14%" align="left" valign="top">郵件：</th>
-            <td align="left"><%= @ticket.email %></td>
-          </tr>  
-          <tr>
-            <th width="14%" align="left" valign="top"><h3>服務需求：</h3></th>
-            <td align="left"><%= @ticket.issue %></td>
-          </tr> 
-          <tr>
-            <th width="14%" align="left" valign="top"><h3>其他：</h3></th>
-            <td align="left"><%= @ticket.content %></td>
-          </tr>      
+
+    <div class="one">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">郵件：</th>
+          <td><%= @ticket.email %></td>
+        </tr>
       </table>
     </div>
-    
-  <div class="button"><%= link_to image_tag("/images/back_icon.png")+'返回', admin_tickets_path %></div>
-</div>
+    <div class="one">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">需求：</th>
+          <td><%= @ticket.issue %></td>
+        </tr>
+      </table>
+    </div>
+    <div class="one">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th >其他：</th>
+          <td><%= @ticket.content %></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <!--text-->
+  <section class="button">
+  <%= link_to image_tag("/images/back_icon.png")+'返回', admin_tickets_path %>
+  </section>
+  <!--button-->
+</article>
 
 <script type="text/javascript">
 $(document).ready(function(){
-  $("#tickets").addClass("active");
+  $("#nav-1").parents("li").addClass("active");
 });
 </script>
