@@ -1,8 +1,0 @@
-﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  Width="200" Height="100" Canvas.Left="80" Canvas.Top="150" Background="Yellow">
-  <Rectangle Width="200" Height="100" Fill="Red">
-    <Rectangle.RenderTransform>
-      <RotateTransform Angle="45"/>
-    </Rectangle.RenderTransform>
-  </Rectangle>
-</Canvas>

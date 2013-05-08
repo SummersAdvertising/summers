@@ -1,5 +1,0 @@
-﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-  <Ellipse Fill="Purple" Width="80" Height="80"/>
-  <Ellipse Canvas.Left="25" Canvas.Top="25" Fill="Red" Width="80" Height="80"/>
-  <Ellipse Canvas.Left="50" Canvas.Top="50" Fill="Green" Width="80" Height="80"/>
-</Canvas>

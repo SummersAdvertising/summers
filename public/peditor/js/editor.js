@@ -112,7 +112,6 @@ var editor = {
 	},
 	ajaxupdate: function(){
 		$("#article_metakw").val($("#metakw").val());
-		console.log($("#article_metakw").val(),$("#metakw").val());
 		$.ajax({
 			type: "POST",
 			url: $("form, .edit_"+ editor.settings.articleModel).attr("action"),

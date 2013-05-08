@@ -1,8 +1,0 @@
-﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  Width="50" Height="50" Background="Blue">
-  <Canvas.Clip>
-    <RectangleGeometry Rect="0,0,50,50"/>
-  </Canvas.Clip>
-  <Ellipse Width="200" Height="200" Fill="Red" Stroke="Black"
-    StrokeThickness="5"/>
-</Canvas>

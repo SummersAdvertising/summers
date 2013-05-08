@@ -1,7 +1,0 @@
-<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-  <Rectangle Width="150" Height="150" Fill="Red" Canvas.Left="160"/>
-  <MediaElement Stretch="None" Width="150" Height="150" Source="05/Lake.wmv"/>
-  <MediaElement Stretch="Uniform" Width="150" Height="150" Source="05/Lake.wmv" Canvas.Left="160"/>
-  <MediaElement Stretch="UniformToFill" Width="150" Height="150" Source="05/Lake.wmv" Canvas.Top="160"/>
-  <MediaElement Stretch="Fill" Width="150" Height="150" Source="05/Lake.wmv" Canvas.Top="160" Canvas.Left="160"/>
-</Canvas>

@@ -1,7 +1,0 @@
-﻿<Canvas xmlns="http://schemas.microsoft.com/client/2007">
-  <TextBlock Foreground="Red">This example only works when run from a local Windows drive.</TextBlock>
-  <Glyphs FontUri="/windows/fonts/segoepr.ttf"  Fill="Red"    FontRenderingEmSize="70" OriginY="70"  UnicodeString="Segoe Print"/>
-  <Glyphs FontUri="/windows/fonts/stencil.ttf"  Fill="Green"  FontRenderingEmSize="70" OriginY="150" UnicodeString="Stencil"/>
-  <Glyphs FontUri="/windows/fonts/brlnsr.ttf"   Fill="Blue"   FontRenderingEmSize="70" OriginY="230" UnicodeString="Berlin Sans FB"/>
-  <Glyphs FontUri="/windows/fonts/arialuni.ttf" Fill="Purple" FontRenderingEmSize="70" OriginY="310" UnicodeString="도사급 해커"/>
-</Canvas>

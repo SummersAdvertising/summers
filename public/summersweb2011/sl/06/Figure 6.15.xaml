@@ -1,8 +1,0 @@
-﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-  <Image Source="06/TeamPhoto.jpg"/>
-  <Image Canvas.Top="507" Source="06/TeamPhoto.jpg">
-    <Image.RenderTransform>
-      <ScaleTransform ScaleY="-0.75"/>
-    </Image.RenderTransform>
-  </Image>
-</Canvas>

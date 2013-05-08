@@ -46,7 +46,6 @@ editor.img = {
 
 		if(editor.img.validate()){
 			$("input[name=authenticity_token]").val($('meta[name="csrf-token"]').attr('content'));
-			console.log(editor.img.photoModel);
 			$("#new_" + editor.img.photoModel).submit();
 			
 		}
@@ -71,7 +70,6 @@ editor.img = {
 		img.attr("alt", paragraph.id);
 		img.attr("src", paragraph.path);
 		img.attr("title", paragraph.id);
-		img.css("max-height", "200px");
 
 		if(paragraph.link){
 			var a = $("<a>");
