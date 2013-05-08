@@ -1,0 +1,20 @@
+<section class="list">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="left" class="x0 x2">發佈日期</th>
+            <th align="left">文章標題</th>
+        </tr>
+        <% @articles.each do |article| %>
+        <tr>
+            <td class="x0"><%= article.created_at.strftime("%Y-%m-%d") %></td>
+            <td>
+                <% if(article.namehash.empty?) %>
+                <%= link_to article.title, article_path(article) %>
+                <% else %>
+                <%= link_to article.title, article_path(article.namehash) %>
+                <% end %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</section>

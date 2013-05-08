@@ -1,0 +1,117 @@
+<article>
+	<%= form_for(@article, :url => admin_article_path(@article), :method => "put") do |f| %>
+	<section class="title">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th><%= @article.created_at.strftime("%Y-%m-%d") %></th>
+				<td><%= f.text_field :title, :placeholder => "請輸入文章標題", :autocomplete => "off" %>
+					<%= f.text_field :content, :style => "display:none;" %>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<!--title-->
+
+	<section class="title">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>網址</th>	
+          <td><%= f.text_field :namehash, :autocomplete => "off" %></td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+    <div id="editorPanel">
+    <section class="tab">
+      <ul class="x3">
+        <li id="tab-p" data-type="p"><a href="#post-p"><img src="/images/edit.png">段落</a></li>
+        <li id="tab-img" data-type="img"><a href="#post-img"><img src="/images/img.png">圖片</a></li>
+        <li id="tab-video" data-type="video"><a href="#post-video"><img src="/images/video.png">影片</a></li>
+        <li id="tab-list" data-type="list"><a href="#post-list"><img src="/images/list.png"/>清單</a></li>
+      </ul>
+    </section>
+    <!--tab-->
+    <section class="post">
+    	<div id="post-p">
+    		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    			<tr>
+    				<td colspan="2"><textarea id="newParagraphContent" name="textarea" cols="" rows="" class="autogrow" placeholder="請輸入文字"></textarea></td>
+    			</tr>
+    			<tr class="addlink">
+    				<td width="100" align="center"><img src="/images/link.png" width="16" height="16"> 段落連結</td>
+    				<td><input id="newParagraphLink" name="" type="text" placeholder="http://www.example.com" /></td>
+    			</tr>
+    		</table>
+    	</div>
+
+    	<div id="post-img">
+    		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    			<tr>
+    				<td colspan="2"><input type="file" name="fileField" id="fileField"></td>
+    			</tr>
+    			<tr class="addlink">
+    				<td width="100" align="center"><img src="/images/link.png" width="16" height="16"> 圖片連結</td>
+    				<td><input name="" type="text" placeholder="http://www.example.com" /></td>
+    			</tr>
+    		</table>
+    	</div>
+
+    	<div id="post-video">
+    		<input id="newVideoContent" name="" type="text" placeholder="請輸入影片網址" />
+    	</div>
+    	<div id="post-list">
+    		<ul id="newListContent">
+    			<li>
+    				<input name="" type="text" class="listElement autogrow"/>
+    			</li>
+    			<li>
+    				<input name="" type="text" class="listElement autogrow"/>
+    			</li>
+    			<li>
+    				<input name="" type="text" class="listElement autogrow"/>
+    			</li>
+    		</ul>
+            <div class="addlist"><a href="javascript: void(0);">增加</a></div>
+    	</div>
+    </section>
+    <!--post-->
+    <section class="button editorAdd"> <a href="#"><img src="/images/add.png">新增</a> </section>
+    <!--button-->
+    </div>
+    
+    <section class="hgroup">
+      <h2>文章預覽</h2>
+    </section>
+    <!--hgroup-->
+    <section class="preview" id="articleContent">
+    
+    </section>
+    <!--preview-->
+    <section class="title">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>關鍵字</th>	
+          <td><%= f.text_field :metakw, :placeholder => "多個關鍵字請用逗號分隔", :autocomplete => "off" %></td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+
+    <% end %>
+
+    <section class="button" id="saveArticle"><a href="#"><img src="/images/check.png">完成</a></section>
+    <!--button--> 
+</article>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#nav-2").parents("li").addClass("active");
+
+  editor.init();
+
+  $("#saveArticle").click(function(e){
+    e.preventDefault();
+    $("form:first").submit();
+  });
+});
+</script>

@@ -16,12 +16,13 @@ end
 
 #for pagination
 gem 'kaminari'
-#for image upload
+#image upload
 gem 'carrierwave'
 gem "mini_magick"
 
-#for form using "remote = true" and "multi-part = true" at the same time
-gem 'remotipart'
+gem "remotipart"
+
+gem 'jquery-ui-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

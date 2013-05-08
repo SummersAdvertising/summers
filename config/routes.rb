@@ -1,4 +1,6 @@
 Summers::Application.routes.draw do
+  resources :articles, :only => [:index, :show]
+
   resources :tickets
 
   match "/admin/createAdmin" => "admin#createAdmin", :via => :post
@@ -12,10 +14,9 @@ Summers::Application.routes.draw do
     get '/' => 'tickets#index'
     
     resources :tickets
-    
-    resources :news, :except => :new do
-      match 'uploadPhoto' => 'news#createPhoto', :via => [:post]
-      match 'deletePhoto/:id' => 'news#destroyPhoto', :via => [:delete]
+    resources :articles, :except => :new do
+      match 'uploadPhoto' => 'article#createPhoto', :via => [:post]
+      match 'deletePhoto/:id' => 'article#destroyPhoto', :via => [:delete]
     end
   end
 

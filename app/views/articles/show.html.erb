@@ -1,0 +1,36 @@
+<script src="../js/jquery-1.8.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/peditor/css/peditor.css">
+<script src="/peditor/js/editor.js"></script>
+<script src="/peditor/js/editor_p.js"></script>
+<script src="/peditor/js/editor_img.js"></script>
+<script src="/peditor/js/editor_list.js"></script>
+<script src="/peditor/js/editor_video.js"></script>
+
+<% if(@article) %>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th><%= @article.created_at.strftime("%Y-%m-%d") %></th>
+    <td>
+      <%= @article.title %>
+      <input id="article_content" style="display:none;" type="text" value="<%=@article.content%>">
+    </td>
+  </tr>
+</table>
+
+<section class="text text-show" id="articleContent"></section>
+
+<% else %>
+<p>文章不存在，請返回短文列表</p>
+<% end %>
+
+<%= link_to (image_tag("/images/back_icon.png")+'返回'), articles_path %>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  editor.output();
+
+  $("#articleContent").children("div").each(function(){
+    $(this).addClass("part");
+  });
+});
+</script>
