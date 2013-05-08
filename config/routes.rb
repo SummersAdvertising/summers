@@ -15,8 +15,8 @@ Summers::Application.routes.draw do
     
     resources :tickets
     resources :articles, :except => :new do
-      match 'uploadPhoto' => 'article#createPhoto', :via => [:post]
-      match 'deletePhoto/:id' => 'article#destroyPhoto', :via => [:delete]
+      match 'uploadPhoto' => 'articles#createPhoto', :via => [:post]
+      match 'deletePhoto/:id' => 'articles#destroyPhoto', :via => [:delete]
     end
   end
 

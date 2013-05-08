@@ -1,5 +1,5 @@
 class Articlephoto < ActiveRecord::Base
-  attr_accessible :article_id, :img, :name
+  attr_accessible :article_id, :image, :name
   belongs_to :article
 
   mount_uploader :image, ImageUploader

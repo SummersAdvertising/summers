@@ -13,7 +13,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def store_dir
-    "uploads/#{model.class.name}/#{model.id}"
+    "uploads/#{model.class.name}/#{model.article_id}"
   end
 
   def filename

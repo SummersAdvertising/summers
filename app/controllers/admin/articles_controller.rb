@@ -22,6 +22,7 @@ class Admin::ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    @photo = Articlephoto.new
   end
 
   def create
@@ -59,6 +60,34 @@ class Admin::ArticlesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to admin_articles_path }
       format.json { head :no_content }
+    end
+  end
+
+  def createPhoto
+    @photo = Article.find(params[:article_id]).articlephotos.new(params[:articlephoto])
+
+    respond_to do |format|
+      if @photo.save
+        format.json { render json: @photo, status: :created, location: @photo }
+        format.js
+      else
+        format.json { render json: @photo.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroyPhoto
+    @photo = Articlephoto.find(params[:id])
+    @photopath = "public/uploads/Articlephoto/"+ @photo.article_id.to_s + "/" + @photo.id.to_s + "-" + @photo.name
+    
+    if(File.exist?(@photopath))
+      File.delete(@photopath)
+    end
+
+    @photo.destroy
+
+    respond_to do |format|
+      format.html { redirect_to :controller => 'photos', :action => 'index' }
     end
   end
 end

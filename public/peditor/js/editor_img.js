@@ -1,9 +1,11 @@
 editor.img = {
-	photoModel: editor.settings.photoModel,
-	fileinputID: editor.settings.photoModel + "_" + editor.settings.photoColumn,
-	fileinputName: editor.settings.photoModel + "[" + editor.settings.photoColumn + "]",
-	photoUpload: editor.settings.photoUpload,
-	photoDestroy: editor.settings.photoDestroy,
+	setEditor: function(){
+		editor.img.photoModel = editor.settings.photoModel;
+		editor.img.fileinputID = editor.settings.photoModel + "_" + editor.settings.photoColumn;
+		editor.img.fileinputName = editor.settings.photoModel + "[" + editor.settings.photoColumn + "]";
+		editor.img.photoUpload = editor.settings.photoUpload;
+		editor.img.photoDestroy = editor.settings.photoDestroy;
+	},	
 	initTab: function(){
 		var li = $("<li>");
 		li.attr("data-type", "img").attr("id", "tab-img");
@@ -43,6 +45,8 @@ editor.img = {
 		}
 
 		if(editor.img.validate()){
+			$("input[name=authenticity_token]").val($('meta[name="csrf-token"]').attr('content'));
+			console.log(editor.img.photoModel);
 			$("#new_" + editor.img.photoModel).submit();
 			
 		}

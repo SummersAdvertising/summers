@@ -111,6 +111,8 @@ var editor = {
 		}
 	},
 	ajaxupdate: function(){
+		$("#article_metakw").val($("#metakw").val());
+		console.log($("#article_metakw").val(),$("#metakw").val());
 		$.ajax({
 			type: "POST",
 			url: $("form, .edit_"+ editor.settings.articleModel).attr("action"),
@@ -171,6 +173,9 @@ var editor = {
 		editor.settings.articleSection = $(editor.settings.articleSection);
 		for(setting in settings){
 			editor.settings[setting] = settings[setting];
+		}
+		if(editor.img){
+			editor.img.setEditor();
 		}
 	},
 	bindPanelControl: function(){
