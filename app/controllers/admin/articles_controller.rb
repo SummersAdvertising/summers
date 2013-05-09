@@ -3,7 +3,7 @@ class Admin::ArticlesController < ApplicationController
   layout 'admin'
 
   def index
-    @articles = Article.all
+    @articles = Article.order("created_at DESC").all
 
     respond_to do |format|
       format.html

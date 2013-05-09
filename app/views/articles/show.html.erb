@@ -1,3 +1,6 @@
+<meta name="title" content="<%= $meta_title %>"/>
+<meta name="keywords" content="<%= $meta_kw %>"/>
+<meta name="description" content="<%= $meta_description %>"/>
 <script src="../js/jquery-1.8.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/peditor/css/peditor.css">
 <script src="/peditor/js/editor.js"></script>
@@ -18,6 +21,7 @@
 </table>
 
 <section class="text text-show" id="articleContent"></section>
+<section>瀏覽人數：<%= @article.count %></section>
 
 <% else %>
 <p>文章不存在，請返回短文列表</p>

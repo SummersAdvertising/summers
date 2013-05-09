@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130508091821) do
+ActiveRecord::Schema.define(:version => 20130509015538) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(:version => 20130508091821) do
     t.text     "content"
     t.string   "namehash"
     t.string   "metakw"
-    t.integer  "count"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "count",      :default => 0
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   create_table "news", :force => true do |t|
