@@ -23,6 +23,18 @@
 <section class="text text-show" id="articleContent"></section>
 <section>瀏覽人數：<%= @article.count %></section>
 
+<br>
+
+<section>
+  <% if(@prev) %>
+  上一篇：<%= link_to @prev.title, article_path((@prev.namehash.length > 0)? @prev.namehash : @prev.id) %>
+  <% end %>
+
+  <% if(@next) %>
+  下一篇：<%= link_to @next.title, article_path((@next.namehash.length > 0)? @next.namehash : @next.id) %>
+  <% end %>
+</section>
+
 <% else %>
 <p>文章不存在，請返回短文列表</p>
 <% end %>

@@ -31,6 +31,7 @@
 <% if (flash[:loginCheck]) %>
 Alertify.log.error("帳號或密碼錯誤，登入失敗");
 <% end %>
+
 $("#main").addClass("login-main");
 $("#btnLogin").click(function(){
   $("form").submit();

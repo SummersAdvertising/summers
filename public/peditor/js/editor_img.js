@@ -101,27 +101,43 @@ editor.img = {
 	},
 	validate: function(){
 		//validate image upload
-		var isSubmit = false;
+		var isSubmit = true;
 
 		var fileinput = document.getElementById(editor.img.fileinputID);
-		if(fileinput.files[0]){
-			var typeAllowed = ["gif", "png", "jpg", "jpeg"];
-			(function() {
-				outerloop:
-				for(var item in typeAllowed){
-					if(fileinput.files[0].type.indexOf(typeAllowed[item]) != -1){
-						isSubmit = true;
-						break outerloop;
-					}
-				}
-			})();
+		var uploadSize, uploadType;
+        
+        if(navigator.userAgent.indexOf("MSIE")>-1){
+        	//IE: do nothing.
 
-			if(fileinput.files[0].size > 5 * 1024 *1024){
-				isSubmit = false;
-			}
-		}
+            // var obj = new ActiveXObject("Scripting.FileSystemObject");
+            // uploadSize = obj.getFile(fileinput.value).size;
+            // uploadType = obj.getFile(fileinput.value).type;
+        }
+        else{
+        	uploadSize = fileinput.files.item(0).size;
+            uploadType = fileinput.files.item(0).type;
 
-		return isSubmit;
+            switch(uploadType){
+            	case "image/gif":
+            	case "image/png":
+            	case "image/jpg":
+            	case "image/jpeg":
+            		isSubmit = true;
+            	break;
+
+            	default:
+            		isSubmit = false;
+            		editor.alert("只能上傳 gif/png/jpg 圖片檔", "error");
+            	break;
+            }
+
+            if(uploadSize > 5 * 1024 *1024){
+            	editor.alert("檔案大小不能超過5MB", "error");
+            	isSubmit = false;
+            }
+        }
+        
+        return isSubmit;
 	},
 	bindControl: function(paragraphBox, photoID){
 		var controlPanel = $("<div>");

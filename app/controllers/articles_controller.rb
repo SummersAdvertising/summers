@@ -13,7 +13,11 @@ class ArticlesController < ApplicationController
     @article = Article.where("id = ? or namehash = ?", params[:id], params[:id]).first
 
     if(@article)
-      # generate contents of meta tags
+      #find prev and next article
+      @prev = Article.where("id > ?", @article.id).first
+      @next = Article.where("id < ?", @article.id).first
+
+      # generate contents for meta tags
       $meta_description = '';
       if(!@article.content.blank?)
         @paragraphs = JSON.parse(@article.content)
