@@ -53,12 +53,6 @@
   <!--text-->
   <% end %>
 
-  <div id="error">
-  <% if flash[:notice] %>
-  <p>管理者資料已更新</p>
-  <% end %>
-  </div>
-
   <section class="button">
     <a href="#" id="btnSubmit"><img src="/images/save.png">儲存</a>
     <a href="#"><img src="/images/cancel.png">取消</a>
@@ -67,13 +61,17 @@
 </article>
 
 <script type="text/javascript">
+<% if flash[:notice] %>
+Alertify.log.success("管理者資料已更新");
+<% end %>
+
 $("#btnSubmit").click(function(){
 	$("form").submit();
 });
 $("form").submit(function(){
 	var check = ($("#admin_password").val()==$("#pswCheck").val());
 	if(check == false){
-		$("#error").html("密碼不一致, 更新失敗");
+    Alertify.log.error("密碼不一致, 更新失敗");
 		$("#admin_password").val("");
 		$("#pswCheck").val("");
 	}

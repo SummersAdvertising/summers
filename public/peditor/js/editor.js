@@ -117,6 +117,8 @@ var editor = {
 			url: $("form, .edit_"+ editor.settings.articleModel).attr("action"),
 			data: $("form, .edit_"+ editor.settings.articleModel).serialize()
 		});
+
+		editor.alert("文章變更已儲存", "success");
 	},
 	pack: function(upload){
 		var article = new Array();
@@ -146,8 +148,8 @@ var editor = {
 		editor.settings.articleSection = $(articleSection? articleSection : editor.settings.articleSection);
 
 		var content = content? content : $("#"+editor.settings.articleModel+"_content").val();
-
 		var article = JSON.parse((content && content.length>0)? content: "{}");
+
 		for(var i = 0, length = article.length; i < length; i++)
 		{
 			var paragraph = article[i];
