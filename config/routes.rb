@@ -1,6 +1,5 @@
 Summers::Application.routes.draw do
   resources :articles, :only => [:index, :show]
-
   resources :tickets
 
   match "/admin/createAdmin" => "admin#createAdmin", :via => :post

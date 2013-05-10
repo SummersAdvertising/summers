@@ -6,7 +6,6 @@
 				<th><%= @article.created_at.strftime("%Y-%m-%d") %></th>
 				<td><%= f.text_field :title, :placeholder => "請輸入文章標題", :autocomplete => "off" %>
 					<%= f.text_field :content, :style => "display:none;" %>
-                    <%= f.text_field :metakw, :style => "display:none;" %>
 				</td>
 			</tr>
 		</table>
@@ -98,7 +97,19 @@
         <tr>
           <th>關鍵字</th>	
           <td>
-            <input autocomplete="off" id = "metakw" placeholder="多個關鍵字請用逗號分隔" size="30" type="text" />
+            <input autocomplete="off" id = "article_metakw" name="article[metakw]" placeholder="多個關鍵字請用逗號分隔" size="30" type="text" />
+          </td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+
+    <section class="title">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>前台顯示</th>  
+          <td>
+            <input id="article_show" name="article_show" type="checkbox" value="1">
           </td>
         </tr>
       </table>
@@ -112,13 +123,23 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $("#nav-2").parents("li").addClass("active");
-  $("#metakw").val($("#article_metakw").val());
+  $("#article_metakw").val("<%= @article.metakw %>");
+
+  <% if (@article.status == "show") %>
+  $("#article_show").attr('checked', true);
+  <% end %>
+
+  <% if (@article.errors.any?) %>
+  <% @article.errors.full_messages.each do|msg| %>
+  Alertify.log.error("儲存失敗：<%= msg %>");
+  <% end %>
+  <% end %>
 
   editor.init({photoModel:"articlephoto"});
 
   $("#saveArticle").click(function(e){
     e.preventDefault();
-    $("#article_metakw").val($("#metakw").val());
+    $("form:first").append($("#article_metakw").clone().hide()).append($("#article_show").clone().hide());
     $("form:first").submit();
   });
 });

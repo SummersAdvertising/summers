@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   
   def index
-    @articles = Article.order("created_at DESC").all
+    @articles = Article.where("status = ?", "show").order("created_at DESC").all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,12 +10,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.where("id = ? or namehash = ?", params[:id], params[:id]).first
+    @article = Article.where("(id = ? or namehash = ?) and status = ?", params[:id], params[:id], "show").first
 
     if(@article)
       #find prev and next article
-      @prev = Article.where("id > ?", @article.id).first
-      @next = Article.where("id < ?", @article.id).first
+      @prev = Article.where("id > ? and status = ?", @article.id, "show").first
+      @next = Article.where("id < ? and status = ?", @article.id, "show").first
 
       # generate contents for meta tags
       $meta_description = '';

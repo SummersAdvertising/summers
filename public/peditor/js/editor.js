@@ -84,8 +84,8 @@ var editor = {
 			}
 		}
 
-		if($(".button").length > 0){
-			var editorAdd = $(".button:first");
+		if($(".editorAdd").length > 0){
+			var editorAdd = $(".editorAdd");
 		}
 		else{
 			var editorAdd = $("<section>");
@@ -111,7 +111,6 @@ var editor = {
 		}
 	},
 	ajaxupdate: function(){
-		$("#article_metakw").val($("#metakw").val());
 		$.ajax({
 			type: "POST",
 			url: $("form, .edit_"+ editor.settings.articleModel).attr("action"),

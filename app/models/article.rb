@@ -1,6 +1,13 @@
+#encoding: utf-8
 class Article < ActiveRecord::Base
-  attr_accessible :content, :count, :metakw, :namehash, :title
+  attr_accessible :content, :count, :metakw, :namehash, :title, :status
   has_many :articlephotos, :dependent => :destroy
+  validates :namehash, :uniqueness => { :message => "網址重複，請重新輸入。" }, :allow_nil => true, :allow_blank => true
+  validates :namehash, :format => { :with => /^\S+$/, :message => "網址不能包含空白字元，請重新輸入。" },:if => :not_blank?
+
+  def not_blank?
+    namehash.length >0
+  end
 
   paginates_per 15
   

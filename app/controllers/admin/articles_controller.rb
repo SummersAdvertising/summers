@@ -41,12 +41,19 @@ class Admin::ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
+    
+    if(params[:article_show])
+      @article.status = "show"
+    else
+      @article.status = ""
+    end
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to admin_article_path(@article), notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
+        @photo = Articlephoto.new
         format.html { render action: "edit" }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
