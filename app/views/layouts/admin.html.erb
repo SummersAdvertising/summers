@@ -3,7 +3,7 @@
 <head>
 <!--[if lt IE 9]>
 <script src="js/html5.js"></script>
-<link rel="stylesheet" href="/assets/admin/responsive/desktop">
+<%= stylesheet_link_tag "admin/responsive/desktop" %>
 
 <![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
@@ -12,14 +12,14 @@
 <meta http-equiv="content-language" content="zh-TW" />
 <title>夏天廣告-後台管理系統</title>
 
-<%= stylesheet_link_tag "admin", :media => "all" %>
+<%= stylesheet_link_tag "admin" %>
 <%= javascript_include_tag "application" %>
 
 <%= stylesheet_link_tag "admin/responsive/mobile", :media => "screen and (max-width: 543px)" %>
 <%= stylesheet_link_tag "admin/responsive/tablet", :media => "screen and (min-width: 544px) and (max-width: 896px)" %>
 <%= stylesheet_link_tag "admin/responsive/desktop", :media => "screen and (min-width: 897px)" %>
 
-<link rel="stylesheet" href="/assets/admin/custom">
+<%= stylesheet_link_tag "admin/custom" %>
 
 <link rel="stylesheet" type="text/css" href="/peditor/css/peditor.css">
 <script src="/peditor/js/editor.js"></script>
