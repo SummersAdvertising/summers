@@ -103,20 +103,11 @@
       </table>
     </section>
     <!--title-->
-
-    <section class="title">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <th>前台顯示</th>  
-          <td>
-            <input id="article_show" name="article_show" type="checkbox" value="1">
-          </td>
-        </tr>
-      </table>
-    </section>
-    <!--title-->
     
-    <section class="button" id="saveArticle"><a href="#"><img src="/images/check.png">完成</a></section>
+    <section class="button">
+      <a href="#" data-save="article" class = "saveArticle"><img src="/images/upload.png">發佈</a>
+      <a href="#" data-save="draft" class = "saveArticle"><img src="/images/draft.png">草稿</a>
+    </section>
     <!--button--> 
 </article>
 
@@ -124,10 +115,6 @@
 $(document).ready(function(){
   $("#nav-2").parents("li").addClass("active");
   $("#article_metakw").val("<%= @article.metakw %>");
-
-  <% if (@article.status == "show") %>
-  $("#article_show").attr('checked', true);
-  <% end %>
 
   <% if (@article.errors.any?) %>
   <% @article.errors.full_messages.each do|msg| %>
@@ -137,9 +124,10 @@ $(document).ready(function(){
 
   editor.init({photoModel:"articlephoto"});
 
-  $("#saveArticle").click(function(e){
+  $(".saveArticle").click(function(e){
     e.preventDefault();
-    $("form:first").append($("#article_metakw").clone().hide()).append($("#article_show").clone().hide());
+    var articleStatus = $("<input>").attr("name", "article[status]").attr("type", "text").attr("value", $(this).data("save"));
+    $("form:first").append($("#article_metakw").clone().hide()).append(articleStatus.hide());
     $("form:first").submit();
   });
 });

@@ -33,9 +33,11 @@ nav li a{background-repeat:no-repeat;display:block;width:100%;height:100%}
 
 .title{width:100%;border:1px solid #ccc;border-radius:5px}
 .title th{background:image-url("list.jpg") 0 0 repeat-x #DEDEDE;color:#999;text-shadow:0 1px 0 #fff;font:300 13px "verdana";width:100px;border-right:1px solid #ccc}
-.title td{padding:8px 10px 5px 10px;border-left:1px solid #fff;color:#555}
+.title td{padding:8px 10px 5px 10px;border-left:1px solid #fff;color:#555;position:relative}
 .title td input{border:0;width:100%;font:300 13px 新細明體;color:#555}
 .title th input{width:80%;border-radius:5px;border:1px solid #ccc!important;padding:5px;color:#555}
+
+.title .counter{background:image-url("list.jpg") 0 0 repeat-x #DEDEDE;border:1px solid #ccc;display:block;padding:3px 5px 0 5px;height:21px;text-align:center;border-radius:5px;color:#555;text-shadow:0 1px 0 #fff;font:300 11px "verdana";position:absolute;top:4px;right:3px}
 
 /*-----------------------------------------------------------------------分類---*/
 
@@ -85,11 +87,11 @@ border-radius:5px;width:302px;margin:0 auto}
 .post textarea{min-height:100px}
 
 #post-list ul{margin:0 0 3px 0}
-.addlist a{display:block;border:1px solid #ccc;background:#fff;font:300 11px "verdana";padding:5px 0;width:50px;text-align:center;border-radius:5px}
-.addlist a:hover{background:#eee}
 
 .addlink{text-shadow:0 1px 0 #fff}
-.addlink img{position:relative;top:4px}
+.addlist a{display:block;border:1px solid #ccc;background:#fff;font:300 11px "verdana";padding:5px 0;width:50px;text-align:center;border-radius:5px}
+.addlist a:hover{background:#eee}
+.addlink img{position:relative;top:4px;left:-5px}
 
 /*-----------------------------------------------------------------------預覽---*/
 

@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   
   def index
-    @articles = Article.where("status = ?", "show").order("created_at DESC").all
+    @articles = Article.where("status = ?", "article").order("created_at DESC").all
 
     if(@articles)
       @articles.each do | article |
@@ -24,12 +24,12 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.where("(id = ? or namehash = ?) and status = ?", params[:id], params[:id], "show").first
+    @article = Article.where("(id = ? or namehash = ?) and status = ?", params[:id], params[:id], "article").first
 
     if(@article)
       #find prev and next article
-      @prev = Article.where("id > ? and status = ?", @article.id, "show").first
-      @next = Article.where("id < ? and status = ?", @article.id, "show").last
+      @prev = Article.where("id > ? and status = ?", @article.id, "article").first
+      @next = Article.where("id < ? and status = ?", @article.id, "article").last
 
       # generate contents for meta tags
       $meta_description = '';

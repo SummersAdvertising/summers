@@ -6,8 +6,8 @@
     <section class="list">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
+                <th align="left" class="x0 x1">狀態</th>
                 <th align="left" class="x0 x2">發佈日期</th>
-                <th align="left">前台顯示</th>
                 <th align="left">文章標題</th>
                 <th align="left" class="x0 x1">編輯</th>
                 <th align="left" class="x1">刪除</th>
@@ -15,8 +15,11 @@
 
             <% @articles.each do |article| %>
             <tr>
+                <td class="x0">
+                    <img src="<%= (article.status == "article") ?  "/images/check.png" : "/images/draft.png" %>
+                    ">
+                </td>
                 <td class="x0"><%= article.created_at.strftime("%Y-%m-%d") %></td>
-                <td class="x0"><%= article.status %></td>
                 <td><%= link_to article.title, admin_article_path(article) %></td>
                 <td class="x0"><%= link_to image_tag("/images/edit.png"), edit_admin_article_path(article) %></td>
                 <td class="delete"><%= link_to image_tag("/images/delete.png"), admin_article_path(article), method: :delete, data: { confirm: 'Are you sure?' } %></td>

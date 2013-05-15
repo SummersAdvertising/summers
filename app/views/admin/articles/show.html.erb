@@ -4,7 +4,7 @@
       <tr>
         <th><%= @article.created_at.strftime("%Y-%m-%d") %></th>
         <td>
-          <%= @article.title %>
+          <%= @article.title %><span class="counter"><%= @article.count %> 人次</span>
           <input id="article_content" style="display:none;" type="text" value="<%=@article.content%>">
         </td>
       </tr>
