@@ -3,6 +3,20 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.where("status = ?", "show").order("created_at DESC").all
 
+    if(@articles)
+      @articles.each do | article |
+        if(!article.content.blank?)
+          @paragraphs = JSON.parse(article.content)
+          @paragraphs.each do | p |
+            next if p["type"] != "img"
+
+            article[:imgpath] = p["path"]
+            break
+          end
+        end
+      end
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
@@ -15,7 +29,7 @@ class ArticlesController < ApplicationController
     if(@article)
       #find prev and next article
       @prev = Article.where("id > ? and status = ?", @article.id, "show").first
-      @next = Article.where("id < ? and status = ?", @article.id, "show").first
+      @next = Article.where("id < ? and status = ?", @article.id, "show").last
 
       # generate contents for meta tags
       $meta_description = '';

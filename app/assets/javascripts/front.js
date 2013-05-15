@@ -10,8 +10,5 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery.remotipart
-//= require jquery.ui.sortable
-//= require_tree ./admin
+//= require_tree ./font
+//= require ./admin/json2.js

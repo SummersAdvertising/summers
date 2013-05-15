@@ -1,0 +1,46 @@
+
+/*-----------------------------------------------------------------------頁首---*/
+
+/*
+nav{height:58px}
+nav .limit{width:90%;padding:10px 0 0 0}
+nav a{width:38px;height:38px}
+nav a span{top:20px;left:315px}
+*/
+
+nav a,nav span{font-size:14pt}
+#ctrl{display:none}
+#cloud{background:url(/images/article/cloud-s.png) center 0 no-repeat;height:104px;margin:35px 0 0 0}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article .limit{width:90%;max-width:600px}
+article h2{font-size:31px}
+
+.list .publish{float:left;width:25%;padding:15% 30px 0 0}
+.list .date{font-size:40px}
+.list .year{font-size:20px}
+
+.list .title{float:right;width:75%}
+
+/*-----------------------------------------------------------------------內文---*/
+
+.single h3{font-size:25px}
+.inner p{font-size:15px}
+
+/*-----------------------------------------------------------------------頁碼---*/
+
+#page {text-align:center;margin:5% 0;}
+#page a{display:inline-block;height:60px;text-indent:-7777px}
+#page a:active{position:relative;top:2px;}
+#page .prev{width:59px;background:url(/images/article/prev.png) 0 0 no-repeat}
+#page .next{width:59px;background:url(/images/article/next.png) 0 0 no-repeat}
+#page .more{width:90px;background:url(/images/article/more.png) 0 0 no-repeat}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer .limit{width:90%}
+#contact{width:50%}
+#contact a{font-size:18pt;width:187px;height:62px;padding:15px 0 0 0}
+#logo{width:50%;height:50px;background-position:90% center}
+#gplus{width:50%;text-align:right;padding:0 5% 0 0}

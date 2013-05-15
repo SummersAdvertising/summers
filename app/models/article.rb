@@ -6,7 +6,7 @@ class Article < ActiveRecord::Base
   validates :namehash, :format => { :with => /^\S+$/, :message => "網址不能包含空白字元，請重新輸入。" },:if => :not_blank?
 
   def not_blank?
-    namehash.length >0
+    (namehash && namehash.length >0)
   end
 
   paginates_per 15
