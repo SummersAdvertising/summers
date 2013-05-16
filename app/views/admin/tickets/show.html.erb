@@ -30,15 +30,15 @@
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <th valign="top">需求：</th>
-          <td><%= @ticket.issue %></td>
+          <td><%=(@ticket.issue.length>0) ?  @ticket.issue : "<其他>" %></td>
         </tr>
       </table>
     </div>
     <div class="one">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <th >其他：</th>
-          <td><%= @ticket.content %></td>
+          <th>其他：</th>
+          <td><%= (@ticket.content.length>0) ? @ticket.content : "<空>" %></td>
         </tr>
       </table>
     </div>

@@ -6,3 +6,6 @@ en:
     attributes:
       article:
         namehash: ""
+        content: "內容"
+        metakw: "meta關鍵字"
+        title: "標題"

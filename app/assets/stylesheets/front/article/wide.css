@@ -7,7 +7,6 @@ nav .limit{max-width:1024px;padding:17px 0 0 0}
 nav a{width:47px;height:47px}
 nav a span{top:30px;left:365px;}
 */
-
 nav a,nav span{font-size:16pt}
 #ctrl{display:none}
 #cloud{background:url(/images/article/cloud.png) center 0 no-repeat;height:206px;margin:20px 0 0 0}

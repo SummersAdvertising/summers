@@ -2,7 +2,7 @@
     <section class="button">
         <%= link_to (image_tag("/images/add.png")+"新增文章"), admin_articles_path, method: :post %>
     </section>
-    <!--button-->
+
     <section class="list">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
@@ -16,8 +16,7 @@
             <% @articles.each do |article| %>
             <tr>
                 <td class="x0">
-                    <img src="<%= (article.status == "article") ?  "/images/check.png" : "/images/draft.png" %>
-                    ">
+                    <img src="<%= (article.status == "article") ?  "/images/check.png" : "/images/draft.png" %>" />
                 </td>
                 <td class="x0"><%= article.created_at.strftime("%Y-%m-%d") %></td>
                 <td><%= link_to article.title, admin_article_path(article) %></td>

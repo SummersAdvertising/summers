@@ -129,7 +129,12 @@ var editor = {
 			article.push(upload);
 		}
 
-		$("#"+editor.settings.articleModel+"_content").val(editor.filter(JSON.stringify(article), editor.parsequot));
+		if(article.length>0){
+			$("#"+editor.settings.articleModel+"_content").val(editor.filter(JSON.stringify(article), editor.parsequot));
+		}
+		else{
+			$("#"+editor.settings.articleModel+"_content").val("");
+		}
 
 		editor.save(editor.ajaxupdate);
 	},
