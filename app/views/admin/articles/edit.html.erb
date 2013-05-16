@@ -11,19 +11,9 @@
 		</table>
 	</section>
 	<!--title-->
+  <% end %>
 
-	<section class="title">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <th>網址</th>	
-          <td><%= f.text_field :namehash, :autocomplete => "off" %></td>
-        </tr>
-      </table>
-    </section>
-    <!--title-->
-    <% end %>
-
-    <div id="editorPanel">
+  <div id="editorPanel">
     <section class="tab">
       <ul class="x3">
         <li id="tab-p" data-type="p"><a href="#post-p"><img src="/images/edit.png">段落</a></li>
@@ -92,17 +82,33 @@
     
     </section>
     <!--preview-->
-    <section class="title">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <th>關鍵字</th>	
-          <td>
-            <input autocomplete="off" id = "article_metakw" name="article[metakw]" placeholder="多個關鍵字請用逗號分隔" size="30" type="text" />
-          </td>
-        </tr>
-      </table>
+
+    <section class="text text-edit">
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top">自訂日期</th>
+            <td><input autocomplete="off" id = "article_publishDate" name="article[publishDate]" type="text" value="<%= @article.publishDate %>" /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top">自訂網址</th>
+            <td><input autocomplete="off" id = "article_namehash" name="article[namehash]" type="text" value="<%= @article.namehash %>" /></td>
+          </tr>
+        </table>
+      </div>
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top">關鍵字</th>
+            <td><input autocomplete="off" id = "article_metakw" name="article[metakw]" placeholder="多個關鍵字請用逗號分隔" size="30" type="text" value="<%= @article.metakw %>" /></td>
+          </tr>
+        </table>
+      </div>
     </section>
-    <!--title-->
     
     <section class="button">
       <a href="#" data-save="article" class = "saveArticle"><img src="/images/upload.png">發佈</a>
@@ -114,7 +120,7 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $("#nav-2").parents("li").addClass("active");
-  $("#article_metakw").val("<%= @article.metakw %>");
+  //$("#article_metakw").val("<%= @article.metakw %>");
 
   <% if (@article.errors.any?) %>
   <% @article.errors.full_messages.each do|msg| %>
@@ -127,7 +133,7 @@ $(document).ready(function(){
   $(".saveArticle").click(function(e){
     e.preventDefault();
     var articleStatus = $("<input>").attr("name", "article[status]").attr("type", "text").attr("value", $(this).data("save"));
-    $("form:first").append($("#article_metakw").clone().hide()).append(articleStatus.hide());
+    $("form:first").append($("#article_publishDate").clone().hide()).append($("#article_namehash").clone().hide()).append($("#article_metakw").clone().hide()).append(articleStatus.hide());
     $("form:first").submit();
   });
 });

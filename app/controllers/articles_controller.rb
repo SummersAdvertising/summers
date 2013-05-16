@@ -29,7 +29,14 @@ class ArticlesController < ApplicationController
     if(@article)
       #find prev and next article
       @prev = Article.where("id > ? and status = ?", @article.id, "article").first
+      if(!@prev)
+        @prev = Article.where("status = ?", "article").first
+      end
+
       @next = Article.where("id < ? and status = ?", @article.id, "article").last
+      if(!@next)
+        @next = Article.where("status = ?", "article").last
+      end
 
       # generate contents for meta tags
       $meta_description = '';
@@ -47,8 +54,7 @@ class ArticlesController < ApplicationController
           break if max_length <= 0
         end
       end
-
-      $meta_title = @article.title
+      
       $meta_kw = @article.metakw
 
       # article click count

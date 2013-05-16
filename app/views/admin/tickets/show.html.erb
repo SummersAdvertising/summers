@@ -30,7 +30,7 @@
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <th valign="top">需求：</th>
-          <td><%=(@ticket.issue.length>0) ?  @ticket.issue : "<其他>" %></td>
+          <td><%=(@ticket.issue && @ticket.issue.length>0) ?  @ticket.issue : "<其他>" %></td>
         </tr>
       </table>
     </div>
