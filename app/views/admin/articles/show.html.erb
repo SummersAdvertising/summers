@@ -45,5 +45,8 @@ $(document).ready(function(){
   $("#nav-2").parents("li").addClass("active");
 
   editor.output();
+  $("#articleContent").children("div").each(function(){
+    $(this).addClass("part");
+  });
 });
 </script>
