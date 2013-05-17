@@ -81,7 +81,7 @@ article h2 a{display:block;text-align:right;color:#fff;font-weight:300;font-fami
 
 /*-----------------------------------------------------------------------社群---*/
 
-.social{border-bottom:1px solid #7CE5FF;margin:5% 0 2.5% 0}
+.social{border-bottom:1px solid #7CE5FF;margin:5% 0 2.5% 0;width:100%;text-align:right}
 .social:after{content:' ';display:block;border-top:1px solid #045A8A}
 
 /*-----------------------------------------------------------------------森林---*/
