@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   
   def index
-    @articles = Article.where("status = ?", "article").order("created_at DESC").all
+    @articles = Article.where("status = ?", "article").order("publishDate DESC, created_at DESC").all
 
     if(@articles)
       @articles.each do | article |
@@ -28,14 +28,14 @@ class ArticlesController < ApplicationController
 
     if(@article)
       #find prev and next article
-      @prev = Article.where("id > ? and status = ?", @article.id, "article").first
+      @prev = Article.where("publishDate > ? and status = ?", @article.publishDate, "article").order("publishDate DESC, created_at DESC").last
       if(!@prev)
-        @prev = Article.where("status = ?", "article").first
+        @prev = Article.where("status = ?", "article").order("publishDate DESC, created_at DESC").last
       end
 
-      @next = Article.where("id < ? and status = ?", @article.id, "article").last
+      @next = Article.where("publishDate < ? and status = ?", @article.publishDate, "article").order("publishDate DESC, created_at DESC").first
       if(!@next)
-        @next = Article.where("status = ?", "article").last
+        @next = Article.where("status = ?", "article").order("publishDate DESC, created_at DESC").first
       end
 
       # generate contents for meta tags

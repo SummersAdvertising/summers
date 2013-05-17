@@ -113,8 +113,8 @@ var _hmt = _hmt || [];
       <h3><%= @article.title %></h3>
       <div class="banner">
         <div class="publish"> 
-          <div class="day"><%= @article.created_at.strftime("%d") %></div>
-          <div class="month"><%= @article.created_at.strftime("%B").slice(0, 3) %></div> 
+          <div class="day"><%= @article.publishDate.strftime("%d") if(@article.publishDate) %></div>
+          <div class="month"><%= @article.publishDate.strftime("%B").slice(0, 3) if(@article.publishDate) %></div> 
         </div>
         <!--publish-->
       </div>

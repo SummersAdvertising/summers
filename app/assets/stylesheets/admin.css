@@ -13,4 +13,5 @@
  *= require ./admin/default.css.scss
  *= require ./alertify/alertify.css
  *= require ./alertify/alertify.default.css
+ *= require jquery.ui.datepicker
  */

@@ -102,8 +102,8 @@ var _hmt = _hmt || [];
     <% @articles.each do |article| %>
     <div class="content list">
       <div class="publish">
-        <span class="date"><%= article.created_at.strftime("%m/%d") %></span><br>
-        <span class="year"><%= article.created_at.strftime("%Y") %></span>
+        <span class="date"><%= article.publishDate.strftime("%m/%d") if(article.publishDate) %></span><br>
+        <span class="year"><%= article.publishDate.strftime("%Y") if(article.publishDate) %></span>
       </div>
       <!--publish-->
       <div class="title">
