@@ -114,7 +114,7 @@ var _hmt = _hmt || [];
       <div class="banner">
         <div class="publish"> 
           <div class="day"><%= @article.created_at.strftime("%d") %></div>
-          <div class="month"><%= @article.created_at.strftime("%B") %></div> 
+          <div class="month"><%= @article.created_at.strftime("%B").slice(0, 3) %></div> 
         </div>
         <!--publish-->
       </div>
