@@ -45,13 +45,21 @@ class ArticlesController < ApplicationController
         max_length = 100
 
         @paragraphs.each do | p |
-          next if p["type"] != "p"
+          if p["type"] == "p"
 
           partical_content = p["content"].gsub(/\\n/, "")
           $meta_description += partical_content
           max_length -= partical_content.length
 
           break if max_length <= 0
+          
+          elsif p["type"] == "img" && !@article[:imgpath]
+            @article[:imgpath] = p["path"]
+
+          else
+            next
+          end
+
         end
       end
       
