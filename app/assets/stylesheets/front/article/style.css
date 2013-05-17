@@ -79,9 +79,10 @@ article h2 a{display:block;text-align:right;color:#fff;font-weight:300;font-fami
 .inner p a{color:#fff}
 .inner img{max-width:100%;height:auto;}
 
-/*-----------------------------------------------------------------------頁碼---*/
+/*-----------------------------------------------------------------------社群---*/
 
-
+.social{border-bottom:1px solid #7CE5FF;margin:5% 0 2.5% 0}
+.social:after{content:' ';display:block;border-top:1px solid #045A8A}
 
 /*-----------------------------------------------------------------------森林---*/
 
