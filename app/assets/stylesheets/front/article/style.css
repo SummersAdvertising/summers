@@ -46,7 +46,7 @@ nav a span:hover{color:#fff}
 aside{max-width:600px;width:95%;margin:0 auto;padding:10px 0;background:url(/images/article/back.png) 5px 8px	 no-repeat;
 -webkit-transition:all .5s ease;
 -moz-transition:all .5s ease}
-aside a{color:#fff;font:300 20pt 微軟正黑體,Arial;display:block;width:190px;padding:0 0 0 50px;text-shadow:0 0 1px #005585;
+aside a{color:#3B579D;font:300 20pt 微軟正黑體,Arial;display:block;width:190px;padding:0 0 0 50px;text-shadow:0 1px 0 #9ADCFF;
 -webkit-transition:all .5s ease;
 -moz-transition:all .5s ease}
 aside:hover{background:url(/images/article/back.png) 0 8px no-repeat}
@@ -54,10 +54,10 @@ aside:hover{background:url(/images/article/back.png) 0 8px no-repeat}
 /*-----------------------------------------------------------------------頁身---*/
 
 article .limit{margin:0 auto}
-article h2 a{display:block;text-align:right;color:#fff;font-weight:300;font-family:"微軟正黑體";text-shadow:0 1px 0 #207ABE;margin:10% 0 0 0}
+article h2 a{display:block;text-align:right;color:#3B579D;font-weight:300;font-family:"微軟正黑體";text-shadow:0 1px 0 #9ADCFF;margin:10% 0 0 0}
 
 .list{margin:5% 0;overflow:hidden}
-.list .publish{color:#fff;text-align:right;text-shadow:0 1px 0 #207ABE}
+.list .publish{color:#3B579D;text-align:right;text-shadow:0 1px 0 #9ADCFF}
 .list .title{position:relative;z-index:1;}
 .list .title img{width:100%;border:1px solid #88B1D8}
 .list .title:hover img{border:1px solid #1C76BA}
@@ -73,10 +73,10 @@ article h2 a{display:block;text-align:right;color:#fff;font-weight:300;font-fami
 .single .day{font-size:25px;height:40px;padding:5px 0 0 0}
 .single .month{font-size:12px;height:17px}
 
-.single .banner img{width:100%;border:1px solid #1C76BA;padding:5px;background:#7DC0EE;border-radius:5px}
+.single .banner img{width:100%;border:1px solid #6BA6C6;padding:5px;background:#7EC7EF;border-radius:5px}
 
 .inner p, .inner ul{line-height:1.7em;padding:10px 0;color:#000;text-shadow:0 1px 0 #9ADCFF}
-.inner p a{color:#fff}
+.inner p a{color:#3B579D;text-shadow:0 1px 0 #9ADCFF}
 .inner img{max-width:100%;height:auto;}
 
 /*-----------------------------------------------------------------------社群---*/
