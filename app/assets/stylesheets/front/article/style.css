@@ -67,7 +67,7 @@ article h2 a{display:block;text-align:right;color:#fff;font-weight:300;font-fami
 /*-----------------------------------------------------------------------內文---*/
 
 .single{max-width:600px;margin:0 auto}
-.single h3{font-weight:300;font-family:"微軟正黑體";padding:5% 0;text-shadow:0 1px 0 #51B2FD}
+.single h3{font-weight:300;font-family:"微軟正黑體";padding:5% 0;text-shadow:0 1px 0 #9ADCFF}
 .single .banner{position:relative}
 .single .publish{position:absolute;background:url(/images/article/publish.png) 0 0 no-repeat;width:51px;height:67px;left:-5px;top:20px;color:#fff;font-family:Arial;font-weight:700;text-shadow:0 1px 0 #8A2E07;text-align:center}
 .single .day{font-size:25px;height:40px;padding:5px 0 0 0}
@@ -75,13 +75,13 @@ article h2 a{display:block;text-align:right;color:#fff;font-weight:300;font-fami
 
 .single .banner img{width:100%;border:1px solid #1C76BA;padding:5px;background:#7DC0EE;border-radius:5px}
 
-.inner p, .inner ul{line-height:1.7em;padding:10px 0;color:#000;text-shadow:0 1px 0 #6ECBFF}
+.inner p, .inner ul{line-height:1.7em;padding:10px 0;color:#000;text-shadow:0 1px 0 #9ADCFF}
 .inner p a{color:#fff}
 .inner img{max-width:100%;height:auto;}
 
 /*-----------------------------------------------------------------------社群---*/
 
-.social{border-bottom:1px solid #7CE5FF;margin:5% 0 2.5% 0;width:100%;text-align:right}
+.social{border-bottom:1px solid #9ADCFF;margin:5% 0 2.5% 0;width:100%;text-align:right}
 .social:after{content:' ';display:block;border-top:1px solid #045A8A}
 
 /*-----------------------------------------------------------------------森林---*/
