@@ -15,7 +15,7 @@ nav a,nav span{font-size:14pt}
 /*-----------------------------------------------------------------------頁身---*/
 
 article .limit{width:90%;max-width:600px}
-article h2 a{font-size:31px}
+article h2 a{width:100%;max-width:600px;font-size:31px}
 
 .list .publish{float:left;width:25%;padding:15% 30px 0 0}
 .list .date{font-size:40px}
