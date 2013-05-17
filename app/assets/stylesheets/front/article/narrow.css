@@ -31,7 +31,7 @@ article h2 a{width:100%;font-size:24px;text-align:center;}
 /*-----------------------------------------------------------------------內文---*/
 
 .single h3{font-size:20px}
-.inner p{font-size:14px}
+.inner p,.inner ul{font-size:14px}
 
 /*-----------------------------------------------------------------------頁碼---*/
 
