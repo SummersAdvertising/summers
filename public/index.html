@@ -30,22 +30,27 @@
 <link rel="stylesheet" media="screen and (min-width: 1024px)" href="css/wide.css" />
 <script src="js/jquery-1.8.1.min.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
-<script src="/assets/front"></script>
 <script type="text/javascript">
+$(function() {  
+    $("#ctrl").click(function() {  
+        $("#navBar").toggleClass("box-change");  
+    });  
+});
 loadJS();
 function loadJS(){
   if($(window).width()>581){
     var jsFiles = ["js/anchor-art.js", "js/jquery.superscrollorama.js", "js/TweenMax.min.js", "js/jquery.event.frame.js", "js/jquery.parallax.js", "js/konami.js"];
     var countLoaded = 0;
 
-    $.each( jsFiles, function( key, value ) {
+    for(var i = 0, length = jsFiles.length; i<length ;i++){
+      var value = jsFiles[i];
       $.getScript(value, function(){
         countLoaded++;
         if(countLoaded == jsFiles.length){
           loadScript();
         }
       });
-    });
+    }
 
   }
 }
@@ -177,7 +182,7 @@ var _hmt = _hmt || [];
 
 <body>
 <div id="big-wrestler"></div>
-<aside itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> 
+<aside id="navBar" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"> 
 <span id="ctrl"><img src="images/ctrl.png"></span>
 <a href="contact.html" itemprop="url"  title="業務聯絡"><span itemprop="title">業務聯絡</span></a> <span class="star">★</span> <a href="works/enterprise.html" itemprop="url"><span itemprop="title" title="作品">作品</span></a> <span class="star">★</span> <a href="service.html" itemprop="url" title="服務項目"><span itemprop="title">服務項目</span></a> <span class="star">★</span> <a href="/articles" itemprop="url" title="網站工作隨筆"><span itemprop="title">網站工作隨筆</span></a></aside>
 <nav id="move-w" class="move"><a href="#writer">請看我的左腳─網頁文字</a></nav>

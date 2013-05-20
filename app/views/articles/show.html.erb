@@ -130,13 +130,14 @@ var _hmt = _hmt || [];
     </div>
 
     <div class="social">
+      <!-- FB -->
       <iframe src="//www.facebook.com/plugins/like.php?href=<%= "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=90&amp;appId=433197170080910" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:60px;" allowTransparency="true"></iframe>
 
-      <!-- 在你要顯示「+1 按鈕」的位置放上這個標記。 -->
+      <!-- Google+ +1 -->
       <div class="g-plusone" data-size="tall"></div>
     </div>
 
-    <!-- 在最後一個「+1 按鈕」標記之後放置這個標記。 -->
+    <!-- js for Google+ -->
     <script type="text/javascript">
     window.___gcfg = {lang: 'zh-TW'};
 
@@ -148,15 +149,12 @@ var _hmt = _hmt || [];
     </script>
 
     <div id="page">
-      <% if(@prev) %>
       <a href="<%= article_path((@prev.namehash.length > 0)? @prev.namehash : @prev.id) %>" class="prev" title="<%= @prev.title%>">Prev</a>
-      <% end %>
 
       <a href="<%= articles_path %>" class="more" title="回文章列表">..看更多..</a>
 
-      <% if(@next) %>
       <a href="<%= article_path((@next.namehash.length > 0)? @next.namehash : @next.id) %>" class="next" title="<%= @next.title%>">Next</a>
-      <% end %>
+
     </div>
   </section>
   <!--limit-->
