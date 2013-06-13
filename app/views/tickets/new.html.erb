@@ -250,7 +250,7 @@ var _hmt = _hmt || [];
     }
 
     //validate tel value
-    var telrule = /^(\(?0\d{1,3}\)?-?)?(\d)+(?#\d{1,4}$/;
+    var telrule = /^(\(?0\d{1,3}\)?-?)?(\d)+(\#\d{1,4})?$/;
     if(jQuery(".valid_tel").val() && !jQuery(".valid_tel").val().match(telrule)){
       submit = false;
       alertMsg += "請輸入正確的聯絡電話<br />";
