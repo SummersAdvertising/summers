@@ -77,7 +77,7 @@ Summers::Application.configure do
     :port                 	=> 587,
     :domain               => 'localhost',
     :user_name            => 'adword@summers.com.tw',
-    :password             => '92179209',
+    :password             => '4957QW9780',
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }
