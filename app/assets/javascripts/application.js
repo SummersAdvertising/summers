@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.remotipart
+//= require jquery.ui.sortable
+//= require jquery.ui.datepicker
+//= require_tree ./admin

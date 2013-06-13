@@ -1,0 +1,52 @@
+<article>
+  <section class="title">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th><%= @article.publishDate.strftime("%Y-%m-%d") if(@article.publishDate) %></th>
+        <td>
+          <%= @article.title %><span class="counter"><%= @article.count %> 人次</span>
+          <input id="article_content" style="display:none;" type="text" value="<%=@article.content%>">
+        </td>
+      </tr>
+    </table>
+  </section>
+  <!--title-->
+  <section class="text text-show">  
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top">自訂網址</th>
+            <td><%= @article.namehash.length>0 ? @article.namehash : @article.id %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top">關鍵字</th>
+            <td><%= @article.metakw.length>0 ? @article.metakw : "未輸入關鍵字" %></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+  <section class="text text-show" id="articleContent"></section>
+  <!--text-->
+
+  <section class="button">
+    <%= link_to (image_tag("/images/edit.png")+'編輯'), edit_admin_article_path(@article) %>
+    <%= link_to (image_tag("/images/back_icon.png")+'返回'), admin_articles_path %>
+  </section>
+  <!--button-->
+</article>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#nav-2").parents("li").addClass("active");
+
+  editor.output();
+  $("#articleContent").children("div").each(function(){
+    $(this).addClass("part");
+  });
+});
+</script>

@@ -8,23 +8,16 @@ class ImageUploader < CarrierWave::Uploader::Base
   before :store, :remember_cache_id
   after :store, :delete_tmp_dir
 
-  # resize all the upload pics
-  process :resize_to_limit => [360, nil]
-
-  version :thumb, :if => :isProduct? do
-    process :resize_to_fill => [218, 163]
-  end
-
   def extension_white_list
     %w(jpg jpeg gif png)
   end
 
   def store_dir
-    if(model.class.name=='Newsphoto')
-    "uploads/#{model.class.name}/#{model.news_id}"
-    else
-    "uploads/#{model.class.name}/#{model.id}"
-    end
+    "uploads/#{model.class.name}/#{model.article_id}"
+  end
+
+  def filename
+    model.id ? "#{model.id}-#{original_filename}" : original_filename
   end
 
   def cache_dir
@@ -42,10 +35,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     if @cache_id_was.present? && @cache_id_was =~ /\A[\d]{8}\-[\d]{4}\-[\d]+\-[\d]{4}\z/
       FileUtils.rm_rf(File.join(cache_dir, @cache_id_was))
     end
-  end
-
-  def isProduct?(new_file)
-    model.class.name == 'Product'
   end
 
 end

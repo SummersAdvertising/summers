@@ -1,3 +1,0 @@
-﻿<Polyline xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  Stroke="Black" StrokeThickness="10" Fill="Red"
-  Points="20,20 100,100"/>

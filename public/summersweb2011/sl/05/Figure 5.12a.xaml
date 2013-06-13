@@ -1,6 +1,0 @@
-﻿<Rectangle xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  Height="200" Width="600" Stroke="Black">
-  <Rectangle.Fill>
-    <ImageBrush Stretch="None" ImageSource="05/Waterfall.jpg"/>
-  </Rectangle.Fill>
-</Rectangle>

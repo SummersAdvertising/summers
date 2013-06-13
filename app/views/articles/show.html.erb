@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<!--[if lt IE 9]>
+<script src="/js/html5.js"></script>
+<link rel="stylesheet" href="/css/style-article.css">
+<link rel="stylesheet" href="/assets/front/article/wide">
+<![endif]-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+
+<meta name="keywords" content="<%= $meta_kw %>"/>
+<meta name="description" content="<%= $meta_description %>"/>
+
+<meta property="og:title" content="<%= @article.title %>-網站工作隨筆"/>
+<meta property="og:description" content="<%= $meta_description %>"/>
+<meta property="og:site_name" content="夏天廣告官方網站"/>
+<meta property="og:type" content="company"/>
+<meta property="og:image" content="http://www.summers.com.tw<%= @article["imgpath"] ? @article.imgpath : "/images/thumbnail.jpg" %>"/>
+
+<meta name="msvalidate.01" content="BD7CCAECD53F3EDDF89A9F154C15F65E" />
+<link rel="image_src" href="/images/thumbnail.jpg"/>
+
+<title><%= @article.title %>-網站工作隨筆</title>
+<link rel="shortcut icon" href="/images/favicon.ico" >
+<%= stylesheet_link_tag "article" %>
+<link rel="stylesheet" media="screen and (max-width: 581px)" href="/assets/front/article/narrow" />
+<link rel="stylesheet" media="screen and (min-width: 582px) and (max-width: 1023px)" href="/assets/front/article/medium" />
+<link rel="stylesheet" media="screen and (min-width: 1024px)" href="/assets/front/article/wide" />
+<script src="/js/jquery-1.8.1.min.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/assets/front"></script>
+
+<link rel="stylesheet" type="text/css" href="/peditor/css/peditor.css">
+<script src="/peditor/js/editor.js"></script>
+<script src="/peditor/js/editor_p.js"></script>
+<script src="/peditor/js/editor_img.js"></script>
+<script src="/peditor/js/editor_list.js"></script>
+<script src="/peditor/js/editor_video.js"></script>
+
+<script>
+  jQuery(document).ready(function(){
+  $("body").css("display", "none");
+    $("body").fadeIn(500);
+  $("nav a").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(500, redirectPage);
+    });   
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+  
+  $(".title a").hover(function(){
+    $(this).children("h3").stop().animate({height:70},400,'easeInOutBack')
+  },function(){
+    $(this).children("h3").stop().animate({height:50},400,'easeInOutBack')  
+  });
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22983915-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38776205-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?488af24fc55cb9a4eeac7da38383e935";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+<header>
+  <nav itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <span id="ctrl"><img src="/images/article/ctrl.png"></span>
+    <a href="../contact.html" itemprop="url"  title="業務聯絡"><span itemprop="title">業務聯絡</span></a> <span class="star">★</span> <a href="../works/enterprise.html" itemprop="url"><span itemprop="title" title="作品">作品</span></a> <span class="star">★</span> <a href="../service.html" itemprop="url" title="服務項目"><span itemprop="title">服務項目</span></a> <span class="star">★</span> <a href="/articles" itemprop="url" title="網站工作隨筆"><span itemprop="title">網站工作隨筆</span></a>
+  </nav>
+  <div id="cloud"> </div>
+</header>
+<article>
+  <section class="limit" >
+    <h2><a href="<%= articles_path %>">網站工作隨筆</a></h2>
+    <div class="content single">
+      <% if(@article) %>
+      <h3><%= @article.title %></h3>
+      <div class="banner">
+        <div class="publish"> 
+          <div class="day"><%= @article.publishDate.strftime("%d") if(@article.publishDate) %></div>
+          <div class="month"><%= @article.publishDate.strftime("%B").slice(0, 3) if(@article.publishDate) %></div> 
+        </div>
+        <!--publish-->
+      </div>
+      <!--banner-->
+
+      <input id="article_content" style="display:none;" type="text" value="<%=@article.content%>">
+      <div class="inner" id="articleContent"></div>
+      <!--inner-->
+
+      <% else %>
+      <h3>該篇文章不存在，請返回短文列表。</h3>
+      <% end %>
+    </div>
+
+    <div class="social">
+      <!-- FB -->
+      <iframe src="//www.facebook.com/plugins/like.php?href=<%= "#{request.protocol}#{request.host_with_port}#{request.fullpath}" %>&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=90&amp;appId=433197170080910" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:60px;" allowTransparency="true"></iframe>
+
+      <!-- Google+ +1 -->
+      <div class="g-plusone" data-size="tall"></div>
+    </div>
+
+    <!-- js for Google+ -->
+    <script type="text/javascript">
+    window.___gcfg = {lang: 'zh-TW'};
+
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+    </script>
+
+    <div id="page">
+      <a href="<%= article_path((@prev.namehash.length > 0)? @prev.namehash : @prev.id) %>" class="prev" title="<%= @prev.title%>">Prev</a>
+
+      <a href="<%= articles_path %>" class="more" title="回文章列表">..看更多..</a>
+
+      <a href="<%= article_path((@next.namehash.length > 0)? @next.namehash : @next.id) %>" class="next" title="<%= @next.title%>">Next</a>
+
+    </div>
+  </section>
+  <!--limit-->
+</article>
+<div id="forest"></div>
+<footer>
+  <section class="limit">
+    <div class="flt">
+      <div id="contact"><a href="../contact.html">業務聯絡 <span>></span></a></div>
+      <div id="logo"><a href="http://www.summers.com.tw" title="夏天廣告 | 網頁設計觀點"></a></div>
+      <div id="gplus">Copyright © <a href="https://plus.google.com/109325166536931705977?rel=author" target="_blank">Summers</a></div>
+    </div>
+    <!--flt--> 
+  </section>
+  <!--limit--> 
+</footer>
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  <% if(@article) %>
+  editor.output();
+
+  if($("div[data-type=img]").length>0)
+  {
+    $("div[data-type=img]:first").children("img").attr("alt", "<%= @article.title %>").attr("title", "<%= @article.title %>");
+    $("div.banner").append($("div[data-type=img]:first").children("img"));
+    $("div[data-type=img]:first").remove();
+  }
+  else
+  {
+    $("div.banner").append($("<img>").attr("alt", "<%= @article.title %>").attr("title", "<%= @article.title %>").attr("src", "/images/article/error.jpg"));
+  }
+
+  $("#articleContent").children("div").each(function(){
+    $("#articleContent").append($(this).html());
+    $(this).remove();
+  });
+  <% else %>
+  window.location.assign("/404");
+  <% end %>
+});
+</script>

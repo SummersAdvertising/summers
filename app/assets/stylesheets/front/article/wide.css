@@ -1,0 +1,46 @@
+
+/*-----------------------------------------------------------------------頁首---*/
+
+/*
+nav{height:80px}
+nav .limit{max-width:1024px;padding:17px 0 0 0}
+nav a{width:47px;height:47px}
+nav a span{top:30px;left:365px;}
+*/
+nav a,nav span{font-size:16pt}
+#ctrl{display:none}
+#cloud{background:url(/images/article/cloud.png) center 0 no-repeat;height:206px;margin:20px 0 0 0}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article .limit{max-width:600px}
+article h2 a{max-width:600px;font-size:38px}
+
+
+.list .publish{float:left;width:25%;padding:17% 20px 0 0}
+.list .date{font-size:45px}
+.list .year{font-size:25px}
+
+.list .title{float:right;width:75%}
+
+/*-----------------------------------------------------------------------內文---*/
+
+.single h3{font-size:30px}
+.inner p,.inner ul{font-size:16px}
+
+/*-----------------------------------------------------------------------頁碼---*/
+
+#page {text-align:center;margin:5% 0;}
+#page a{display:inline-block;height:60px;text-indent:-7777px}
+#page a:active{position:relative;top:2px;}
+#page .prev{width:59px;background:url(/images/article/prev.png) 0 0 no-repeat}
+#page .next{width:59px;background:url(/images/article/next.png) 0 0 no-repeat}
+#page .more{width:90px;background:url(/images/article/more.png) 0 0 no-repeat}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer .limit{max-width:1024px}
+#contact{width:733px;height:80px;padding:0 0 0 39%}
+#contact a{font-size:20pt;padding:20px 0 0 0;width:237px;height:79px}
+#logo{width:291px;height:80px}
+#gplus{width:291px;text-align:center}

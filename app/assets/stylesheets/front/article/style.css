@@ -1,0 +1,109 @@
+﻿
+/*-----------------------------------------------------------------------全域---*/
+
+html{font:300 12pt 微軟正黑體,Arial;width:100%;background:url(/images/article/bgblue.png)}
+body{font:300 12pt 微軟正黑體,Arial;width:100%;-webkit-text-size-adjust: none;background:url(/images/article/bg.png) center 0 repeat-x;padding:0 0 0 0}
+a{font:300 12pt 微軟正黑體,Arial;text-decoration:none}
+.flt{overflow:hidden;margin:0 auto;clear:both}
+
+/*-----------------------------------------------------------------------頁首---*/
+
+/*
+nav{background:#000;background:rgba(0,0,0,.8);width:100%;position:absolute;top:0;left:0;z-index:9}
+nav .limit{margin:0 auto;position:relative}
+nav a{display:inline-block;background-repeat:no-repeat;background-position:center center;background-size:contain;margin:0 10px;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+nav a span{display:none;position:absolute;color:#fff;font:300 18px "微軟正黑體"}
+nav a:hover span,
+#nav-5 span{display:inline}
+#nav-5:hover span{display:inline!important}
+
+nav .limit:hover #nav-5{background-image:url(/images/article/nav-5.png)}
+nav .limit:hover #nav-5 span{display:none}
+
+#nav-1{background-image:url(/images/article/nav-1.png)}
+#nav-2{background-image:url(/images/article/nav-2.png)}
+#nav-3{background-image:url(/images/article/nav-3.png)}
+#nav-4{background-image:url(/images/article/nav-4.png)}
+#nav-5{background-image:url(/images/article/nav-5a.png)}
+#nav-1:hover{background-image:url(/images/article/nav-1a.png)}
+#nav-2:hover{background-image:url(/images/article/nav-2a.png)}
+#nav-3:hover{background-image:url(/images/article/nav-3a.png)}
+#nav-4:hover{background-image:url(/images/article/nav-4a.png)}
+#nav-5:hover{background-image:url(/images/article/nav-5a.png)!important}
+*/
+
+nav{background:#000;background:rgba(0,0,0,.8);padding:10pt 0;text-align:center;position:absolute;top:0;left:0;z-index:9;width:100%}
+nav span{margin:0 1%;color:#92DDE3}
+nav a span{color:#92DDE3}
+nav a span:hover{color:#fff}
+
+#cloud{width:100%;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+
+aside{max-width:600px;width:95%;margin:0 auto;padding:10px 0;background:url(/images/article/back.png) 5px 8px	 no-repeat;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside a{color:#3B579D;font:300 20pt 微軟正黑體,Arial;display:block;width:190px;padding:0 0 0 50px;text-shadow:0 1px 0 #9ADCFF;
+-webkit-transition:all .5s ease;
+-moz-transition:all .5s ease}
+aside:hover{background:url(/images/article/back.png) 0 8px no-repeat}
+
+/*-----------------------------------------------------------------------頁身---*/
+
+article .limit{margin:0 auto}
+article h2 a{display:block;text-align:right;color:#3B579D;font-weight:300;font-family:"微軟正黑體";text-shadow:0 1px 0 #9ADCFF;margin:10% 0 0 0}
+
+.list{margin:5% 0;overflow:hidden}
+.list .publish{color:#3B579D;text-align:right;text-shadow:0 1px 0 #9ADCFF}
+.list .title{position:relative;z-index:1;}
+.list .title img{width:100%;border:1px solid #88B1D8}
+.list .title:hover img{border:1px solid #1C76BA}
+.list .title:hover a:before{content:" ";display:block;width:100%;height:100%;background:none;position:absolute;top:0;left:0;box-shadow:inset 0 0 20px #44759A}
+.list .title h4{background:#000;background:rgba(0,0,0,.8);position:absolute;bottom:0;left:0;width:100%;height:50px;text-align:right;padding:12px 20px 0 0;color:#fff;font:300 17px "微軟正黑體"}
+
+/*-----------------------------------------------------------------------內文---*/
+
+.single{max-width:600px;margin:0 auto}
+.single h3{font-weight:300;font-family:"微軟正黑體";padding:5% 0;text-shadow:0 1px 0 #9ADCFF}
+.single .banner{position:relative}
+.single .publish{position:absolute;background:url(/images/article/publish.png) 0 0 no-repeat;width:51px;height:67px;left:-5px;top:20px;color:#fff;font-family:Arial;font-weight:700;text-shadow:0 1px 0 #8A2E07;text-align:center}
+.single .day{font-size:25px;height:40px;padding:5px 0 0 0}
+.single .month{font-size:12px;height:17px}
+
+.single .banner img{width:100%;border:1px solid #6BA6C6;padding:5px;background:#7EC7EF;border-radius:5px}
+
+.inner p, .inner ul{line-height:1.7em;padding:10px 0;color:#000;text-shadow:0 1px 0 #9ADCFF}
+.inner p a{color:#3B579D;text-shadow:0 1px 0 #9ADCFF}
+.inner img{max-width:100%;height:auto;}
+
+/*-----------------------------------------------------------------------社群---*/
+
+.social{border-bottom:1px solid #9ADCFF;margin:5% 0 2.5% 0;width:100%;text-align:right}
+.social:after{content:' ';display:block;border-top:1px solid #045A8A}
+
+/*-----------------------------------------------------------------------森林---*/
+
+#forest{width:100%;height:134px;background:url(/images/article/forest.png) 70% bottom no-repeat}
+
+/*-----------------------------------------------------------------------頁腳---*/
+
+footer{background:#000;padding:2% 0}
+footer .limit{margin:0 auto}
+#contact{float:left;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#contact a{color:#bcdde3;text-shadow:0 -1px 0 #000;display:block;background:url(/images/article/contact-1.png) 0 0 no-repeat;text-align:center;background-size:contain}
+#contact a:hover{color:#23fde6}
+#contact a:active{background:url(/images/article/contact-2.png) 0 0 no-repeat;background-size:contain;color:#23fde6;position:relative;top:1px}
+#contact a span{font-weight:700}
+#logo{float:right;background-image:url(/images/article/logo.jpg);background-repeat:no-repeat;background-size:contain;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#logo a{display:block;width:100%;height:100%}
+#gplus{float:right;color:#fff;font:300 9pt 微軟正黑體,Arial;
+-webkit-transition:all .2s ease;
+-moz-transition:all .2s ease}
+#gplus a{color:#fff;font:300 9pt 微軟正黑體,Arial}

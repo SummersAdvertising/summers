@@ -1,0 +1,27 @@
+article{font:300 27px "微軟正黑體";line-height:1.7em}
+#form-1 .text,#form-2 .text{font:300 27px "微軟正黑體"}
+
+#info h2{font:300 44px "微軟正黑體"}
+#info strong{font:300 56px "微軟正黑體"}
+
+.title h3{font:300 90px "微軟正黑體"}
+.title p{color:#fff}
+.title{padding:10% 0 0 0}
+
+.form{float:right;width:55%;border-top:1px solid #fff}
+
+#form-1 ol{padding:19% 0}
+#form-1 ul{width:85%;overflow:hidden}
+#form-1 .name{float:left;width:20%}
+#form-1 .enter{float:left;width:80%}
+
+#form-2{overflow:hidden;padding:11% 0}
+#form-2 div{float:left;width:33%}
+#form-2 #other-left{width:20%}
+#form-2 #other-right{width:65%}
+
+#send{padding:0 0 10% 0}
+#earthman{height:223px;}
+
+#form-2 input[type="checkbox"]{display:inline!important}
+#form-2 input[type="checkbox"] + label span{display:none!important}

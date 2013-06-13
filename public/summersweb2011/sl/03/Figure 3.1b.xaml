@@ -1,8 +1,0 @@
-﻿<Rectangle xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-Width="100"
-Height="100"
-Fill="Orange"
-Stroke="Black"
-/>
-
-

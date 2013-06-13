@@ -48,6 +48,9 @@ class AdminController < ApplicationController
   end
 
   def log_in
+    if(session[:admin])
+      redirect_to admin_path()
+    end
     @admin = Admin.new
   end
 
@@ -55,21 +58,23 @@ class AdminController < ApplicationController
   	@admin = Admin.new(params[:admin])
     @dbData = Admin.where("username = ?", @admin.username).first
 
-    if(@dbData && pswordCheck(@admin.password, @dbData.password))
-      session[:admin] = @dbData.name
-      session[:adminID] = @dbData.id
-      session[:notice] = nil
-    else
-      session[:notice] = "wrong password"
+    respond_to do |format|
+      if(@dbData && pswordCheck(@admin.password, @dbData.password))
+        session[:admin] = @dbData.name
+        session[:adminID] = @dbData.id
+        format.html { redirect_to admin_path() }
+      else
+        flash[:loginCheck] = "wrong password"
+        format.html { redirect_to admin_log_in_path() }
+      end
     end
 
-    redirect_to admin_path
-    
   end
 
 
   def log_out
     session[:admin] = nil
+    session[:adminID] = nil
     redirect_to admin_path
   end
 

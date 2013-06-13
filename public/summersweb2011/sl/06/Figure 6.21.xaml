@@ -1,11 +1,0 @@
-﻿<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-  <Image Source="06/TeamPhoto.jpg">
-    <Image.Clip>
-      <RectangleGeometry Rect="0,0,380,290">
-        <RectangleGeometry.Transform>
-          <SkewTransform AngleX="20"/>
-        </RectangleGeometry.Transform>
-      </RectangleGeometry>
-    </Image.Clip>
-  </Image>
-</Canvas>

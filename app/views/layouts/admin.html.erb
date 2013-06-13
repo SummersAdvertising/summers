@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<%= stylesheet_link_tag "admin/responsive/desktop" %>
+
+<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>夏天後台管理系統</title>
-<%= stylesheet_link_tag "admin", :media => "all" %>
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+<title>夏天廣告-後台管理系統</title>
+
+<%= stylesheet_link_tag "admin" %>
 <%= javascript_include_tag "application" %>
+
+<%= stylesheet_link_tag "admin/responsive/mobile", :media => "screen and (max-width: 543px)" %>
+<%= stylesheet_link_tag "admin/responsive/tablet", :media => "screen and (min-width: 544px) and (max-width: 896px)" %>
+<%= stylesheet_link_tag "admin/responsive/desktop", :media => "screen and (min-width: 897px)" %>
+
+<%= stylesheet_link_tag "admin/custom" %>
+
+<link rel="stylesheet" type="text/css" href="/peditor/css/peditor.css">
+<script src="/peditor/js/editor.js"></script>
+<script src="/peditor/js/editor_p.js"></script>
+<script src="/peditor/js/editor_img.js"></script>
+<script src="/peditor/js/editor_list.js"></script>
+<script src="/peditor/js/editor_video.js"></script>
+
 <%= csrf_meta_tags %>
 </head>
 
 <body>
-<div id="top-out">
-  <div id="top">
-    <h1 class="left"><a href="/admin">夏天廣告 - 後台管理系統</a></h1>
-    <div class="right">
-      <%if session[:admin]%>
-      你好，<%= session[:admin]%>！<a href="/admin/edit">修改個人資料</a><a href="/admin/log_out">登出</a>
-      <% end %>
+  <header _height="none">
+    <section id="top"> <a id="nav-ctrl"><img src="/images/nav.png"></a>
+      <div class="left">
+        <h1><a href="/admin">夏天廣告-後台管理系統</a></h1>
+      </div>
+      <!--left-->
 
-      <a href="/home">返回首頁</a>
+      <aside> <a id="aside-ctrl"><img src="/images/set.png"></a>
+        <div id="aside-box">
+          <%if session[:admin]%>
+          <a href="/admin/edit">修改個人資料</a>
+          <a href="/admin/log_out">登出</a>
+          <% end %>
 
-    </div>
-  </div>
-  <!--top--> 
-</div>
-<!--top-out-->
-<div id="container">
-  <%if session[:admin]%>
-  <div id="side" class="left">
-    <ul>
-      <li><a href="/admin/tickets" id="tickets">客服系統</a></li>
-    </ul>
-  </div>
-  <% end %>
+          <a href="/">返回首頁</a>
+        </div>
+      </aside>
+    </section>
+    <!--top-->
+  </header>
 
-<%= yield %>
+  <section id="main" _height="auto">
+    <%if session[:admin]%>
+    <nav>
+      <ul>
+        <li><a href="/admin/tickets" id="nav-1">訪客留言</a></li>
+        <li><a href="/admin/articles" id="nav-2">短文分享</a></li>
+      </ul>
+    </nav>
+    <% end %>
 
-</div>
-<!--container-->
-<div id="footer"></div>
-<!--footer-->
+    <%= yield %>
+
+  </section>
+  <!--main-->
+  <footer _height="none"> Copyright © <a href="http://www.summers.com.tw/" target="_blank">Summers</a> </footer>
+
 </body>
 </html>

@@ -1,0 +1,151 @@
+<article>
+	<%= form_for(@article, :url => admin_article_path(@article), :method => "put") do |f| %>
+	<section class="title">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th><%= @article.publishDate.strftime("%Y-%m-%d") if(@article.publishDate) %></th>
+				<td><%= f.text_field :title, :placeholder => "請輸入文章標題", :autocomplete => "off" %>
+					<%= f.text_field :content, :style => "display:none;" %>
+				</td>
+			</tr>
+		</table>
+	</section>
+	<!--title-->
+
+  <section class="text text-edit">
+    <div class="half">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">自訂日期</th>
+          <td>
+            <%= f.text_field :publishDate, :value => @article.publishDate ? @article.publishDate.strftime("%Y-%m-%d") : "", :autocomplete => "off" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="half">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">自訂網址</th>
+          <td>
+            <%= f.text_field :namehash, :autocomplete => "off" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="one">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th valign="top">關鍵字</th>
+          <td>
+            <%= f.text_field :metakw, :autocomplete => "off" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <% end %>
+
+  <div id="editorPanel">
+    <section class="tab">
+      <ul class="x3">
+        <li id="tab-p" data-type="p"><a href="#post-p"><img src="/images/edit.png">段落</a></li>
+        <li id="tab-img" data-type="img"><a href="#post-img"><img src="/images/img.png">圖片</a></li>
+        <li id="tab-video" data-type="video"><a href="#post-video"><img src="/images/video.png">影片</a></li>
+        <li id="tab-list" data-type="list"><a href="#post-list"><img src="/images/list.png"/>清單</a></li>
+      </ul>
+    </section>
+    <!--tab-->
+    <section class="post">
+    	<div id="post-p">
+    		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    			<tr>
+    				<td colspan="2"><textarea id="newParagraphContent" name="textarea" cols="" rows="" class="autogrow" placeholder="請輸入文字"></textarea></td>
+    			</tr>
+    			<tr class="addlink">
+    				<td width="100" align="center"><img src="/images/link.png" width="16" height="16"> 段落連結</td>
+    				<td><input id="newParagraphLink" name="" type="text" placeholder="http://www.example.com" /></td>
+    			</tr>
+    		</table>
+    	</div>
+
+    	<div id="post-img">
+            <%= form_for (@photo), :url => 'uploadPhoto', :html => {:multipart => true, :remote => true} do |p| %>
+    		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    			<tr>
+    				<td colspan="2"><%= p.file_field :image, :class => "autogrow" %></td>
+                    <input name="authenticity_token" type="hidden" value="" />
+    			</tr>
+    			<tr class="addlink">
+    				<td width="100" align="center"><img src="/images/link.png" width="16" height="16"> 圖片連結</td>
+    				<td><input id="newImageLink" name="" type="text" placeholder="http://www.example.com" /></td>
+    			</tr>
+    		</table>
+            <% end %>
+    	</div>
+
+    	<div id="post-video">
+    		<input id="newVideoContent" name="" type="text" placeholder="請輸入影片網址" />
+    	</div>
+    	<div id="post-list">
+    		<ul id="newListContent">
+    			<li>
+    				<input name="" type="text" class="listElement autogrow"/>
+    			</li>
+    			<li>
+    				<input name="" type="text" class="listElement autogrow"/>
+    			</li>
+    			<li>
+    				<input name="" type="text" class="listElement autogrow"/>
+    			</li>
+    		</ul>
+            <div class="addlist"><a href="javascript: void(0);">增加</a></div>
+    	</div>
+    </section>
+    <!--post-->
+    <section class="button editorAdd"> <a href="#"><img src="/images/add.png">新增</a> </section>
+    <!--button-->
+    </div>
+    
+    <section class="hgroup">
+      <h2>文章預覽</h2>
+    </section>
+    <!--hgroup-->
+    <section class="preview" id="articleContent">
+    
+    </section>
+    <!--preview-->
+    
+    <section class="button">
+      <a href="#" data-save="article" class = "saveArticle"><img src="/images/upload.png">發佈</a>
+      <a href="#" data-save="draft" class = "saveArticle"><img src="/images/draft.png">草稿</a>
+    </section>
+    <!--button--> 
+</article>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#nav-2").parents("li").addClass("active");
+  //$("#article_metakw").val("<%= @article.metakw %>");
+
+  <% if (@article.errors.any?) %>
+  <% @article.errors.full_messages.each do|msg| %>
+  Alertify.log.error("儲存失敗：<%= msg %>");
+  <% end %>
+  <% end %>
+
+  editor.init({photoModel:"articlephoto"});
+
+  $( "#article_publishDate" ).datepicker();
+  $( "#article_publishDate" ).change(function(){
+    $(this).datepicker("option", "dateFormat", "yy-mm-dd");
+  });
+
+  $(".saveArticle").click(function(e){
+    e.preventDefault();
+    var articleStatus = $("<input>").attr("name", "article[status]").attr("type", "text").attr("value", $(this).data("save"));
+    $("form:first").append(articleStatus.hide());
+    $("form:first").submit();
+  });
+});
+</script>
