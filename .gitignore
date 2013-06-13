@@ -1,4 +1,5 @@
 .DS_Store
+
 *.rbc
 *.sassc
 .sass-cache
@@ -18,5 +19,6 @@ pickle-email-*.html
 
 /config/deploy.rb
 /config/deploy/*
+/config/environments/*
 
 /public/uploads/*
