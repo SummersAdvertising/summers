@@ -149,11 +149,15 @@ var _hmt = _hmt || [];
     </script>
 
     <div id="page">
+      <% if(@prev) %>
       <a href="<%= article_path((@prev.namehash.length > 0)? @prev.namehash : @prev.id) %>" class="prev" title="<%= @prev.title%>">Prev</a>
+      <% end %>
 
       <a href="<%= articles_path %>" class="more" title="回文章列表">..看更多..</a>
 
+      <% if(@next) %>
       <a href="<%= article_path((@next.namehash.length > 0)? @next.namehash : @next.id) %>" class="next" title="<%= @next.title%>">Next</a>
+      <% end %>
 
     </div>
   </section>
