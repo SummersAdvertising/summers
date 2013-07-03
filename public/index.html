@@ -36,109 +36,101 @@ $(function() {
         $("#navBar").toggleClass("box-change");  
     });  
 });
-loadJS();
-function loadJS(){
-  if($(window).width()>581){
-    var jsFiles = ["js/anchor-art.js", "js/jquery.superscrollorama.js", "js/TweenMax.min.js", "js/jquery.event.frame.js", "js/jquery.parallax.js", "js/konami.js"];
-    var countLoaded = 0;
 
-    for(var i = 0, length = jsFiles.length; i<length ;i++){
-      var value = jsFiles[i];
-      $.getScript(value, function(){
-        countLoaded++;
-        if(countLoaded == jsFiles.length){
-          loadScript();
-        }
-      });
-    }
-
+<script src="js/jquery-1.8.1.min.js"></script>
+<script src="js/anchor-art.js"></script>
+<script src="js/jquery.superscrollorama.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/jquery.event.frame.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/konami.js"></script>
+<script type="text/javascript">
+  konami = new Konami()
+  konami.iphone.code = function() {
+    $('#wrestler').fadeOut(0).delay(2750).fadeIn(0)
+    $('#big-wrestler').fadeIn(0).delay(250).animate({bottom:'0'},500).delay(1500).animate({bottom:'-200%'},500).fadeOut(0)
   }
-}
+  konami.code = function() {
+    $('#wrestler').fadeOut(0).delay(2750).fadeIn(0)
+    $('#big-wrestler').fadeIn(0).delay(250).animate({bottom:'0'},500).delay(1500).animate({bottom:'-200%'},500).fadeOut(0)    
+  }
+  konami.load()
+</script>
 
-function loadScript(){
-  /* konami */
+<script>
+jQuery(document).ready(function(){  
+  var controller = $.superscrollorama();
+  controller.addTween('#box1', TweenMax.from( $('#wrong'),  .75 ,  {css:{opacity:0,'position':'relative','top':'-15px'}} ));
+  controller.addTween('#box1', TweenMax.from( $('#dcr-1'),  .75 ,  {css:{opacity: 0}} )); 
+  controller.addTween('#box2', TweenMax.to( $('#move-w'),  .75 ,  {css:{top:0}} ));   
+  controller.addTween('#box2', TweenMax.from( $('#box2 .item'),  .75 ,  {css:{opacity: 0}} ));  
+  controller.addTween('#box4', TweenMax.from( $('#wlf'),  .75 ,  {css:{opacity:0,'position':'relative','top':'-15px'}} ));
+  controller.addTween('#box5', TweenMax.from( $('#item-left-1'), 1.5 ,  {css:{opacity: 0, left:'-49%'}} ));
+  controller.addTween('#box5', TweenMax.from( $('#item-left-2'),  2 ,  {css:{opacity: 0, left:'-47%'}} ));
+  controller.addTween('#box5', TweenMax.from( $('#item-left-3'),  2.5 ,  {css:{opacity: 0, left:'-40%'}} ));
+  controller.addTween('#box5', TweenMax.from( $('#item-right-1'),  1.5 ,  {css:{opacity: 0,right:'-30%'}} ));
+  controller.addTween('#box5', TweenMax.from( $('#item-right-2'),  2 ,  {css:{opacity: 0,right:'-45%'}} ));
+  controller.addTween('#box5', TweenMax.from( $('#item-right-3'),  2.5 ,  {css:{opacity: 0,right:'-40%'}} ));
+  controller.addTween('#writer', TweenMax.from( $('#dcr-4'),  .75 ,  {css:{opacity: 0}} ));
+  controller.addTween('#writer', TweenMax.to( $('#move-d'),  .75 ,  {css:{top:0}} ));
+  controller.addTween('#pg4', TweenMax.from( $('#forest'),  2 ,  {css:{opacity:0,'position':'relative','top':'25px'}} ));
+});
+</script>
+<script>
   jQuery(document).ready(function(){
-    konami = new Konami()
-    konami.iphone.code = function() {
-      $('#wrestler').fadeOut(0).delay(2750).fadeIn(0)
-      $('#big-wrestler').fadeIn(0).delay(250).animate({bottom:'0'},500).delay(1500).animate({bottom:'-200%'},500).fadeOut(0)
-    }
-    konami.code = function() {
-      $('#wrestler').fadeOut(0).delay(2750).fadeIn(0)
-      $('#big-wrestler').fadeIn(0).delay(250).animate({bottom:'0'},500).delay(1500).animate({bottom:'-200%'},500).fadeOut(0)
-    }
-    konami.load()
-  });
-
-  /* addTween */
-  jQuery(document).ready(function(){
-    var controller = $.superscrollorama();
-    controller.addTween('#box1', TweenMax.from( $('#wrong'),  .75 ,  {css:{opacity:0,'position':'relative','top':'-15px'}} ));
-    controller.addTween('#box1', TweenMax.from( $('#dcr-1'),  .75 ,  {css:{opacity: 0}} ));
-    controller.addTween('#box2', TweenMax.to( $('#move-w'),  .75 ,  {css:{top:0}} ));
-    controller.addTween('#box2', TweenMax.from( $('#box2 .item'),  .75 ,  {css:{opacity: 0}} ));
-    controller.addTween('#box4', TweenMax.from( $('#wlf'),  .75 ,  {css:{opacity:0,'position':'relative','top':'-15px'}} ));
-    controller.addTween('#box5', TweenMax.from( $('#item-left-1'), 1.5 ,  {css:{opacity: 0, left:'-49%'}} ));
-    controller.addTween('#box5', TweenMax.from( $('#item-left-2'),  2 ,  {css:{opacity: 0, left:'-47%'}} ));
-    controller.addTween('#box5', TweenMax.from( $('#item-left-3'),  2.5 ,  {css:{opacity: 0, left:'-40%'}} ));
-    controller.addTween('#box5', TweenMax.from( $('#item-right-1'),  1.5 ,  {css:{opacity: 0,right:'-30%'}} ));
-    controller.addTween('#box5', TweenMax.from( $('#item-right-2'),  2 ,  {css:{opacity: 0,right:'-45%'}} ));
-    controller.addTween('#box5', TweenMax.from( $('#item-right-3'),  2.5 ,  {css:{opacity: 0,right:'-40%'}} ));
-    controller.addTween('#writer', TweenMax.from( $('#dcr-4'),  .75 ,  {css:{opacity: 0}} ));
-    controller.addTween('#writer', TweenMax.to( $('#move-d'),  .75 ,  {css:{top:0}} ));
-    controller.addTween('#pg4', TweenMax.from( $('#forest'),  2 ,  {css:{opacity:0,'position':'relative','top':'25px'}} ));
-  });
-
-  /* parallax */
-  jQuery(document).ready(function(){
-    jQuery('#parallax .parallax-layer').parallax({
+    jQuery('#parallax .parallax-layer')
+    .parallax({
       mouseport: jQuery('#parallax')
     });
 
-    $("body").css("display", "none");
+  $("body").css("display", "none");
     $("body").fadeIn(500);
-    $("#box3 a,#box4 a,aside a,#pg5 a,#forest a,#contact a,#logo a").click(function(event){
-      event.preventDefault();
-      linkLocation = this.href;
-      $("body").fadeOut(500, redirectPage);
-    });
+  $("#box3 a,#box4 a,aside a,#pg5 a,#forest a,#contact a,#logo a").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $("body").fadeOut(500, redirectPage);
+    });   
     function redirectPage() {
-      window.location = linkLocation;
+        window.location = linkLocation;
     }
-
-    $("#link-l a").mouseover(function() {
-      $("#wrestler").removeClass().addClass('lift-l');
-    });
-    $("#link-r a").mouseover(function() {
-      $("#wrestler").removeClass().addClass('lift-r');
-    });
-    $("#link a").mouseout(function(){
-      $("#wrestler").removeClass()
-    });
   });
-
-  /* load img */
-  var images = new Array()
-  function preload() {
-    for (i = 0; i < preload.arguments.length; i++) {
-      images[i] = new Image()
-      images[i].src = preload.arguments[i]
-    }
-  }
-  preload(
-    "images/wrestler-l.png",
-    "images/wrestler-r.png",
-    "images/weightlifting-up.png"
-    )
-
-  /* for browsers below ie8 */
-  var userAgent = window.navigator.userAgent.toLowerCase();
-  $.browser.version = (userAgent.match( /.(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0, '0'])[1];
-  var version = $.browser.version;
-  if ($.browser.msie) {
-    if (parseFloat(version) < 8.0) {
-      document.location.href="oops.html" + window.location.hash;
-    }
+</script>
+<script>
+$(function(){
+  $("#link-l a").mouseover(function() {
+    $("#wrestler").removeClass().addClass('lift-l');
+  });
+  $("#link-r a").mouseover(function() {
+    $("#wrestler").removeClass().addClass('lift-r');
+  });
+  $("#link a").mouseout(function(){
+    $("#wrestler").removeClass()
+  });
+});
+</script>
+<script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+      var images = new Array()
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image()
+          images[i].src = preload.arguments[i]
+        }
+      }
+      preload(
+        "images/wrestler-l.png",
+        "images/wrestler-r.png",
+        "images/weightlifting-up.png"
+      )
+    //--><!]]>
+</script>
+<script>
+var userAgent = window.navigator.userAgent.toLowerCase();
+$.browser.version = (userAgent.match( /.(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) || [0, '0'])[1];
+var version = $.browser.version;
+if ($.browser.msie) {
+  if (parseFloat(version) < 8.0) { 
+    document.location.href="oops.html" + window.location.hash;
   }
 }
 </script>
