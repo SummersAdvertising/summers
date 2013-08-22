@@ -1,6 +1,6 @@
 # encoding: utf-8
 class TicketMailer < ActionMailer::Base
-  default from: "adword@summers.com.tw"
+  default from: "\"夏天客服系統\" <adword@summers.com.tw>"
   
   def send_notice(ticket)
   	@ticket = ticket
